@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
+
 class UsersController extends BaseController {
+
+    use SoftDeletingTrait;
 
 	private $autorizado;
 	public function __construct() {

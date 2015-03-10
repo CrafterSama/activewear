@@ -1,6 +1,10 @@
 <?php
 
+//use Illuminate\Database\Eloquent\SoftDeletingTrait;
+
 class Factura extends Eloquent {
+
+    //use SoftDeletingTrait;
 
 	protected $table = 'facturas';
 	public $timestamp = true;

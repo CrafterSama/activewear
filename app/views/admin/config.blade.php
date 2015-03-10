@@ -42,11 +42,10 @@
 						</script>
 						{{ Form::label($config->config_name, strtoupper($config->config_name), array('class' => 'control-label col-sm-3') ) }}
 							<div class="input-group col-sm-9">
+								<span class="input-group-addon">Value</span>
 								@if(is_numeric($config->config_value))
-									<span class="input-group-addon">%</span>
 										<input name="{{ $config->config_name }}" type="text" value="{{ $config->config_value }}" class="form-control" required />
 								@else
-									<span class="input-group-addon">Value</span>
 										<textarea name="{{ $config->config_name }}" class="form-control" required>{{ $config->config_value }}</textarea>
 								@endif
 							</div>

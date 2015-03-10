@@ -5,11 +5,10 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
 class Item extends Eloquent {
 
     use SoftDeletingTrait;
+    
     protected $table = 'items';
     public $timestamp = true;
     protected $softDelete = true;
-
-
 
 	public function product()
     {

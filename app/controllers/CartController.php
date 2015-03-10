@@ -1,10 +1,10 @@
 <?php
-
-//use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class CartController extends BaseController {
 
-//    use SoftDeletingTrait;
+    use SoftDeletingTrait;
+
     public function get_cart()
     {
         return Cart::content();        

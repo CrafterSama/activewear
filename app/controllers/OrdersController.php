@@ -1,10 +1,10 @@
 <?php
 
-//use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class OrdersController extends \BaseController {
 
-    //use SoftDeletingTrait;
+    use SoftDeletingTrait;
 	/**
 	 * Display a listing of the resource.
 	 *

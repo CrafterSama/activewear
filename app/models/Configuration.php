@@ -102,5 +102,29 @@ class Configuration extends Eloquent {
 		return $value;
 
 	}
+	public static function getTwitter()
+	{
+		$value = Configuration::where('config_name','=','social_twitter')->pluck('config_value');
+		return $value;
+
+	}
+	public static function getFacebook()
+	{
+		$value = Configuration::where('config_name','=','social_facebook')->pluck('config_value');
+		return $value;
+
+	}
+	public static function getInstagram()
+	{
+		$value = Configuration::where('config_name','=','social_instagram')->pluck('config_value');
+		return $value;
+
+	}
+	public static function getContactPhone()
+	{
+		$value = Configuration::where('config_name','=','contact_phone')->pluck('config_value');
+		return $value;
+
+	}
 
 }

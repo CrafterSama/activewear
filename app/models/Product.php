@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
@@ -10,6 +11,8 @@ class Product extends Eloquent {
 	 *
 	 * @var string
 	 */
+
+  use SoftDeletingTrait;
 
 	protected $table = 'products';
 

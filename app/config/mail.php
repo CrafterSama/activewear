@@ -6,7 +6,7 @@ return array(
 'host' => 'smtp.gmail.com',
 'port' => 587,
 'from' => array('address' => Configuration::getServiceEmail(), 'name' => Configuration::getCompanyName()),
-'encryption' => 'tls',
+'encryption' => 'ssl',
 'username' => 'cariocamailservice@gmail.com',
 'password' => 'carioca123456',
 'sendmail' => '/usr/sbin/sendmail -bs',

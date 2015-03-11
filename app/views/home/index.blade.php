@@ -21,16 +21,16 @@
      </div>
 </div>
 <div class="buttons col-md-8">
-    <div class="img-1 col-xs-4">
-        <div class="row-fluid">
+    <div class="row-fluid">
+        <div class="img-1 col-xs-6">
             <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos">
             <div class="title-box carioca_color1">
                 <h3 class="fig-text"><a href="/productos/carioca" alt="Productos Carioca"><strong>Productos Carioca + </strong></a></h3>
             </div>
         </div>
     </div>
-    <div class="img-2 col-xs-4">
-        <div class="row-fluid">
+    <div class="row-fluid">
+        <div class="img-2 col-xs-6">
             <a href="/carrito"><img class="carrito col-md-12" src="/../assets/images/home_carrito.png" alt="carrito"></a>
             <div class="title-box carioca_color4">
                 <h3 class="fig-text"><a href="/carrito" alt="Carrito de Compras"><strong>Carrito + </strong></a></h3>

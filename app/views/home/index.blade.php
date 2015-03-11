@@ -21,7 +21,7 @@
      </div>
 </div>
 <div class="buttons col-md-8">
-    <div class="col-md-6 img-1">
+    <div class="col-xs-6 img-1">
         <div class="row-fluid">
             <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos">
             <div class="title-box carioca_color1">
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6 img-2">
+    <div class="col-xs-6 img-2">
         <div class="row-fluid">
             <a href="/carrito"><img class="carrito col-md-12" src="/../assets/images/home_carrito.png" alt="carrito"></a>
             <div class="title-box carioca_color4">

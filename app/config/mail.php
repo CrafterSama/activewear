@@ -8,7 +8,7 @@ return array(
 'from' => array('address' => Configuration::getServiceEmail(), 'name' => Configuration::getCompanyName()),
 'encryption' => 'tls',
 'username' => 'cariocamailservice@gmail.com',
-'password' => 'carioca123456',
+'password' => 'mfkcyqjdoxminuoy',
 'sendmail' => '/usr/sbin/sendmail -bs',
 'pretend' => false,
 );

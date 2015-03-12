@@ -20,7 +20,7 @@
          </div>
      </div>
 </div>
-<div class="buttons col-md-8 col-xs-12">
+<div class="buttons col-md-8 col-sm-12">
     <div class="row-fluid">
         <div class="img-1 col-sm-6">
             <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos" width="100%">

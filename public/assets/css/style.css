@@ -507,6 +507,11 @@ a.blog-nav-item:visited
   padding: 14px 20px 13px 20px;
 }
 
+.text-box
+{
+  max-height: 49px;
+}
+
 .title-box
 {
   bottom: 0;

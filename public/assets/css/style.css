@@ -135,6 +135,7 @@ ul.nav-tabs > li > a.carioca_color5:visited
 }
 .buttons
 {
+  display: block;
   margin-top: 15px;
   text-align: center;
 }
@@ -678,6 +679,11 @@ div.jMyCarousel ul li img
    top: 0px;
    left: 650px;
 }
+
+
+/********************************/
+/*   Estilo para el Responsive  */
+/********************************/
 
 @media (max-width: 1023px) {
   .font-cursiva-index p.second-text {

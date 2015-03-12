@@ -494,7 +494,12 @@ a.blog-nav-item:visited
 
 .social
 {
-  height: 73px;
+  height: 72px;
+}
+
+.boxes
+{
+  height: 69px;
 }
 
 .social-box

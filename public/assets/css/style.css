@@ -492,24 +492,9 @@ a.blog-nav-item:visited
   height: 120px;
 }
 
-.social
-{
-  height: 72px;
-}
-
-.boxes
-{
-  height: 69px;
-}
-
 .social-box
 {
   padding: 14px 20px 13px 20px;
-}
-
-.text-box
-{
-  max-height: 49px;
 }
 
 .title-box

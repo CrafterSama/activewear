@@ -92,7 +92,7 @@ class OrdersController extends \BaseController {
 			} else {
 				return Redirect::back()->with('notice','El pedido no pudo ser cancelado');
 			}			
-			
+			dd($item);
 		}
 		return Redirect::back()->with('notice','Los Productos fueron devueltos a stock y el pedido cancelado');
 

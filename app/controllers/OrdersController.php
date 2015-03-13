@@ -79,19 +79,22 @@ class OrdersController extends \BaseController {
 	}
 	public function cancelAllOrder($id)
 	{
-		$item = Item::all()->where('factura_id','=',$id);
+		$items = Item::where('factura_id','=',$id);
 		//print_r($item);
-		$product = Product::find($item->producto_id);
-		//print_r($product);/*
-		$product->amounts = $item->cantidad + $product->amounts;
-		if($product->save())
-		{
-			$item->forceDelete();
-			return Redirect::back()->with('notice','Los Productos fueron devueltos a stock y el pedido cancelado');
-		}
-		else
-		{
-			return Redirect::back()->with('notice','El pedido no pudo ser cancelado');
+		foreach ($items as $item) {
+			# code...
+			$product = Product::find($item->producto_id);
+			//print_r($product);/*
+			$product->amounts = $item->cantidad + $product->amounts;
+			if($product->save())
+			{
+				$item->forceDelete();
+				return Redirect::back()->with('notice','Los Productos fueron devueltos a stock y el pedido cancelado');
+			}
+			else
+			{
+				return Redirect::back()->with('notice','El pedido no pudo ser cancelado');
+			}
 		}
 
 	}

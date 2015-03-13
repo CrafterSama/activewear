@@ -128,6 +128,7 @@ Route::group(array('before' => 'auth'), function()
 		Route::get('pedidos/aprobar/{id}', 'OrdersController@approveOrder');
 		Route::get('pedidos/enviado/{id}', 'OrdersController@shippedOrder');
 		Route::get('pedidos/cancelar/{id}', 'OrdersController@cancelOrder');
+		Route::get('pedidos/cancelar/pedido/{id}', 'OrdersController@cancelAllOrder');
 
 		Route::get('reportes/por-fecha', 'ReportsController@getDates');
 		Route::get('reportes/por-porcentaje', 'ReportsController@getPorcentual');

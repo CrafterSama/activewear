@@ -29,7 +29,7 @@
 	            <table class="table table-striped table-condensed cf">
 	            	<thead class="cf">
 						<tr>
-							<th class="col-xs-1 text-center">Nº de Factura</th>
+							<th class="col-xs-1 text-center">Nº de Pedido</th>
 							<th class="col-xs-1 text-center">Nombre Completo</th>
 							<th class="col-xs-2 text-center">Banco</th>
 							<th class="col-xs-1 text-center">No. de Recibo</th>
@@ -96,6 +96,7 @@
 								<td data-title="Acciones" class="text-center">
 									<a href="/admin/pedidos/aprobar/{{ $item->factura->id }}" class="btn btn-success btn-xs white"  data-toggle="tooltip" data-placement="top" title="Aprobar y Entregar"><i class="fa fa-check fa-lg" onclick="return confirm('¿Esta seguro que ya realizo la entrega o envio para aprobar este Pedido?');"></i></a>
 									<a href="/admin/pedidos/cancelar/{{ $item->id }}" class="btn btn-danger btn-xs white"  data-toggle="tooltip" data-placement="top" title="Cancelar Pedido" onclick="return confirm('¿Esta seguro que desea cancelar este pedido?');"><i class="fa fa-trash-o fa-lg"></i></a>
+									<a href="/admin/pedidos/cancelar/{{ $item->factura_id }}" class="btn btn-danger btn-xs white"  data-toggle="tooltip" data-placement="top" title="Cancelar Pedido" onclick="return confirm('¿Esta seguro que desea cancelar todo este pedido?');"><i class="fa fa-trash-o fa-lg"></i></a>
 									<a href="/order/{{ $item->factura_id }}" class="btn btn-info btn-xs white"  data-toggle="tooltip" data-placement="top" title="Ver el Pedido"><i class="fa fa-eye fa-lg"></i></a>
 								</td>
 							</tr>

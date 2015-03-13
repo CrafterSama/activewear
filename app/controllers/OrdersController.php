@@ -86,15 +86,16 @@ class OrdersController extends \BaseController {
 			$product = Product::find($item->producto_id);
 			//print_r($product);/*
 			$product->amounts = $item->cantidad + $product->amounts;
+			
 			if($product->save())
 			{
 				$item->forceDelete();
-				return Redirect::back()->with('notice','Los Productos fueron devueltos a stock y el pedido cancelado');
 			}
 			else
 			{
 				return Redirect::back()->with('notice','El pedido no pudo ser cancelado');
 			}
+				return Redirect::back()->with('notice','Los Productos fueron devueltos a stock y el pedido cancelado');
 		}
 
 	}

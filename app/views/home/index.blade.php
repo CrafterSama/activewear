@@ -21,7 +21,7 @@
      </div>
 </div>
 <div class="buttons col-xs-12 col-md-8 ">
-    <div class="row-fluid">
+    <div class="row">
         <div class="img-1 col-xs-6 col-md-4">
             <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos" width="100%">
             <div class="title-box carioca_color1">
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="row-fluid">
+    <div class="row">
         <div class="img-2 col-xs-6 col-md-4">
             <a href="/carrito"><img class="carrito col-md-12" src="/../assets/images/home_carrito.png" alt="carrito" width="100%"></a>
             <div class="title-box carioca_color4">
@@ -41,24 +41,24 @@
 <div class="col-xs-6 col-md-4">
     <div class="col-md-12 social-buttons">
         <div class="row social">
-            <div class="col-xs-4 carioca_color1">
+            <div class="col-sm-4 carioca_color1">
                 <div class="social-box "><a class="btn btn-block btn-social btn-instagram" href="http://www.instagram.com/carioca_activewear"><i class="fa fa-instagram fa-lg fa-3x"></i></a></div>
             </div>
-            <div class="col-xs-4 carioca_color4">
+            <div class="col-sm-4 carioca_color4">
                 <div class="social-box"><a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/pages/Carioca-Activewear/332150280300248"><i class="fa fa-facebook fa-lg fa-3x"></i></a></div>
             </div>
-            <div class="col-xs-4 carioca_color3">
+            <div class="col-sm-4 carioca_color3">
                 <div class="social-box"><a class="btn btn-block btn-social btn-twitter" href="http://www.twitter.com/cariocaactive"><i class="fa fa-twitter fa-lg fa-3x"></i></a></div>
             </div>
         </div>
         <div class="row boxes">
-            <div class="col-xs-4 carioca_color1">
+            <div class="col-sm-4 carioca_color1">
                 <div class="box"></div>
             </div>
-            <div class="col-xs-4 carioca_color4">
+            <div class="col-sm-4 carioca_color4">
                 <div class="box"></div>
             </div>
-            <div class="col-xs-4 carioca_color3">
+            <div class="col-sm-4 carioca_color3">
                 <div class="box"></div>
             </div>
         </div>
@@ -69,7 +69,7 @@
         </div>
     </div>
 </div>
-<div class="last-box-index col-md-12">
+<div class="last-box-index col-xs-4 col-md-12">
     <div class="col-md-6 carioca_color2">
         <a href="/productos/pioggia" rel="nofollow">&nbsp;&nbsp; Productos Pioggia &nbsp;&nbsp; <img src="/../assets/images/logo-pioggia.png" alt="acerca de" width="13%" align="" class=""></a>
     </div>

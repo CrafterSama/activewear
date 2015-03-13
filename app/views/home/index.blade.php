@@ -38,9 +38,9 @@
         </div>
     </div>
 </div>
-<div class="col-md-4">
+<div class="row-fluid col-md-4">
     <div class="col-md-12 social-buttons">
-        <div class="row social">
+        <div class="row-fluid social">
             <div class="col-xs-4 carioca_color1">
                 <div class="social-box "><a class="btn btn-block btn-social btn-instagram" href="http://www.instagram.com/carioca_activewear"><i class="fa fa-instagram fa-lg fa-3x"></i></a></div>
             </div>
@@ -51,7 +51,7 @@
                 <div class="social-box"><a class="btn btn-block btn-social btn-twitter" href="http://www.twitter.com/cariocaactive"><i class="fa fa-twitter fa-lg fa-3x"></i></a></div>
             </div>
         </div>
-        <div class="row boxes">
+        <div class="row-fluid boxes">
             <div class="col-xs-4 carioca_color1">
                 <div class="box"></div>
             </div>
@@ -62,7 +62,7 @@
                 <div class="box"></div>
             </div>
         </div>
-        <div class="row text-box carioca_color2">
+        <div class="row-fluid text-box carioca_color2">
             <div class="col-md-12">
                 <h3 class="fig-text"><strong>Siguenos +</strong></h3>
             </div>

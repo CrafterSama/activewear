@@ -21,16 +21,16 @@
      </div>
 </div>
 <div class="buttons col-md-8 col-xs-12">
-    <div class="row-fluid">
-        <div class="img-1 col-xs-6 col-md-6">
+    <div class="img-1 col-xs-6 col-md-6">
+        <div class="row-fluid">
             <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos" width="100%">
             <div class="title-box carioca_color1">
                 <h3 class="fig-text"><a href="/productos/carioca" alt="Productos Carioca"><strong>Productos Carioca + </strong></a></h3>
             </div>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="img-2 col-xs-6 col-md-6">
+    <div class="img-2 col-xs-6 col-md-6">
+        <div class="row-fluid">
             <a href="/carrito"><img class="carrito col-md-12" src="/../assets/images/home_carrito.png" alt="carrito" width="100%"></a>
             <div class="title-box carioca_color4">
                 <h3 class="fig-text"><a href="/carrito" alt="Carrito de Compras"><strong>Carrito + </strong></a></h3>
@@ -39,26 +39,26 @@
     </div>
 </div>
 <div class="col-md-4">
-    <div class="col-md-12 social-buttons">
+    <div class="col-xs-12 social-buttons">
         <div class="row social">
-            <div class="col-md-4 carioca_color1">
+            <div class="col-xs-4 carioca_color1">
                 <div class="social-box "><a class="btn btn-block btn-social btn-instagram" href="http://www.instagram.com/carioca_activewear"><i class="fa fa-instagram fa-lg fa-3x"></i></a></div>
             </div>
-            <div class="col-md-4 carioca_color4">
+            <div class="col-xs-4 carioca_color4">
                 <div class="social-box"><a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/pages/Carioca-Activewear/332150280300248"><i class="fa fa-facebook fa-lg fa-3x"></i></a></div>
             </div>
-            <div class="col-md-4 carioca_color3">
+            <div class="col-xs-4 carioca_color3">
                 <div class="social-box"><a class="btn btn-block btn-social btn-twitter" href="http://www.twitter.com/cariocaactive"><i class="fa fa-twitter fa-lg fa-3x"></i></a></div>
             </div>
         </div>
         <div class="row boxes">
-            <div class="col-md-4 carioca_color1">
+            <div class="col-xs-4 carioca_color1">
                 <div class="box"></div>
             </div>
-            <div class="col-md-4 carioca_color4">
+            <div class="col-xs-4 carioca_color4">
                 <div class="box"></div>
             </div>
-            <div class="col-md-4 carioca_color3">
+            <div class="col-xs-4 carioca_color3">
                 <div class="box"></div>
             </div>
         </div>

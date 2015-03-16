@@ -38,30 +38,34 @@
     <div class="row">
         <div class="col-md-12 social-buttons">
             <div class="social">
-                <div class="col-xs-4 carioca_color1">
-                    <div class="social-box "><a class="btn btn-block btn-social btn-instagram" href="http://www.instagram.com/carioca_activewear"><i class="fa fa-instagram fa-lg fa-3x"></i></a></div>
-                </div>
-                <div class="col-xs-4 carioca_color4">
-                    <div class="social-box"><a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/pages/Carioca-Activewear/332150280300248"><i class="fa fa-facebook fa-lg fa-3x"></i></a></div>
-                </div>
-                <div class="col-xs-4 carioca_color3">
-                    <div class="social-box"><a class="btn btn-block btn-social btn-twitter" href="http://www.twitter.com/cariocaactive"><i class="fa fa-twitter fa-lg fa-3x"></i></a></div>
+                <div class="row">
+                    <div class="col-xs-4 carioca_color1">
+                        <div class="social-box "><a class="btn btn-block btn-social btn-instagram" href="http://www.instagram.com/carioca_activewear"><i class="fa fa-instagram fa-lg fa-3x"></i></a></div>
+                    </div>
+                    <div class="col-xs-4 carioca_color4">
+                        <div class="social-box"><a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/pages/Carioca-Activewear/332150280300248"><i class="fa fa-facebook fa-lg fa-3x"></i></a></div>
+                    </div>
+                    <div class="col-xs-4 carioca_color3">
+                        <div class="social-box"><a class="btn btn-block btn-social btn-twitter" href="http://www.twitter.com/cariocaactive"><i class="fa fa-twitter fa-lg fa-3x"></i></a></div>
+                    </div>
                 </div>
             </div>
             <div class="boxes">
-                <div class="col-xs-4 carioca_color1">
-                    <div class="box"></div>
+                <div class="row">
+                    <div class="col-xs-4 carioca_color1">
+                        <div class="box"></div>
+                    </div>
+                    <div class="col-xs-4 carioca_color4">
+                        <div class="box"></div>
+                    </div>
+                    <div class="col-xs-4 carioca_color3">
+                        <div class="box"></div>
+                    </div>
                 </div>
-                <div class="col-xs-4 carioca_color4">
-                    <div class="box"></div>
-                </div>
-                <div class="col-xs-4 carioca_color3">
-                    <div class="box"></div>
-                </div>
-            </div>
-            <div class="text-box carioca_color2">
-                <div class="col-md-12">
-                    <h3 class="fig-text"><strong>Siguenos +</strong></h3>
+                <div class="text-box carioca_color2">
+                    <div class="col-md-12">
+                        <h3 class="fig-text"><strong>Siguenos +</strong></h3>
+                    </div>
                 </div>
             </div>
         </div>

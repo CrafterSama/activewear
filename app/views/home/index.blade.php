@@ -61,11 +61,9 @@
             </div>
         </div>
         <div class="text-box carioca_color2">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="fig-text"><strong>Siguenos +</strong></h3>
-                </div> 
-            </div>
+            <div class="col-md-12">
+                <h3 class="fig-text"><strong>Siguenos +</strong></h3>
+            </div> 
         </div>
     </div>
 </div>

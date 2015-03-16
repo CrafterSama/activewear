@@ -154,7 +154,7 @@ $url = Request::path();
 						<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}"><i style="color: #333" class="fa fa-instagram fa-x4"></i></a>
 					</p>
 					<p>
-						Creado por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em; padding: .3em;" href="http://craftersama.me"><img style="margin-bottom: -3px;" src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="24px">&nbsp; CrafterSama Studio</a>
+						Creado por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em;" href="http://craftersama.me"><img style="margin-bottom: -3px;" src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="24px">&nbsp; CrafterSama Studio</a>
 					</p> 
 					<p><span id="back-to-top">Subir</span></p>
 				</div>

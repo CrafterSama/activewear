@@ -130,42 +130,30 @@ $url = Request::path();
 					</div>
 				</div>
 			</header>
-			{{-- @if($url == '/')
-				<section class="body-bg">
-					<div class="main">
-						<div class="container">
-							@yield('content')
-						</div>
-					</div>
-				</section>
-			@else --}}
-				<div class="main">
-					<div class="container">
-						@yield('content')
-					</div>
-				</div>
-			{{-- @endif --}}
-			<footer class="footer">
+			<div class="main">
 				<div class="container">
-					<p> &nbsp; {{ Configuration::getCompanyName() }}&copy;</p>
-					<p>
-						<a style="opacity: 0.5;" href="{{ Configuration::getTwitter() }}">
-							<i style="color: #333" class="fa fa-twitter-square fa-2x"></i>
-						</a>
-						&nbsp; &nbsp;
-						<a style="opacity: 0.5;" href="{{ Configuration::getInstagram() }}">
-							<i style="color: #333" class="fa fa-facebook-square fa-2x"></i>
-						</a>
-						&nbsp; &nbsp;
-						<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}">
-							<i style="color: #333" class="fa fa-instagram fa-2x"></i>
-						</a>
-					</p>
-					<p style="text-align: right;">
-						Diseño por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em;" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
-					</p> 
-					<p><span id="back-to-top">Subir</span></p>
+					@yield('content')
 				</div>
+			</div>
+			<footer class="footer">
+				<p> &nbsp; {{ Configuration::getCompanyName() }}&copy;</p>
+				<p>
+					<a style="opacity: 0.5;" href="{{ Configuration::getTwitter() }}">
+						<i style="color: #333" class="fa fa-twitter-square fa-2x"></i>
+					</a>
+					&nbsp; &nbsp;
+					<a style="opacity: 0.5;" href="{{ Configuration::getInstagram() }}">
+						<i style="color: #333" class="fa fa-facebook-square fa-2x"></i>
+					</a>
+					&nbsp; &nbsp;
+					<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}">
+						<i style="color: #333" class="fa fa-instagram fa-2x"></i>
+					</a>
+				</p>
+				<p style="text-align: right;">
+					Diseño por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em;" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
+				</p> 
+				<p><span id="back-to-top">Subir</span></p>
 			</footer>
 		{{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
 		<!-- Bootstrap core JavaScript

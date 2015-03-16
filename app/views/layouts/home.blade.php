@@ -168,6 +168,7 @@ $url = Request::path();
 							</td>
 						</tr>
 					</table>
+					<p><span id="back-to-top">Subir</span></p>
 				</div>
 			</footer>
 		{{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}

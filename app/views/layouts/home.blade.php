@@ -147,14 +147,22 @@ $url = Request::path();
 			{{-- @endif --}}
 			<footer class="footer">
 				<div class="container">
-					<p>&copy; &nbsp; {{ Configuration::getCompanyName() }}<br></p>
+					<p> &nbsp; {{ Configuration::getCompanyName() }}&copy;</p>
 					<p>
-						<a style="opacity: 0.5;" href="{{ Configuration::getTwitter() }}"><i style="color: #333" class="fa fa-twitter-square fa-x4"></i></a>&nbsp; &nbsp;
-						<a style="opacity: 0.5;" href="{{ Configuration::getInstagram() }}"><i style="color: #333" class="fa fa-facebook-square fa-x4"></i></a>&nbsp; &nbsp;
-						<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}"><i style="color: #333" class="fa fa-instagram fa-x4"></i></a>
+						<a style="opacity: 0.5;" href="{{ Configuration::getTwitter() }}">
+							<i style="color: #333" class="fa fa-twitter-square fa-2x"></i>
+						</a>
+						&nbsp; &nbsp;
+						<a style="opacity: 0.5;" href="{{ Configuration::getInstagram() }}">
+							<i style="color: #333" class="fa fa-facebook-square fa-2x"></i>
+						</a>
+						&nbsp; &nbsp;
+						<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}">
+							<i style="color: #333" class="fa fa-instagram fa-2x"></i>
+						</a>
 					</p>
-					<p>
-						Creado por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em;" href="http://craftersama.me"><img style="margin-bottom: -3px;" src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="24px">&nbsp; CrafterSama Studio</a>
+					<p style="text-align: right;">
+						Diseño por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em;" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
 					</p> 
 					<p><span id="back-to-top">Subir</span></p>
 				</div>

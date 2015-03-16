@@ -147,8 +147,27 @@ $url = Request::path();
 			{{-- @endif --}}
 			<footer class="footer">
 				<div class="container">
-					<p>Creado por <a href="http://craftersama.me">CrafterSama Studio</a></p>
-					<p><span id="back-to-top">Subir</span></p>
+					<table align="center">
+						<tr>
+							<td style="text-align: center;padding: 40px 0px 0px 0px;font-family: sans-serif; font-size: 12px; line-height: 18px;color: #888888;">
+								© {{ Configuration::getCompanyName() }}<br>
+								<p></p>
+								<a href="mailto:{{ Configuration::getContactEmail() }}" style="font-weight:bold; color: #8a929f;">{{ Configuration::getContactEmail() }}</a><br><br>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;padding: 10px 0px 40px 0px;font-family: sans-serif; font-size: 12px; line-height: 18px;color: #888888;">
+								<a style="opacity: 0.5;" href="{{ Configuration::getTwitter() }}"><img src="https://raw.githubusercontent.com/danleech/simple-icons/master/icons/twitter/twitter-64-black.png" alt="Twitter"><i style="color: #ccc" class="fa fa-twitter-square fa-x2"></i></a>&nbsp; &nbsp;
+								<a style="opacity: 0.5;" href="{{ Configuration::getInstagram() }}"><img src="https://raw.githubusercontent.com/danleech/simple-icons/master/icons/instagram/instagram-64-black.png" alt="Instagram"><i style="color: #ccc" class="fa fa-facebook-square fa-x2"></i></a>&nbsp; &nbsp;
+								<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}"><img src="https://raw.githubusercontent.com/danleech/simple-icons/master/icons/facebook/facebook-64-black.png" alt="Facebook"><i style="color: #ccc" class="fa fa-instagram fa-x2"></i></a>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;padding: 10px 0px 40px 0px;font-family: sans-serif; font-size: 12px; line-height: 18px;color: #888888;">
+								Creado por &nbsp; <a style="font-size: 1.2em; font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em; padding: .3em;" href="http://craftersama.me"><img style="margin-bottom: -3px;" src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="16px">&nbsp; CrafterSama Studio</a> 
+							</td>
+						</tr>
+					</table>
 				</div>
 			</footer>
 		{{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}

@@ -138,6 +138,8 @@ ul.nav-tabs > li > a.carioca_color5:visited
   display: block;
   margin-top: 15px;
   text-align: center;
+  max-height: 190px;
+  min-height: 90px;
 }
 
 .carioca_line
@@ -714,6 +716,9 @@ div.jMyCarousel ul li img
   .fig-text {
     font-size: 1em;
   }
+  .social-buttons {
+    margin-top: 150px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -759,7 +764,15 @@ div.jMyCarousel ul li img
   {
     width: 19.5%;
   }*/
+
 }
+
+@media (min-width: 360px) and (max-width: 600px) {
+  .social-buttons {
+    margin-top: 130px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .menu-word
   {

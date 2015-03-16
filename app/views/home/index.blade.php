@@ -32,8 +32,8 @@
         </div>
     </div>
 </div>
-<div class="col-md-4">
-    <div class="col-md-12 social-buttons">
+<div class="col-md-4 social-buttons">
+    <div class="col-md-12">
         <div class="social">
             <div class="row">
                 <div class="col-xs-4 carioca_color1">
@@ -59,10 +59,12 @@
                     <div class="box"></div>
                 </div>
             </div>
-            <div class="text-box carioca_color2">
+        </div>
+        <div class="text-box carioca_color2">
+            <div class="row">
                 <div class="col-md-12">
                     <h3 class="fig-text"><strong>Siguenos +</strong></h3>
-                </div>
+                </div> 
             </div>
         </div>
     </div>

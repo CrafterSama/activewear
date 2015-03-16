@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-box carioca_color2">
+        <div class="text-box carioca_color2 row">
             <div class="col-md-12">
                 <h3 class="fig-text"><strong>Siguenos +</strong></h3>
             </div> 

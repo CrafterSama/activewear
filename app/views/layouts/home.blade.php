@@ -83,17 +83,20 @@ $url = Request::path();
 				<div class="bar-menu navbar navbar-default" role="navigation">
 					<div class="container">
 						<div class="navbar-header">
-							<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="fa fa-bars fa-lg"></span><span class="menu-word">&nbsp;&nbsp;MENU</span>
-							</button>
 							@if ($url == '/')
+								<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="fa fa-bars fa-lg"></span><span>&nbsp;&nbsp;MENU</span>
+								</button>
 							@else
-							<span class="social-nav-btns visible-xs pull-right">
-								<a class="cart" href="/carrito"><span class="label label-warning cart-text">{{ Cart::count(); }}</span>&nbsp;&nbsp;<span class="fa fa-shopping-cart fa-lg"></span></a>
-								<a class="instagram" href="http://www.instagram.com/carioca_activewear"><span class="fa fa-instagram fa-lg"></span></a>
-								<a class="facebook" href="https://www.facebook.com/pages/Carioca-Activewear/332150280300248"><span class="fa fa-facebook fa-lg"></span></a>
-								<a class="twitter" href="http://www.twitter.com/cariocaactive"><span class="fa fa-twitter fa-lg"></a></span>
-							</span>
+								<button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="fa fa-bars fa-lg"></span><span class="menu-word">&nbsp;&nbsp;MENU</span>
+								</button>
+								<span class="social-nav-btns visible-xs pull-right">
+									<a class="cart" href="/carrito"><span class="label label-warning cart-text">{{ Cart::count(); }}</span>&nbsp;&nbsp;<span class="fa fa-shopping-cart fa-lg"></span></a>
+									<a class="instagram" href="http://www.instagram.com/carioca_activewear"><span class="fa fa-instagram fa-lg"></span></a>
+									<a class="facebook" href="https://www.facebook.com/pages/Carioca-Activewear/332150280300248"><span class="fa fa-facebook fa-lg"></span></a>
+									<a class="twitter" href="http://www.twitter.com/cariocaactive"><span class="fa fa-twitter fa-lg"></a></span>
+								</span>
 							@endif
 						</div>  
 						<div class="collapse navbar-collapse">

@@ -69,7 +69,7 @@
 </div>
 <div class="last-box-index col-md-12">
     <div class="col-md-6 carioca_color2">
-        <a href="/productos/pioggia" rel="nofollow">&nbsp;&nbsp; Productos Pioggia &nbsp;&nbsp; <img src="/../assets/images/logo-pioggia.png" alt="acerca de" width="13%" align="" class=""></a>
+        <a href="/productos/pioggia" rel="nofollow">&nbsp;&nbsp; Productos Pioggia &nbsp;&nbsp; <img src="/../assets/images/logo-pioggia.png" alt="acerca de" width="15%" align="" class=""></a>
     </div>
     <div class="col-md-6"></div>
 </div>

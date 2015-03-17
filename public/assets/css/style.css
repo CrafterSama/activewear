@@ -296,6 +296,7 @@ ul.nav-tabs > li > a.carioca_color5:visited
 
 .footer
 {
+  min-height: 250px;
   margin-top: 20px;
   background: #ddd;
   color: white;
@@ -303,12 +304,34 @@ ul.nav-tabs > li > a.carioca_color5:visited
 
 .footer a
 {
-  color: white;
+  color: #333;
 }
 
 .footer p
 {
   text-align: center;
+}
+
+.footer div.col {
+float:left;
+width:200px;
+}
+
+.footer dt {
+  font-size:1em;
+  font-weight:bold;
+  padding-bottom:5px;
+  text-decoration: underline;
+}
+
+.footer dd {
+  font-size: 1em;
+  line-height:17px;
+}
+
+.footer div.company {
+  float: right;
+  text-align: right;
 }
 
 .footer-header
@@ -332,8 +355,6 @@ ul.nav-tabs > li > a.carioca_color5:visited
 
 .footer-bottom
 {
-  margin-top: -1em;
-  padding: 1em;
 }
 
 #back-to-top
@@ -724,7 +745,7 @@ div.jMyCarousel ul li img
   }
 }
 @media (max-width: 900px) {
-  .white-space-index, .font-cursiva-index, .quote
+  .white-space-index, .font-cursiva-index, .quote, .footer div.col
   {
     display: none;
   }
@@ -745,6 +766,10 @@ div.jMyCarousel ul li img
   }
   .social-buttons {
     margin-top: 210px;
+  }
+  .footer div.company {
+    float: none;
+    text-align: center;
   }
 }
 

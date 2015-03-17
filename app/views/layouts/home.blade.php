@@ -140,6 +140,7 @@ $url = Request::path();
 					@yield('content')
 				</div>
 			</div>
+			<br />
 			<footer class="footer">
 				<p class="footer-header"> Copyright &copy; &nbsp; {{ Configuration::getCompanyName() }}
 					&nbsp; - &nbsp; Siguenos &nbsp;
@@ -155,10 +156,26 @@ $url = Request::path();
 						<i style="color: #333" class="fa fa-instagram fa-lg"></i>
 					</a>
 				</p>
-				<p class="footer-body">
-					Diagramacion: &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
-				</p> 
-				<p class="footer-bottom"><span id="back-to-top"><i class="fa fa-arrow-up fa-lg"></i> &nbsp; Subir</span></p>
+				<div class="footer-body">
+					<div class="col">
+						<dt>Nosotros</dt>
+						<dd><a href='/acerca-de' title="Enterate que Hacemos y Quienes Somos">Acerca De</a></dd>
+						<dd><a href='/contactos' title="Contacta con nuestro Personal">Contactenos</a></dd>
+					</div>
+
+					<div class="col">
+						<dt>Enlaces</dt>
+						<dd><a href='/productos/carioca' title="Ir a los Productos">Productos</a></dd>
+						<dd><a href='/galerias' title="Ir a la Galeria de la Web">Galerias</a></dd>
+					</div>
+					<div class="company">
+						Powered by &nbsp;  2007 - <?php echo date('Y'); ?> &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
+						<br/>
+						<br/>
+						<br/>
+						<span id="back-to-top"><i class="fa fa-arrow-up fa-lg"></i> &nbsp; Subir</span>
+					</div>
+				</div> 
 			</footer>
 		{{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
 		<!-- Bootstrap core JavaScript

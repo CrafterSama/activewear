@@ -79,6 +79,12 @@ class OrdersController extends \BaseController {
 	}
 	public function cancelAllOrder($id)
 	{
+        /*$order = Factura::withTrashed()->find($id);
+
+        $order->ForceDelete();
+
+        return Redirect::back()->with('notice', 'El Pedido ha sido eliminado correctamente.');*/
+        
 		$items = Item::where('factura_id','=',$id);
 		//print_r($item);
 		foreach ($items as $item) {
@@ -92,7 +98,7 @@ class OrdersController extends \BaseController {
 			} else {
 				return Redirect::back()->with('notice','El pedido no pudo ser cancelado');
 			}			
-			dd($item);
+			// dd($item);
 		}
 		return Redirect::back()->with('notice','Los Productos fueron devueltos a stock y el pedido cancelado');
 

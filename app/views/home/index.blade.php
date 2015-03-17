@@ -20,13 +20,13 @@
 </div>
 <div class="buttons col-md-8 col-xs-12">
     <div class="img-1 col-xs-6 col-md-6">
-        <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos" width="100%">
+        <img class="products col-md-12" src="/../assets/images/home_productos.png" alt="productos" width="120%">
         <div class="title-box carioca_color1">
             <h3 class="fig-text"><a href="/productos/carioca" alt="Productos Carioca"><strong>Productos Carioca + </strong></a></h3>
         </div>
     </div>
     <div class="img-2 col-xs-6 col-md-6">
-        <img class="carrito col-md-12" src="/../assets/images/home_carrito.png" alt="carrito" width="100%">
+        <img class="carrito col-md-12" src="/../assets/images/home_carrito.png" alt="carrito" width="120%">
         <div class="title-box carioca_color4">
             <h3 class="fig-text"><a href="/carrito" alt="Carrito de Compras"><strong>Carrito + </strong></a></h3>
         </div>

@@ -699,6 +699,9 @@ div.jMyCarousel ul li img
   .social-buttons {
     margin-top: 210px;
   }
+  p.second-text {
+    display: none;
+  }
 }
 @media (max-width: 900px) {
   .white-space-index, .font-cursiva-index, .quote

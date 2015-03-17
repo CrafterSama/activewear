@@ -429,12 +429,17 @@ a.blog-nav-item:visited
   padding: 15px 17px;
 }
 
+.logo-image
+{
+  text-align: center;
+}
+
 .image-logo-header
 {
   position: relative;
   top: 0;
   margin-top: -24px;
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
 

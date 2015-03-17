@@ -69,7 +69,7 @@ $url = Request::path();
 					@if ($url == '/')
 						<div class="col-sm-1 carioca_block carioca_color1"></div>
 					@else
-						<div class="col-sm-1"><img class="image-logo-header" src="/../assets/images/logo_carioca.png" alt="logo" /></div>
+						<div class="col-sm-1 logo-image"><img class="image-logo-header" src="/../assets/images/logo_carioca.png" alt="logo" /></div>
 					@endif
 					<div class="col-sm-1 carioca_block carioca_color2"></div>
 					<div class="col-sm-1 carioca_block carioca_color3"></div>

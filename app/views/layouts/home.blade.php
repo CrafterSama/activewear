@@ -136,24 +136,24 @@ $url = Request::path();
 				</div>
 			</div>
 			<footer class="footer">
-				<p> &nbsp; {{ Configuration::getCompanyName() }}&copy;</p>
-				<p>
+				<p class="footer-header"> Copyright &copy; &nbsp; {{ Configuration::getCompanyName() }}
+					&nbsp; - &nbsp; Siguenos &nbsp;
 					<a style="opacity: 0.5;" href="{{ Configuration::getTwitter() }}">
-						<i style="color: #333" class="fa fa-twitter-square fa-2x"></i>
+						<i style="color: #333" class="fa fa-twitter-square fa-lg"></i>
 					</a>
 					&nbsp; &nbsp;
 					<a style="opacity: 0.5;" href="{{ Configuration::getInstagram() }}">
-						<i style="color: #333" class="fa fa-facebook-square fa-2x"></i>
+						<i style="color: #333" class="fa fa-facebook-square fa-lg"></i>
 					</a>
 					&nbsp; &nbsp;
 					<a style="opacity: 0.5;" href="{{ Configuration::getFacebook() }}">
-						<i style="color: #333" class="fa fa-instagram fa-2x"></i>
+						<i style="color: #333" class="fa fa-instagram fa-lg"></i>
 					</a>
 				</p>
-				<p style="text-align: right;">
-					Diseño por &nbsp; <a style="font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em;" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
+				<p class="footer-body">
+					Diagramacion: &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
 				</p> 
-				<p><span id="back-to-top">Subir</span></p>
+				<p class="footer-bottom"><span id="back-to-top"><i class="fa fa-arrow-up fa-lg"></i> &nbsp; Subir</span></p>
 			</footer>
 		{{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
 		<!-- Bootstrap core JavaScript

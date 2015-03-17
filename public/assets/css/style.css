@@ -328,7 +328,7 @@ ul.nav-tabs > li > a.carioca_color5:visited
 .footer
 {
   margin-top: 20px;
-  background: #81bcb4;
+  background: #ddd;
   color: white;
 }
 
@@ -341,6 +341,41 @@ ul.nav-tabs > li > a.carioca_color5:visited
 {
   text-align: right;
 }
+
+.footer-header
+{
+  padding: 1em;
+  background-color: #ccc;
+  color: #333;
+}
+
+.footer-body
+{
+  padding: 1em;
+  background-color: #ddd;
+  color: #333;
+}
+
+.footer-body img 
+{
+  margin-top: -5px;
+}
+
+.footer-bottom
+{
+  padding: 1em;
+}
+
+.craftersama-me
+{
+  background-color: #ccc; 
+  border-radius: .2em; 
+  color: #333; 
+  font-weight: bold; 
+  padding: 0.3em;
+  text-decoration: none; 
+}
+
 
 .carioca-logo
 {

@@ -177,40 +177,9 @@ ul.nav-tabs > li > a.carioca_color5:visited
   color: #fff;
 }
 
-.carioca_block1
+.carioca_block
 {
-  background: #8c2d83;
-  display: inline-block;
-  margin-left: -3px;
   height: 10px;
-  width: 9.98%;
-}
-
-.carioca_block2
-{
-  background: #81bcb4;
-  display: inline-block;
-  margin-left: -3px;
-  height: 10px;
-  width: 9.98%;
-}
-
-.carioca_block3
-{
-  background: #d1da26;
-  display: inline-block;
-  margin-left: -3px;
-  height: 10px;
-  width: 9.98%;
-}
-
-.carioca_block4
-{
-  background: #c94780;
-  display: inline-block;
-  margin-left: -3px;
-  height: 10px;
-  width: 9.98%;
 }
 
 .col-empty
@@ -462,10 +431,11 @@ a.blog-nav-item:visited
 
 .image-logo-header
 {
-  /*position: relative;
-  top: 0;*/
+  position: relative;
+  top: 0;
   margin-top: -24px;
-  width: 9.5%;
+  width: 100%;
+  text-align: center;
 }
 
 .instagram
@@ -782,7 +752,7 @@ div.jMyCarousel ul li img
     border: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar-default
   {
     font-size: 1.1em;
@@ -818,6 +788,9 @@ div.jMyCarousel ul li img
   }*/
   .social-buttons {
     margin-top: 210px;
+  }
+  .carioca_block {
+    display: none;
   }
 }
 

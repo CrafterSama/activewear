@@ -66,20 +66,24 @@ $url = Request::path();
 				<br />
 				<div class="carioca_line">
 					@if ($url == '/')
-						<div class="carioca_block1"></div>
+						<div class="col-sm-1 carioca_block carioca_color1"></div>
 					@else
-						<img class="image-logo-header" src="/../assets/images/logo_carioca.png" alt="logo" width="100%">
+						<div class="col-sm-1"><img class="image-logo-header" src="/../assets/images/logo_carioca.png" alt="logo" /></div>
 					@endif
-					<div class="carioca_block2"></div>
-					<div class="carioca_block3"></div>
-					<div class="carioca_block4"></div>
-					<div class="carioca_block1"></div>
-					<div class="carioca_block2"></div>
-					<div class="carioca_block3"></div>
-					<div class="carioca_block4"></div>
-					<div class="carioca_block1"></div>
-					<div class="carioca_block2"></div>
+					<div class="col-sm-1 carioca_block carioca_color2"></div>
+					<div class="col-sm-1 carioca_block carioca_color3"></div>
+					<div class="col-sm-1 carioca_block carioca_color4"></div>
+					<div class="col-sm-1 carioca_block carioca_color5"></div>
+					<div class="col-sm-1 carioca_block carioca_color1"></div>
+					<div class="col-sm-1 carioca_block carioca_color2"></div>
+					<div class="col-sm-1 carioca_block carioca_color3"></div>
+					<div class="col-sm-1 carioca_block carioca_color4"></div>
+					<div class="col-sm-1 carioca_block carioca_color5"></div>
+					<div class="col-sm-1 carioca_block carioca_color1"></div>
+					<div class="col-sm-1 carioca_block carioca_color2"></div>
 				</div>
+				<br class="carioca_block">
+				<br class="carioca_block">
 				<div class="bar-menu navbar navbar-default" role="navigation">
 					<div class="container">
 						<div class="navbar-header">

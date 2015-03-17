@@ -695,7 +695,11 @@ div.jMyCarousel ul li img
     position: absolute;
   }
 }
-
+@media (min-width: 900px) and (max-width: 999px) {
+  .social-buttons {
+    margin-top: 210px;
+  }
+}
 @media (max-width: 900px) {
   .white-space-index, .font-cursiva-index, .quote
   {

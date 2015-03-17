@@ -764,7 +764,9 @@ div.jMyCarousel ul li img
   {
     width: 19.5%;
   }*/
-
+  .social-buttons {
+    margin-top: 210px;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 600px) {

@@ -55,6 +55,7 @@ $url = Request::path();
 							<li><a href="/logout"><i class="fa fa-sign-out"></i>  Salir</a></li>
 						</ul>
 					</div>
+					<br />
 				@else
 					<div class="login-menu pull-right">
 						<a class="" href="/registrarse">Registrarte <i class="fa fa-edit"></i></a>
@@ -82,8 +83,8 @@ $url = Request::path();
 					<div class="col-sm-1 carioca_block carioca_color1"></div>
 					<div class="col-sm-1 carioca_block carioca_color2"></div>
 				</div>
-				<br class="carioca_block">
-				<br class="carioca_block">
+				<br class="carioca_block" />
+				<br class="carioca_block" />
 				<div class="bar-menu navbar navbar-default" role="navigation">
 					<div class="container">
 						<div class="navbar-header">

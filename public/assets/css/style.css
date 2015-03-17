@@ -339,7 +339,7 @@ ul.nav-tabs > li > a.carioca_color5:visited
 
 .footer p
 {
-  text-align: right;
+  text-align: center;
 }
 
 .footer-header
@@ -363,14 +363,17 @@ ul.nav-tabs > li > a.carioca_color5:visited
 
 .footer-bottom
 {
+  margin-top: -1em;
   padding: 1em;
 }
 
 #back-to-top
 {
   background-color: #333;
+  border-radius: 0.3em;
   color: #fff;
   padding: 0.6em;
+  cursor: pointer;
 }
 
 .craftersama-me

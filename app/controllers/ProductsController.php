@@ -59,14 +59,14 @@ class ProductsController extends \BaseController {
 		$stamp->stamp 	= $filename;
 		$rules 			= array(
 			'stampcode'	=>'required',
-			'stampname'	=>'required',
-			'stampdesc'	=>'required',
+			/*'stampname'	=>'required',
+			'stampdesc'	=>'required',*/
 			'stamp' 	=>'image|max:3072'
 			);
 		$inputs 		= array(
 			'stampname'	=> Input::get('stampname'),
 			'stampcode'	=> Input::get('stampcode'),
-			/*'stampdesc'	=> Input::get('stampdesc'),*/
+			'stampdesc'	=> Input::get('stampdesc'),
 			'stamp' 	=> Input::file('stamp')
 			);
 		$validation 	= Validator::make($inputs, $rules);
@@ -98,9 +98,9 @@ class ProductsController extends \BaseController {
 				);
 				$messages 			= array(
 					'stamp.image|max:3072' => 'La Imagen que intenta agregar pesa mas de 3mb, reduzca su tamaño en megas.',
-					'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
 					'stampcode.required' => 'Debe llenar el Campo Codigo del Stampado',
-					/*'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
+					/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
+					'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
 					'amounts_'.$modelId.'.required' => 'Dede llenar el campo Cantidades',
 					'amounts_'.$modelId.'.numeric' => 'Las cantidades solo pueden ser numeros',
 				);

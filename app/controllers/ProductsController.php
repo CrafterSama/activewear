@@ -79,7 +79,7 @@ class ProductsController extends \BaseController {
 		$validate 	= Validator::make($inputs, $rules);
 		if($validate->fails())	{
 			$errors = $messages;
-			return Redirect::back()->withErrors($validator)->withInput();
+			return Redirect::back()->withErrors($validate)->withInput();
 		} else {
 			if( $validate->passes() ) {
 				

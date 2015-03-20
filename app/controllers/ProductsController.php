@@ -76,12 +76,12 @@ class ProductsController extends \BaseController {
 			/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
 			'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
 		);
-		$validator 	= Validator::make($inputs, $rules);
-		if($validator->fails())	{
+		$validate 	= Validator::make($inputs, $rules);
+		if($validate->fails())	{
 			$errors = $messages;
 			return Redirect::back()->withErrors($validator)->withInput();
 		} else {
-			if( $validation->passes() ) {
+			if( $validate->passes() ) {
 				
 				//Upload the file
 				$uploadPath = 'assets/images/stamps';

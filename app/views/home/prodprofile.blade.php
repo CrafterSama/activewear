@@ -26,7 +26,7 @@
                     <div class="col-md-5">
                         <figure class="img-thumbnail">
                             <a href="/assets/images/stamps/{{ Stamp::getName($product->stamp_id) }}">
-                                <img src="{{ Image::path($image, 'resizeCrop', 435, 420)->responsive('max-width=435', 'resize', 435) }}" alt="" class="img-tumbnail img-responsive">
+                                <img src="{{ Image::path($image, 'resizeCrop', 435, 420)->responsive('max-width=435', 'resize', 435) }}" alt="" class="img-tumbnail img-responsive" />
                             </a>
                         </figure>
                     </div>
@@ -34,6 +34,7 @@
                         <h2>{{ Stamp::getStampCode($product->stamp_id) }} ({{ ucwords(strtolower(Modelo::getName($product->model_id))) }})</h2>
                         <h3>{{ Stamp::getStampName($product->stamp_id) }}</h3>
                         <h3>{{ Stamp::getStampDesc($product->stamp_id) }}</h3>
+                        {{ dd($product->stamp_id) }}
                         <br/>
                         <p><strong>Precio: </strong> Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }} </p>
                         <p><strong>en Stock: </strong> {{ $product->amounts }} </p>

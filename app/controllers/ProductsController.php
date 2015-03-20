@@ -61,7 +61,7 @@ class ProductsController extends \BaseController {
 			'stampcode'	=>'required',
 			/*'stampname'	=>'required',
 			'stampdesc'	=>'required',*/
-			'stamp' 	=>'image|size:3072'
+			'stamp' 	=>'image|max:3072'
 			);
 		$inputs 		= array(
 			'stampname'	=> Input::get('stampname'),
@@ -71,7 +71,7 @@ class ProductsController extends \BaseController {
 			);
 		$messages 			= array(
 			'stamp.image' => 'El Formato del Archivo debe ser de tipos Imagen (.jpg, .png, .gif, .bmp)',
-			'stamp.size:3072' => 'La Imagen que esta tratando de subir pesa mas de 3MB, reduzca su tamaño en megas.',
+			'stamp.max:3072' => 'La Imagen que esta tratando de subir pesa mas de 3MB, reduzca su tamaño en megas.',
 			'stampcode.required' => 'Debe llenar el Campo Codigo del Stampado',
 			/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
 			'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/

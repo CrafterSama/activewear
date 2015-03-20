@@ -70,12 +70,13 @@ class ProductsController extends \BaseController {
 			'stamp' 	=> Input::file('stamp')
 			);
 		$messages 			= array(
-			'stamp.image|size:3072' => 'La Imagen que intenta agregar pesa mas de 3mb, reduzca su tamaño en megas.',
+			'stamp.image' => 'El Formato del Archivo debe ser de tipos Imagen (.jpg, .png, .gif, .bmp)',
+			'stamp.size:3072' => 'La Imagen que esta tratando de subir pesa mas de 3MB, reduzca su tamaño en megas.',
 			'stampcode.required' => 'Debe llenar el Campo Codigo del Stampado',
 			/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
 			'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
 		);
-		$validation 	= Validator::make($inputs, $rules);
+		$validator 	= Validator::make($inputs, $rules);
 		if($validator->fails())	{
 			$errors = $messages;
 			return Redirect::back()->withErrors($validator)->withInput();

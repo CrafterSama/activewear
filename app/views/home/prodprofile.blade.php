@@ -34,7 +34,7 @@
                         <h2>{{ Stamp::getStampCode($product->stamp_id) }} ({{ ucwords(strtolower(Modelo::getName($product->model_id))) }})</h2>
                         <h3>{{ Stamp::getStampName($product->stamp_id) }}</h3>
                         <h3>{{ Stamp::getStampDesc($product->stamp_id) }}</h3>
-                        {{ dd($product->stamp_id) }}
+                        {{ $product->stamp_id }}
                         <br/>
                         <p><strong>Precio: </strong> Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }} </p>
                         <p><strong>en Stock: </strong> {{ $product->amounts }} </p>

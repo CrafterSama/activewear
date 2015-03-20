@@ -56,7 +56,7 @@
 								<?php $image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id); ?>
 								<tr>
 									<td class="col-xs-2" data-title="Estampado"><a href="/assets/images/stamps/{{ Stamp::getName($product->stamp_id) }}" class="img-thumbnail"><img src="{{ Image::path($image, 'resizeCrop', 150, 145)->responsive('max-width=150', 'resize', 100) }}" alt="Estampado" /></a><br /> </td>
-									<td data-title="Modelo">{{ Stamp::getStampName($product->stamp_id).'<br />'.Modelo::getName($product->model_id) }}</td>
+									<td data-title="Modelo">{{ Stamp::getStampCode($product->stamp_id).'<br />'.Modelo::getName($product->model_id).'<br />'.Stamp::getStampName($product->stamp_id).'<br />'.Stamp::getStampDesc($product->stamp_id) }}</td>
 									<td data-title="Marca">{{ $brand }}</td>
 									<td data-title="Cantidad">{{ $product->amounts }}</td>
 									<td class="visible-lg" data-title="Valor Unitario">Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }}</td>

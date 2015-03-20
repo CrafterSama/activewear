@@ -194,7 +194,7 @@ class CartController extends BaseController {
 
     public function get_orders(){
         
-        return View::make('home.orders', array('orders' => Auth::user()->facturas));
+        return View::make('home.orders', array('orders' => Auth::user()->facturas->orderBy('created_at','desc')));
     }
 
     public function get_order($id){

@@ -69,62 +69,67 @@ class ProductsController extends \BaseController {
 			'stampdesc'	=> Input::get('stampdesc'),
 			'stamp' 	=> Input::file('stamp')
 			);
+		$messages 			= array(
+			'stamp.image|size:3072' => 'La Imagen que intenta agregar pesa mas de 3mb, reduzca su tamaño en megas.',
+			'stampcode.required' => 'Debe llenar el Campo Codigo del Stampado',
+			/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
+			'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
+		);
 		$validation 	= Validator::make($inputs, $rules);
-		if( $validation->passes() )
-		{
-			//Upload the file
-			$uploadPath = 'assets/images/stamps';
-			$upload 	= $file->move($uploadPath,$filename);
-			if ($upload) {
-				$stamp->save();
-			}
-			//if it validate
-
-			$stampId = Stamp::orderBy('created_at','DESC')->first();
-			foreach (Input::get('model_id') as $modelId) {
-				$product 			= new Product();
-				$product->model_id 	= $modelId;
-				$amounts 			= Input::get('amounts_'.$modelId.'');
-				$brand 				= Input::get('brand');
-				$product->amounts 	= $amounts;
-				$product->stamp_id 	= $stampId->id;
-				$product->brand     = $brand;
-				$amount 			= 'amounts_'.$modelId;
-				$rules 				= array(
-					$amount 		=> 'required|numeric'
-				);
-				$inputs 			= array(
-					$amount 		=> $amounts
-				);
-				$messages 			= array(
-					'stamp.image|size:3072' => 'La Imagen que intenta agregar pesa mas de 3mb, reduzca su tamaño en megas.',
-					'stampcode.required' => 'Debe llenar el Campo Codigo del Stampado',
-					/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
-					'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
-					'amounts_'.$modelId.'.required' => 'Dede llenar el campo Cantidades',
-					'amounts_'.$modelId.'.numeric' => 'Las cantidades solo pueden ser numeros',
-				);
+		if($validator->fails())	{
+			$errors = $messages;
+			return Redirect::back()->withErrors($validator)->withInput();
+		} else {
+			if( $validation->passes() ) {
 				
-				$validator 			= 	Validator::make($inputs,$rules);
-				if($validator->fails())
-				{
-					$errors 		= $messages;
-					return Redirect::back()->withErrors($validator)->withInput();
+				//Upload the file
+				$uploadPath = 'assets/images/stamps';
+				$upload 	= $file->move($uploadPath,$filename);
+				if ($upload) {
+					$stamp->save();
 				}
-				else
-				{
-					$product->save();
+				//if it validate
+
+				$stampId = Stamp::orderBy('created_at','DESC')->first();
+				foreach (Input::get('model_id') as $modelId) {
+					$product 			= new Product();
+					$product->model_id 	= $modelId;
+					$amounts 			= Input::get('amounts_'.$modelId.'');
+					$brand 				= Input::get('brand');
+					$product->amounts 	= $amounts;
+					$product->stamp_id 	= $stampId->id;
+					$product->brand     = $brand;
+					$amount 			= 'amounts_'.$modelId;
+					$rules 				= array(
+					$amount 		=> 'required|numeric'
+					);
+					$inputs 			= array(
+					$amount 		=> $amounts
+					);
+					$messages 			= array(
+						'amounts_'.$modelId.'.required' => 'Dede llenar el campo Cantidades',
+						'amounts_'.$modelId.'.numeric' => 'Las cantidades solo pueden ser numeros',
+					);
 					
-				}/* */
+					$validator = Validator::make($inputs,$rules);
+					if($validator->fails())	{
+						$errors = $messages;
+						return Redirect::back()->withErrors($validator)->withInput();
+					} else {
+						$product->save();
+						
+					}/* */
+				}
+		
+				
+				return Redirect::to('admin/productos')->with('notice', 'Los productos han sido agregados correctamente.');
+				
+			} else {
+				
+				return Redirect::to('admin/productos')->with('notice','No se logro guardar informacion en los estampados');
+			
 			}
-			
-			return Redirect::to('admin/productos')->with('notice', 'Los productos han sido agregados correctamente.');
-			
-		}
-		else
-		{
-			return Redirect::to('admin/productos')->with('notice','No se logro guardar informacion en los estampados');
-		}
+		}/* */
 	}
 
 

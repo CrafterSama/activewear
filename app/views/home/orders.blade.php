@@ -26,6 +26,7 @@
 								<tr>
 									<td data-title="ID" class="col-md-3">
 										{{ $order->id }}
+										{{ $userid }}
 									</td>
 									<td data-title="Productos" class="col-md-3 text-center">
 										{{ Item::countItems($order->id) }}

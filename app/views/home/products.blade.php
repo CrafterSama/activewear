@@ -79,8 +79,8 @@ if ($url=='largo')
 						</div>
 					</div>
 				@endforeach
+				{{ $products->links() }}
 			@endif
 	    </div>
 	</div>
-	{{ $products->links() }}
 @stop

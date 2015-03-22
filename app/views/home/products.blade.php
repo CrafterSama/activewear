@@ -66,15 +66,20 @@ if ($url=='largo')
 							</a>
 						</div>
 						<div class="item-right col-sm-6">
-							<a style="color: black; font-size:1.3em;" href="/productos/ver/{{ $product->id }}">{{ ucwords(strtolower(Stamp::getStampCode($product->stamp_id))) }}</a>
+							<a style="color: black; font-size:1.3em;" href="/productos/ver/{{ $product->id }}">
+								{{ ucwords(strtolower(Stamp::getStampCode($product->stamp_id))) }}
+							</a>
 							<br />
 							<strong>Marca:</strong> {{ ucwords(strtoupper($brand)) }}
 							<br />
-							<strong style="color:black;">En Stock:</strong> <span class="label label-primary pro-count carioca_color1">{{ $product->amounts }}</span>
+							<strong style="color:black;">En Stock:</strong>
+							<span class="label label-primary pro-count carioca_color1">
+								{{ $product->amounts }}
+							</span>
 							<br />
-							{{ ucwords(strtoupper(Stamp::getStampName($product->model_id))) }}
+							{{ ucwords(strtoupper(Stamp::getStampName($product->stamp_id))) }}
 							<br />
-							{{ ucwords(strtoupper(Stamp::getStampDesc($product->model_id))) }}
+							{{ ucwords(strtoupper(Stamp::getStampDesc($product->stamp_id))) }}
 							{{-- $product->stamp_id --}}
 						</div>
 					</div>

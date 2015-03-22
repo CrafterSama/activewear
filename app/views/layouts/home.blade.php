@@ -169,7 +169,7 @@ $url = Request::path();
 						<dd><a href='/galerias' title="Ir a la Galeria de la Web">Galerias</a></dd>
 					</div>
 					<div class="company">
-						Powered by &nbsp;  2007 - <?php echo date('Y'); ?> &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
+						Developed by &nbsp;  2013 - <?php echo date('Y'); ?> &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
 						<br/>
 						<a href="mailto:mundofuturoca@gmail.com" class="craftersama-me">Mundo Futuro</a>
 						<br/>

@@ -75,7 +75,7 @@ if ($url=='largo')
 							{{ ucwords(strtoupper(Stamp::getStampName($product->model_id))) }}
 							<br />
 							{{ ucwords(strtoupper(Stamp::getStampDesc($product->model_id))) }}
-							{{ $product->stamp_id }}
+							{{-- $product->stamp_id --}}
 						</div>
 					</div>
 				@endforeach

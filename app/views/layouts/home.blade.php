@@ -171,6 +171,10 @@ $url = Request::path();
 					<div class="company">
 						Powered by &nbsp;  2007 - <?php echo date('Y'); ?> &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
 						<br/>
+						<a href="mailto:mundofuturoca@gmail.com" class="craftersama-me">Mundo Futuro</a>
+						<br/>
+						<a href="mailto:naomicampuzano@gmail.com" class="craftersama me"><img src="http://craftersama.me/images/V.png" alt="" width="20px">&nbsp; Naomi Campuzano</a>
+						<br/>
 						<br/>
 						<br/>
 						<span id="back-to-top"><i class="fa fa-arrow-up fa-lg"></i> &nbsp; Subir</span>

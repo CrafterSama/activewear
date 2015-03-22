@@ -173,7 +173,7 @@ $url = Request::path();
 						<br/>
 						<a href="mailto:mundofuturoca@gmail.com" class="craftersama-me">Mundo Futuro</a>
 						<br/>
-						<a href="mailto:naomicampuzano@gmail.com" class="craftersama me"><img src="http://craftersama.me/images/V.png" alt="" width="20px">&nbsp; Naomi Campuzano</a>
+						<a href="mailto:naomicampuzano@gmail.com" class="craftersama-me"><img src="http://craftersama.me/images/V.png" alt="" width="20px">&nbsp; Naomi Campuzano</a>
 						<br/>
 						<br/>
 						<br/>

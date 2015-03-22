@@ -727,7 +727,11 @@ div.jMyCarousel ul li img
 /********************************/
 /*   Estilo para el Responsive  */
 /********************************/
-
+@media (width: 1024px) {
+  p.second-text {
+    display: none;
+  }
+}
 @media (max-width: 1023px) {
   .font-cursiva-index p.second-text {
     font-size: 0.7em;

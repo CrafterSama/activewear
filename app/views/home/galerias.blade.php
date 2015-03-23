@@ -24,6 +24,7 @@
                 <div class="carioca_color1 fig-text"><h3><a href="/galerias/desfiles"><p align="right">Desfiles <br />Carioca 2014 + </p></a></h3></div>
             </div>
         </div>
+        <div class="col-empty visible-md visible-lg">.</div>
         <div class="col-sm-2 visible-sm"></div>
         <div class="col-md-3 col-sm-5">
             <div class="row">

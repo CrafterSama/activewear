@@ -35,7 +35,7 @@
 						@include ('common/errors', array('errors' => $errors))
 						<div class="row">
 							<div class="form-group col-md-6" >
-								<h4>Nombre e Imagen del Producto</h4>
+								<h4>Codigo, Nombre, Descripción e Imagen del Producto</h4>
 								<hr />
 								{{ Form::label('stampcode','Codigo del Estampado') }}
 								{{ Form::text('stampcode','',array('placeholder'=>'Codigo del Estampado','class'=>'form-control')) }}
@@ -89,8 +89,10 @@
 								<br />
 								<img src="/../assets/images/stamps/{{ Stamp::getName($stamp->id) }}" alt="" width="120px" class="img-thumbnail" />
 								<br />
-								<label for="stampname">Nombre del Stampado</label>
-								<input type="text" value="{{ Stamp::getStampname($stamp->id) }}" name="stampname" class="form-control">
+								<label for="stampname">Codigo del Stampado</label>
+								<input type="text" value="{{ Stamp::getStampCode($stamp->id) }}" name="stampcode" class="form-control">				<label for="stampname">Nombre del Stampado</label>
+								<input type="text" value="{{ Stamp::getStampName($stamp->id) }}" name="stampname" class="form-control">				<label for="stampname">Descripcion del Stampado</label>
+								<input type="text" value="{{ Stamp::getStampDesc($stamp->id) }}" name="stampdesc" class="form-control">
 								<br />
 								<label for="amounts">Cantidades</label>
 								<input type="number" min="1" value="{{ Product::getAmounts($product->id) }}" name="amounts" class="form-control">

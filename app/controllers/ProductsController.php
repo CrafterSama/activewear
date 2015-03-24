@@ -178,10 +178,12 @@ class ProductsController extends \BaseController {
 		
 		$product->amounts = Input::get('amounts');
 		$stamp->stampname = Input::get('stampname');
+		$stamp->stampcode = Input::get('stampcode');
+		$stamp->stampdesc = Input::get('stampdesc');
 		
 		if ($product->save() && $stamp->save())
 		{
-			return Redirect::to('admin/productos')->with('notice', 'El producto se edito correctamente.');
+			return Redirect::to('admin/productos')->with('notice', 'El producto fue editado de manera satisfactoria.');
 		}
 	}
 

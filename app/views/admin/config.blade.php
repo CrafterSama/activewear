@@ -49,6 +49,12 @@
 										<textarea name="{{ $config->config_name }}" class="form-control" required>{{ $config->config_value }}</textarea>
 								@endif
 							</div>
+							<div class="col-sm-2">
+								Vista Previa
+							</div>
+							<div class="col-sm-10">
+								{{ $config->config_value }}
+							</div>
 						</div>
 						<br />
 						@endforeach

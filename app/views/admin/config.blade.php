@@ -52,12 +52,14 @@
 								<br />
 								<br />
 							</div>
+							<hr />
 							<div class="col-sm-1">
 								Vista Previa
 							</div>
 							<div class="col-sm-11">
 								{{ $config->config_value }}
 							</div>
+							<hr />
 						</div>
 						<br />
 						@endforeach

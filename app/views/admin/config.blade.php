@@ -49,9 +49,9 @@
 										<textarea name="{{ $config->config_name }}" class="form-control" required>{{ $config->config_value }}</textarea>
 										<br />
 								@endif
-								<br />
-								<br />
 							</div>
+							<br />
+							<br />
 							<div class="control-label col-sm-3">
 								Vista Previa
 							</div>

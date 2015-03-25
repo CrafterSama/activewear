@@ -52,14 +52,12 @@
 								<br />
 								<br />
 							</div>
-							<hr />
 							<div class="control-label col-sm-3">
 								Vista Previa
 							</div>
 							<div class="form-control col-sm-9">
 								{{ $config->config_value }}
 							</div>
-							<hr />
 						</div>
 						<br />
 						@endforeach

@@ -53,10 +53,10 @@
 								<br />
 							</div>
 							<hr />
-							<div class="col-sm-1">
+							<div class="control-label col-sm-3">
 								Vista Previa
 							</div>
-							<div class="col-sm-11">
+							<div class="form-control col-sm-9">
 								{{ $config->config_value }}
 							</div>
 							<hr />

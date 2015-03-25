@@ -55,7 +55,7 @@
 							<div class="control-label col-sm-3">
 								Vista Previa
 							</div>
-							<div class="form-control col-sm-9">
+							<div class="alert alert-info col-sm-9">
 								{{ $config->config_value }}
 							</div>
 						</div>

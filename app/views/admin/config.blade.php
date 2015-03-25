@@ -41,8 +41,6 @@
 							}*/		
 						</script>
 						{{ Form::label($config->config_name, strtoupper($config->config_name), array('class' => 'control-label col-sm-3') ) }}
-						<br />
-						Vista Previa
 							<div class="input-group col-sm-9">
 								<span class="input-group-addon">Value</span>
 								@if(is_numeric($config->config_value))
@@ -50,7 +48,14 @@
 								@else
 										<textarea name="{{ $config->config_name }}" class="form-control" required>{{ $config->config_value }}</textarea>
 										<br />
-										{{ $config->config_value }}
+										<br />
+										<br />
+										<div class="col-sm-3">
+											Vista Previa
+										</div>
+										<div class="col-sm-9">
+											{{ $config->config_value }}
+										</div>
 								@endif
 	
 							</div>

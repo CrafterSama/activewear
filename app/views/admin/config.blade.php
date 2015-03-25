@@ -51,7 +51,6 @@
 								@endif
 							</div>
 							<br />
-							<br />
 							<div class="control-label col-sm-3">
 								Vista Previa
 							</div>

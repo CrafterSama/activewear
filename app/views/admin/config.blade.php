@@ -48,16 +48,15 @@
 								@else
 										<textarea name="{{ $config->config_name }}" class="form-control" required>{{ $config->config_value }}</textarea>
 										<br />
-										<br />
-										<br />
-										<div class="col-sm-3">
-											Vista Previa
-										</div>
-										<div class="col-sm-9">
-											{{ $config->config_value }}
-										</div>
 								@endif
-	
+								<br />
+								<br />
+							</div>
+							<div class="col-sm-1">
+								Vista Previa
+							</div>
+							<div class="col-sm-11">
+								{{ $config->config_value }}
 							</div>
 						</div>
 						<br />

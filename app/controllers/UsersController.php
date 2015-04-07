@@ -242,6 +242,7 @@ class UsersController extends BaseController {
 	public function password($id)
 	{
 		if(!$this->autorizado) return Redirect::to('/login');
+		
 		$user = User::find($id);
 		
 		return View::make('users.password')->with('user', $user);

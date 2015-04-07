@@ -46,8 +46,8 @@
 									<a href="/admin/usuarios/{{ $user->id }}/perfil" class="btn btn-info btn-xs white"  data-toggle="tooltip" data-placement="top" title="Ver Perfil"><i class="fa fa-user fa-lg"></i></a>
 									<a href="/admin/usuarios/{{ $user->id }}/pedidos" class="btn btn-info btn-xs white"  data-toggle="tooltip" data-placement="top" title="Ver Pedidos"><i class="fa fa-list-alt fa-lg"></i></a>
 									<a href="/admin/usuarios/{{ $user->id }}/editar" class="btn btn-warning btn-xs white"  data-toggle="tooltip" data-placement="top" title="Editar Registro"><i class="fa fa-pencil fa-lg"></i></a>
-									<a href="{{ url('/admin/usuarios/borrar',$user->id) }}" class="btn btn-danger btn-xs btn-delete" data-id="{{ $user->id }}" data-toggle="tooltip" data-placement="top" title="Borrar Registro" onclick="return confirm('¿Esta seguro que desea borrar este Registro?');"><i class="fa fa-trash-o fa-lg"></i></a>
 									<a href="/admin/usuarios/{{ $user->id }}/password" class="btn btn-danger btn-xs btn-delete" data-toggle="tooltip" data-placement="top" title="Cambiar Contraseña"><i class="fa fa-key fa-lg"></i></a>
+									<a href="{{ url('/admin/usuarios/borrar',$user->id) }}" class="btn btn-danger btn-xs btn-delete" data-id="{{ $user->id }}" data-toggle="tooltip" data-placement="top" title="Borrar Registro" onclick="return confirm('¿Esta seguro que desea borrar este Registro?');"><i class="fa fa-trash-o fa-lg"></i></a>
 								</td>
 							</tr>
 		    			@endforeach							

@@ -28,7 +28,7 @@
 		<div class="col-md-8 col-xs-12 contact-form">
 			<div class="row">
 				<div class="col-md-12">
-					<strong><span class="email"></span> Correo Electronico:</strong> <a class="btn-link" href="mailto:#">ventas@cariocaactivewear.com</a>
+					<strong><span class="email"></span> Correo Electronico:</strong> <a class="btn-link" href="mailto:#">ventasactivewear@gmail.com</a>
 					<br /><br />
 					<strong><span class="phone"></span> Telefono de Contacto Venezuela: </strong> +58 414 0659155
 					<br /><br />

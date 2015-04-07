@@ -126,5 +126,11 @@ class Configuration extends Eloquent {
 		return $value;
 
 	}
+	public static function getQuantitiesDiscount()
+	{
+		$value = Configuration::where('config_name','=','quantities_discount')->pluck('config_value');
+		return $value;
+
+	}
 
 }

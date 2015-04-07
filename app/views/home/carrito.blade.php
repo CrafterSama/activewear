@@ -64,7 +64,7 @@
 								<?php $discount += $item->qty; ?> 
 								@endforeach
 
-								@if(($discount >= 12) && (Configuration::getDiscount() > 0))
+								@if(($discount >= Configuration::getQuantitiesDiscount()) && (Configuration::getDiscount() > 0))
 									<tr>
 										<td colspan="5" class="cart-bottom visible-lg" style="text-align:right">
 											<strong>Sub-Total :</strong>

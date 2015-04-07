@@ -50,10 +50,10 @@
 			?>
 			@endforeach
 		</table>
-		@if($discount >= 12 && Configuration::getDiscount() > 0)
+		@if($discount >= Configuration::getQuantitiesDiscount() && Configuration::getDiscount() > 0)
 			<h4 align="right">Total: Bs. {{ number_format($total, 2, ',', '.') }} </h4>
-			<h4 align="right">Descuento 30%: Bs. {{ number_format($total*Configuration::getDiscount(), 2, ',', '.') }} </h4>
-			Descuento del 30% a partir de 12 piezas <h4 align="right">Total: Bs. {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }} </h4>
+			<h4 align="right">{{ Configuration::getWholesaleDiscountReference() }}: Bs. {{ number_format($total*Configuration::getDiscount(), 2, ',', '.') }} </h4>
+			{{ Configuration::getWholesaleDiscountReference() }} a partir de {{ Configuration::getQuantitiesDiscount() }} piezas <h4 align="right">Total: Bs. {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }} </h4>
 		@else
 			<h4 align="right">Total: Bs. {{ number_format($total, 2, ',', '.') }} </h4>
 		@endif

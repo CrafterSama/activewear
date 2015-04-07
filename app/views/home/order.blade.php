@@ -62,7 +62,7 @@
 									<?php $discount += $item->cantidad; ?>
 									@endforeach
 									@if (($item->factura->with_tax == 'yes') && (Configuration::getIva() > 0) )
-										@if (($discount >= 12) && (Configuration::getDiscount() > 0) )
+										@if (($discount >= Configuration::getQuantitiesDiscount()) && (Configuration::getDiscount() > 0) )
 											<tr>
 												<td colspan="2" class="cart-bottom visible-lg" style="text-align:right"><strong>Total Cantidad:</strong></td>
 												<td data-title="Cantidad"><strong>{{ $discount }}</strong></td>
@@ -116,7 +116,7 @@
 											</tr>
 										@endif	
 									@else
-										@if (($discount >= 12) && (Configuration::getDiscount() > 0) )
+										@if (($discount >= Configuration::getQuantitiesDiscount()) && (Configuration::getDiscount() > 0) )
 											<tr>
 												<td colspan="2" class="cart-bottom visible-lg" style="text-align:right"><strong>Total Cantidad :</strong></td>
 												<td data-title="Cantidad"><strong>{{ $discount }}</strong></td>

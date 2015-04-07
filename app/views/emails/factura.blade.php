@@ -43,10 +43,10 @@
 		</table>
 		<div style="font-weight: bold;">
 			@if (($factura['with_tax'] == 'yes') && (Configuration::getIva() > 0))
-				@if(($discount >= 12) && (Configuration::getDiscount() > 0))
+				@if(($discount >= Configuration::getQuantitiesDiscount()) && (Configuration::getDiscount() > 0))
 					<h4 align="right">Sub-Total: {{ Configuration::getMoneySymbol() }} {{ number_format($total, 2, ',', '.') }} </h4>
 					<h4 align="right">{{ Configuration::getWholesaleDiscountReference() }}: {{ Configuration::getMoneySymbol() }} {{ number_format($total*Configuration::getDiscount(), 2, ',', '.') }} </h4>
-					Descuento a partir de 12 piezas <h4 align="right">Sub-Total : {{ Configuration::getMoneySymbol() }} {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }}</h4>
+					Descuento a partir de {{ Configuration::getQuantitiesDiscount() }} piezas <h4 align="right">Sub-Total : {{ Configuration::getMoneySymbol() }} {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }}</h4>
 					<h4 align="right">{{ Configuration::getTaxReference() }}: {{ Configuration::getMoneySymbol() }} {{ number_format(($total-($total*Configuration::getDiscount()))*Configuration::getIva(), 2, ',', '.') }} </h4>
 					<h4 align="right">Total {{ Configuration::getMoneySymbol() }} {{ number_format(($total-($total*Configuration::getDiscount()))+(($total-($total*Configuration::getDiscount()))*Configuration::getIva()), 2, ',', '.') }} </h4>
 				@else
@@ -55,10 +55,10 @@
 					<h4 align="right">Total: {{ Configuration::getMoneySymbol() }} {{ number_format($total+($total*Configuration::getIva()), 2, ',', '.') }} </h4>
 				@endif
 			@else
-				@if(($discount >= 12) && (Configuration::getDiscount() > 0))
+				@if(($discount >= Configuration::getQuantitiesDiscount()) && (Configuration::getDiscount() > 0))
 					<h4 align="right">Sub-Total: {{ Configuration::getMoneySymbol() }} {{ number_format($total, 2, ',', '.') }} </h4>
 					<h4 align="right">{{ Configuration::getWholesaleDiscountReference() }}: {{ Configuration::getMoneySymbol() }} {{ number_format($total*Configuration::getDiscount(), 2, ',', '.') }} </h4>
-					Descuento a partir de 12 piezas <h4 align="right">Sub-Total: {{ Configuration::getMoneySymbol() }} {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }}</h4>
+					Descuento a partir de {{ Configuration::getQuantitiesDiscount() }} piezas <h4 align="right">Sub-Total: {{ Configuration::getMoneySymbol() }} {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }}</h4>
 					<h4 align="right">Total {{ Configuration::getMoneySymbol() }} {{ number_format($total-($total*Configuration::getDiscount()), 2, ',', '.') }} </h4>
 				@else
 					<h4 align="right">Total: {{ Configuration::getMoneySymbol() }} {{ number_format($total, 2, ',', '.') }} </h4>

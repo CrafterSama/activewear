@@ -1,12 +1,15 @@
 <?php
 
-use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use SoftDeletingTrait;
+	use UserTrait, RemindableTrait;
 	
 	/**
 	 * The database table used by the model.
@@ -29,12 +32,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public static $rules = array(
 		'full_name' 	=> 'required',
-		'username' 	=> 'required|min:2|max:16|unique:users,username,id',
+		'username' 		=> 'required|min:2|max:16|unique:users,username,id',
 		'email' 		=> 'required|email|unique:users,email,id',
-		'password' 	=> 'required|min:6',
+		'password' 		=> 'required|min:6',
 		'user_mobile' 	=> 'required',
 		'user_address' 	=> 'required',
-		'role_id' 	=> 'numeric'
+		'role_id' 		=> 'numeric'
    	);
    	public static $messages = array(
 		'full_name.required' => 'El nombre completo es obligatorio.',

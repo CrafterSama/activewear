@@ -22,6 +22,15 @@ class AuthController extends BaseController {
         return View::make('login');
     }
 
+    public function showForgot()
+    {
+        if(Auth::user()){
+            return Redirect::to('/login');
+        }else{
+            return View::make('forgot');
+        }
+    }
+
     public function postLogin()
     {
         // Guardamos en un arreglo los datos del usuario.

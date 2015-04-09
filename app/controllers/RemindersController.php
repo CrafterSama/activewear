@@ -24,7 +24,7 @@ class RemindersController extends Controller {
 	 */
 	public function postRemind()
 	{
-		switch ($response = Password::remind(Input::only('email')))
+		switch ($response = Password::remind(Input::only('email'), function($message){ $message->subject('Reinicio de Contraseña')}))
 		{
 			case Password::INVALID_USER:
 				return Redirect::back()->with('error', 'Hay un error en el correo electrónico o el correo electrónico que proporciono no esta en nuestra base de datos.');
@@ -70,10 +70,10 @@ class RemindersController extends Controller {
 			case Password::INVALID_PASSWORD:
 			case Password::INVALID_TOKEN:
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				return Redirect::back()->with('error', 'Hay un error en los datos proporcionados.');
 
 			case Password::PASSWORD_RESET:
-				return Redirect::to('/login');
+				return Redirect::to('/login')->with('status','La Contraseña se restableció con éxito.');
 		}
 	}
 

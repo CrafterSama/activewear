@@ -29,6 +29,10 @@
         <h2 class="form-signin-heading carioca_color4">Conectarse</h2>
         <div class="login-wrap">
           {{-- Preguntamos si hay algún mensaje de error y si hay lo mostramos  --}}
+          @if(Session::has('status'))
+              <div class="alert alert-success">{{ Session::get('status') }}</div>
+              <br>
+          @endif
           @if(Session::has('mensaje_error'))
               <div class="alert alert-danger">{{ Session::get('mensaje_error') }}</div>
               <br>

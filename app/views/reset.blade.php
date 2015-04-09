@@ -32,7 +32,7 @@
               <br>
           @endif
           @if(Session::has('status'))
-              <div class="alert alert-confirm">{{ Session::get('status') }}</div>
+              <div class="alert alert-success">{{ Session::get('status') }}</div>
               <br>
           @endif
           <div class="login-wrap">

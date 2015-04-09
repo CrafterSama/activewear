@@ -59,6 +59,7 @@ class OrdersController extends \BaseController {
 
         $factura = Factura::withTrashed()->find($id);
 
+        $datos = [];
         $user = User::find($factura->user_id);
         
         Mail::send('emails.gratitude', $datos , function($m) use ($user)

@@ -36,14 +36,16 @@
           @endif
           <h2 class="form-signin-heading carioca_color4">Recordar Contraseña</h2>
           <div class="login-wrap">
-            <input type="email" name="email">
-            <input type="submit" value="Send Reminder">
+            <div class="user-login-info">
+              <input type="email" name="email">
+            </div>
+            {{ Form::submit('Restablecer',array('class'=>'btn btn-lg btn-success btn-block')) }}
+            <div class="text-center" style="font-size: 18px;">
+                No Tienes Cuenta?<br />
+                <a  class="btn btn-lg btn-info btn-block" href="/registrarse">Create una</a>¡Es Gratis!
+            </div>
           </div>        
         </form>
-        <div class="text-center" style="font-size: 18px;">
-            No Tienes Cuenta?<br />
-            <a  class="btn btn-lg btn-info btn-block" href="/registrarse">Create una</a>¡Es Gratis!
-        </div>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--common script init for all pages-->
 {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}

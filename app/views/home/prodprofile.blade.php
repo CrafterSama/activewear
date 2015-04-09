@@ -47,7 +47,12 @@
                             </button>
                             <button id="carrito" onclick="location.href='/carrito'" class="btn btn-success btn-lg hide">
                             	<i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Ir al Carrito
-                            </button>                           
+                            </button>
+                            @if (Auth::check() and Auth::user()->role_id == 1)
+                                <div class="pull-right">
+                                    <a href="/admin/productos/{{ $product->id }}/editar" class="btn btn-warning btn-xs white"  data-toggle="tooltip" data-placement="top" title="Editar Registro"><i class="fa fa-pencil fa-lg"></i></a>
+                                </div>
+                            @endif                        
                         </div>
                     </div>
                 </div>

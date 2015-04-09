@@ -35,9 +35,8 @@
                         <h3>{{ Stamp::getStampName($product->stamp_id) }}</h3>
                         <h3>{{ Stamp::getStampDesc($product->stamp_id) }}</h3>
                         {{-- $product->stamp_id --}}
-                        <br/>
+                        <br />
                         <p><strong>Precio: </strong> Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }} </p>
-                        <p><strong>en Stock: </strong> {{ $product->amounts }} </p>
                         <br />
                         <div class="col-sm-9">
                             {{ Form::selectRange('qty', 1, $product->amounts, array('id'=>'qty','class'=>'form-control col-sm-3')) }}

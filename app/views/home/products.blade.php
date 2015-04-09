@@ -72,14 +72,9 @@ if ($url=='largo')
 							<br />
 							<strong>Marca:</strong> {{ ucwords(strtoupper($brand)) }}
 							<br />
-							<strong style="color:black;">En Stock:</strong>
-							<span class="label label-primary pro-count carioca_color1">
-								{{ $product->amounts }}
-							</span>
+							{{ ucwords(strtoupper(Stamp::getStampDesc($product->stamp_id))) }}
 							<br />
 							{{ ucwords(strtoupper(Stamp::getStampName($product->stamp_id))) }}
-							<br />
-							{{ ucwords(strtoupper(Stamp::getStampDesc($product->stamp_id))) }}
 							{{-- $product->stamp_id --}}
 						</div>
 					</div>

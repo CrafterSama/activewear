@@ -571,7 +571,7 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                     <div align="left" class="article-content">
 
 
-                                        <multiline label="Description">{{ $nombre }}</multiline>
+                                        <multiline label="Description">{{ $data['name'] }}</multiline>
 
 
                                     </div>
@@ -616,7 +616,7 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                     <div align="left" class="article-content">
 
 
-                                        <multiline label="Description">{{ $correo }}</multiline>
+                                        <multiline label="Description">{{ $data['email'] }}</multiline>
 
 
                                     </div>
@@ -697,7 +697,7 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                     <div align="left" class="article-content">
 
 
-                                        <multiline label="Description"> {{ $mensaje }} </multiline>
+                                        <multiline label="Description"> {{ $data['message'] }} </multiline>
 
 
                                     </div>

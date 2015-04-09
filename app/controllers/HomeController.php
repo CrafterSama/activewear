@@ -194,6 +194,32 @@ class HomeController extends BaseController {
 	{
 		return View::make('home.contact');
 	}
+
+	public function postContact()
+	{
+		$data = Input::all();
+
+        $rules = array(
+            'name' 		=> 'required',
+            'email' 	=> 'required',
+            'message' 	=> 'required',
+            );
+
+        $validation = Validator::make($inputs, $rules);
+
+        if ($validation->fails())
+        {
+            return Redirect::back()->with('error', $validation);
+        }
+		
+		Mail::send('emails.contacto', $data , function($m) use ($data)
+        {
+            $m->from(Configuration::getContactEmail(), 'Carioca Active Wear');
+            $m->to('jolivero.03@gmail.com')->cc($data['email'])->subject('Formulario de Contacto');
+        });
+
+		return Redirect::back()->with('status', 'Su correo fue enviado de forma satisfactoria.');
+	}
 	
 	public function showGaleries()
 	{

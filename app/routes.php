@@ -56,6 +56,8 @@ Route::get('acerca-de', 'HomeController@showAbout');
 
 Route::get('contactos', 'HomeController@showContact');
 
+Route::post('contactos', 'HomeController@postContact');
+
 Route::get('galerias', 'HomeController@showGaleries');
 
 Route::get('galerias/desfiles', 'HomeController@showGalerie1');

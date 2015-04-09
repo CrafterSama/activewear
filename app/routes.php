@@ -78,7 +78,7 @@ Route::post('registrarse', 'UsersController@postRegister');
 
 Route::get('/api/dropdown/{id}', 'UsersController@cities');
 
-Route::get('/reset-password', ['uses' => 'AuthController@getRemind']);
+Route::get('/reset-password', ['uses' => 'RemindersController@getRemind']);
 
 Route::post('/reset-password', ['uses' => 'RemindersController@postRemind']);
 

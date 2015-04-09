@@ -57,6 +57,22 @@ class OrdersController extends \BaseController {
             ->where('factura_id', $id)
             ->update(array('shipped' => 'yes'));
 
+        $factura = Factura::withTrashed()->find($id);
+
+        $user = User::find($factura->user_id);
+        
+        Mail::send('emails.gratitude', $datos , function($m) use ($user)
+        {
+            $m->from(Configuration::getSalesEmail(), 'Carioca ActiveWear');
+            $m->to($user['email'])->subject('Gracias por Su Compra.');
+        }); 
+
+/*        Mail::send('emails.gratitude', $data , function($m) use ($data)
+        {
+            $m->from('administracion@cariocaactivewear.com', 'ActiveWear');
+            $m->to('ventasactivewear@gmail.com')->cc('jolivero.03@gmail.com')->subject('Confirmación de Pedido.');
+        });*/
+
         return Redirect::back()->with('notice','El Pedido ha sido entregado satisfactoriamente'); 
 	}
 	public function cancelOrder($id)

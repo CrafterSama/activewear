@@ -27,15 +27,15 @@
   <body class="login-body">
         <form action="{{ action('RemindersController@postRemind') }}" method="POST" class="form-signin" id="singin">
           <h2 class="form-signin-heading carioca_color4">Restablecer Contraseña</h2>
-          @if(Session::has('error'))
-              <div class="alert alert-danger">{{ Session::get('error') }}</div>
-              <br>
-          @endif
-          @if(Session::has('status'))
-              <div class="alert alert-success">{{ Session::get('status') }}</div>
-              <br>
-          @endif
           <div class="login-wrap">
+            @if(Session::has('error'))
+                <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                <br>
+            @endif
+            @if(Session::has('status'))
+                <div class="alert alert-success">{{ Session::get('status') }}</div>
+                <br>
+            @endif
             <div class="user-login-info">
               <input class="form-control" placeholder="Email" type="email" name="email" />
             </div>

@@ -27,15 +27,15 @@
   <body class="login-body">
         <form action="{{ action('RemindersController@postReset') }}" method="POST" class="form-signin" id="singin">
           <h2 class="form-signin-heading carioca_color4">Reiniciar Contraseña</h2>
-          @if(Session::has('error'))
-              <div class="alert alert-danger">{{ Session::get('error') }}</div>
-              <br>
-          @endif
-          @if(Session::has('status'))
-              <div class="alert alert-success">{{ Session::get('status') }}</div>
-              <br>
-          @endif
           <div class="login-wrap">
+            @if(Session::has('error'))
+                <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                <br>
+            @endif
+            @if(Session::has('status'))
+                <div class="alert alert-success">{{ Session::get('status') }}</div>
+                <br>
+            @endif
             <input type="hidden" name="token" value="{{ $token }}">
             <input class="form-control" placeholder="Email" type="email" name="email">
             <input class="form-control" placeholder="Nuevo Password" type="password" name="password">
@@ -43,10 +43,6 @@
             <input class="btn btn-lg btn-success btn-block" type="submit" value="Reiniciar Contraseña">
           </div>        
         </form>
-        <div class="text-center" style="font-size: 18px;">
-            No Tienes Cuenta?<br />
-            <a  class="btn btn-lg btn-info btn-block" href="/registrarse">Create una</a>¡Es Gratis!
-        </div>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--common script init for all pages-->
 {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}

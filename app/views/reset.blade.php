@@ -26,15 +26,15 @@
   <a href="/" class="back-login btn btn-primary btn-xs white"> <i class="fa fa-angle-double-left fa-lg"></i> Volver a la Web</a>
   <body class="login-body">
         <form action="{{ action('RemindersController@postReset') }}" method="POST" class="form-signin" id="singin">
+          <h2 class="form-signin-heading carioca_color4">Reiniciar Contraseña</h2>
           @if(Session::has('error'))
               <div class="alert alert-danger">{{ Session::get('error') }}</div>
               <br>
           @endif
           @if(Session::has('status'))
-              <div class="alert alert-danger">{{ Session::get('error') }}</div>
+              <div class="alert alert-confirm">{{ Session::get('status') }}</div>
               <br>
           @endif
-          <h2 class="form-signin-heading carioca_color4">Reiniciar Contraseña</h2>
           <div class="login-wrap">
             <input type="hidden" name="token" value="{{ $token }}">
             <input class="form-control" placeholder="Email" type="email" name="email">

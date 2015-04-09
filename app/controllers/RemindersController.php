@@ -7,14 +7,6 @@ class RemindersController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function showForgot()
-	{
-		if(Auth::user()){
-			return Redirect::to('/dashboard');
-		}else{
-			return View::make('backend.forgot');
-		}
-	}
 	public function getRemind()
 	{
 		if(Auth::user()){
@@ -35,10 +27,10 @@ class RemindersController extends Controller {
 		switch ($response = Password::remind(Input::only('email')))
 		{
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				return Redirect::back()->with('error', 'Hay un error en el correo electrónico o el correo electrónico que proporciono no esta en nuestra base de datos.');
 
 			case Password::REMINDER_SENT:
-				return Redirect::back()->with('status', Lang::get($response));
+				return Redirect::back()->with('status', 'Se le ha enviado un correo electrónico, con un link para reiniciar su contraseña.');
 		}
 	}
 

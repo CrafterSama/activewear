@@ -76,6 +76,11 @@ if ($url=='largo')
 							<br />
 							{{ ucwords(strtoupper(Stamp::getStampName($product->stamp_id))) }}
 							{{-- $product->stamp_id --}}
+							@if (Auth::user()->role_id == 1)
+								<div class="pull-right">
+									<a href="/admin/productos/{{ $product->id }}/editar" class="btn btn-warning btn-xs white"  data-toggle="tooltip" data-placement="top" title="Editar Registro"><i class="fa fa-pencil fa-lg"></i></a>
+								</div>
+							@endif
 						</div>
 					</div>
 				@endforeach

@@ -25,69 +25,35 @@
 </head>
   <a href="/" class="back-login btn btn-primary btn-xs white"> <i class="fa fa-angle-double-left fa-lg"></i> Volver a la Web</a>
   <body class="login-body">
-        <form action="{{ action('RemindersController@postRemind') }}" method="POST" 'class' => 'form-signin', 'id' => 'singin'>
-          @if(Session::has('error'))
-              <div class="alert alert-danger">{{ Session::get('error') }}</div>
+      {{ Form::open(array('url' => '/login','class' => 'form-signin', 'id' => 'singin')) }}
+        <h2 class="form-signin-heading carioca_color4">Conectarse</h2>
+        <div class="login-wrap">
+          {{-- Preguntamos si hay algún mensaje de error y si hay lo mostramos  --}}
+          @if(Session::has('mensaje_error'))
+              <div class="alert alert-danger">{{ Session::get('mensaje_error') }}</div>
               <br>
           @endif
-          <h2 class="form-signin-heading carioca_color4">Recordar Contraseña</h2>
-          <input type="email" name="email">
-          <input type="submit" value="Send Reminder">
-        </form>
-       <div class="login-wrap">
-            {{-- Preguntamos si hay algún mensaje de error y si hay lo mostramos  --}}
-            <div class="user-login-info">
-                {{ $errors->first('username', '<div class="alert alert-danger">:message</div>') }}
-                {{ Form::text('username', Input::old('username'), array('class' => 'form-control','placeholder' => 'Usuario')); }}
-                {{ $errors->first('password', '<div class="alert alert-danger">:message</div>') }}
-                {{ Form::password('password', array('class' => 'form-control','placeholder' => 'Contraseña')); }}
-            </div>
-            <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Recuerdame
-                <span class="pull-right">
-                    <a href="/reset-password"> Olvide mi Contraseña?</a>
-
-                </span>
-            </label>
-
-            @if(isset($_GET['redirect']))
-              {{ Form::hidden('redirect', $_GET['redirect'] ); }}
-            @endif
-
-            {{ Form::submit('Entrar',array('class'=>'btn btn-lg btn-success btn-block')) }}
-
-            <div class="text-center" style="font-size: 18px;">
-                No Tienes Cuenta?<br />
-                <a  class="btn btn-lg btn-info btn-block" href="/registrarse">
-                    Create una
-                </a>
-		¡Es Gratis!
-            </div>
-
-        </div>
-
-          <!-- Modal -->
-          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title">Olvide mi Contraseña?</h4>
-                      </div>
-                      <div class="modal-body">
-                          <p>Ingresa tu Correo Electronico para reiniciar tu contraseña.</p>
-                          <input type="text" name="email" placeholder="Correo Electronico" autocomplete="off" class="form-control placeholder-no-fix">
-
-                      </div>
-                      <div class="modal-footer">
-                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
-                          <button class="btn btn-success" type="button">Enviar</button>
-                      </div>
-                  </div>
-              </div>
+          <div class="user-login-info">
+              {{ $errors->first('username', '<div class="alert alert-danger">:message</div>') }}
+              {{ Form::text('username', Input::old('username'), array('class' => 'form-control','placeholder' => 'Usuario')); }}
+              {{ $errors->first('password', '<div class="alert alert-danger">:message</div>') }}
+              {{ Form::password('password', array('class' => 'form-control','placeholder' => 'Contraseña')); }}
           </div>
-          <!-- modal -->
-
+          <label class="checkbox">
+              <input type="checkbox" value="remember-me"> Recuerdame
+          </label>
+          <span class="pull-right">
+            <a href="/reset-password"> Olvide mi Contraseña?</a>
+          </span>
+          @if(isset($_GET['redirect']))
+            {{ Form::hidden('redirect', $_GET['redirect'] ); }}
+          @endif
+          {{ Form::submit('Entrar',array('class'=>'btn btn-lg btn-success btn-block')) }}
+          <div class="text-center" style="font-size: 18px;">
+            No Tienes Cuenta?<br />
+            <a  class="btn btn-lg btn-info btn-block" href="/registrarse">Create una</a> ¡Es Gratis!
+          </div>
+        </div>
       </form>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--common script init for all pages-->

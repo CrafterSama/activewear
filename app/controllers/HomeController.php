@@ -205,7 +205,7 @@ class HomeController extends BaseController {
             'message' 	=> 'required',
             );
 
-        $validation = Validator::make($inputs, $rules);
+        $validation = Validator::make($data, $rules);
 
         if ($validation->fails())
         {

@@ -769,7 +769,7 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
             <span class="hide"><p id="permission-reminder" align="left" class="footer-content-left"></p></span>
 
 
-            <p align="center" class="footer-content-left"> Desarrollado por: <a href="http://craftersama.me">CrafterSama Studio</a></p>
+            Made by &nbsp; <a style="font-size: 1.2em; font-weight: bold; text-decoration: none; color: #333; background-color: #ccc; border-radius: .2em; padding: .3em;" href="http://craftersama.me"><img style="margin-bottom: -3px;" src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="16px">&nbsp; CrafterSama Studio</a>
 
 
             </td>

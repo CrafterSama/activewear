@@ -197,6 +197,7 @@ class HomeController extends BaseController {
 
 	public function postContact()
 	{
+		$data = [];
 		$data = Input::all();
 
         $rules = array(

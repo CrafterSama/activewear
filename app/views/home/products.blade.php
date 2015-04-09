@@ -83,8 +83,8 @@ if ($url=='largo')
 							{{-- $product->stamp_id --}}
 						</div>
 					</div>
-					{{ $products->links() }}
 				@endforeach
+				{{ $products->links() }}
 			@endif
 	    </div>
 	</div>

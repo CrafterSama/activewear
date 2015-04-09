@@ -232,6 +232,7 @@ class UsersController extends BaseController {
 			}
 		}
 	}
+	
 	public function showProfile($id)
 	{
 		$user 	= 	User::find($id);
@@ -239,6 +240,7 @@ class UsersController extends BaseController {
 		$rol 	= 	Role::find($idRol);
 		return View::make('users.profile')->with('user', $user)->with('rol', $rol);
 	}
+	
 	public function password($id)
 	{
 		if(!$this->autorizado) return Redirect::to('/login');
@@ -247,6 +249,7 @@ class UsersController extends BaseController {
 		
 		return View::make('users.password')->with('user', $user);
 	}
+	
 	public function changePassword($id)
 	{
 		if(!$this->autorizado) return Redirect::to('/login');
@@ -255,10 +258,12 @@ class UsersController extends BaseController {
 		$user->save();
 		return Redirect::to('admin/usuarios')->with('notice', 'La Contraseña ha sido modificada correctamente.');
 	}
+	
 	public function showRegister()
     {
     	return View::make('registration');
     }
+    
     public function postRegister()
     {
 		$user = new User();

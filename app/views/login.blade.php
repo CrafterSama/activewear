@@ -25,14 +25,17 @@
 </head>
   <a href="/" class="back-login btn btn-primary btn-xs white"> <i class="fa fa-angle-double-left fa-lg"></i> Volver a la Web</a>
   <body class="login-body">
-      {{ Form::open(array('url' => '/login','class' => 'form-signin', 'id' => 'singin')) }}
-        <h2 class="form-signin-heading carioca_color4">Conectarse</h2>
+        <form action="{{ action('RemindersController@postRemind') }}" method="POST" 'class' => 'form-signin', 'id' => 'singin'>
+          @if(Session::has('error'))
+              <div class="alert alert-danger">{{ Session::get('error') }}</div>
+              <br>
+          @endif
+          <h2 class="form-signin-heading carioca_color4">Recordar Contraseña</h2>
+          <input type="email" name="email">
+          <input type="submit" value="Send Reminder">
+        </form>
        <div class="login-wrap">
             {{-- Preguntamos si hay algún mensaje de error y si hay lo mostramos  --}}
-            @if(Session::has('mensaje_error'))
-                <div class="alert alert-danger">{{ Session::get('mensaje_error') }}</div>
-                <br>
-            @endif
             <div class="user-login-info">
                 {{ $errors->first('username', '<div class="alert alert-danger">:message</div>') }}
                 {{ Form::text('username', Input::old('username'), array('class' => 'form-control','placeholder' => 'Usuario')); }}
@@ -42,7 +45,7 @@
             <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Recuerdame
                 <span class="pull-right">
-                    <a data-toggle="modal" href="#myModal"> Olvide mi Contraseña?</a>
+                    <a href="{{ url('RemindersController@getRemind') }}"> Olvide mi Contraseña?</a>
 
                 </span>
             </label>

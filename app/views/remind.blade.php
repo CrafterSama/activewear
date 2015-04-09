@@ -34,10 +34,10 @@
               <div class="alert alert-danger">{{ Session::get('error') }}</div>
               <br>
           @endif
-          <h2 class="form-signin-heading carioca_color4">Recordar Contraseña</h2>
+          <h2 class="form-signin-heading carioca_color4">Restablecer Contraseña</h2>
           <div class="login-wrap">
             <div class="user-login-info">
-              <input type="email" name="email">
+              <input class="form-control" placeholder="Email" type="email" name="email" />
             </div>
             {{ Form::submit('Restablecer',array('class'=>'btn btn-lg btn-success btn-block')) }}
             <div class="text-center" style="font-size: 18px;">

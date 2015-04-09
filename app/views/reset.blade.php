@@ -34,13 +34,13 @@
               <div class="alert alert-danger">{{ Session::get('error') }}</div>
               <br>
           @endif
-          <h2 class="form-signin-heading carioca_color4">Recordar Contraseña</h2>
+          <h2 class="form-signin-heading carioca_color4">Reiniciar Contraseña</h2>
           <div class="login-wrap">
             <input type="hidden" name="token" value="{{ $token }}">
-            <input type="email" name="email">
-            <input type="password" name="password">
-            <input type="password" name="password_confirmation">
-            <input type="submit" value="Reset Password">
+            <input class="form-control" placeholder="Email" type="email" name="email">
+            <input class="form-control" placeholder="Nuevo Password" type="password" name="password">
+            <input class="form-control" placeholder="Confirma Nuevo Password" type="password" name="password_confirmation">
+            <input class="btn btn-lg btn-success btn-block" type="submit" value="Reiniciar Contraseña">
           </div>        
         </form>
         <div class="text-center" style="font-size: 18px;">

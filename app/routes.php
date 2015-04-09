@@ -78,6 +78,14 @@ Route::post('registrarse', 'UsersController@postRegister');
 
 Route::get('/api/dropdown/{id}', 'UsersController@cities');
 
+Route::get('/reset-password', ['uses' => 'AuthController@getRemind']);
+
+Route::post('/reset-password', ['uses' => 'RemindersController@postRemind']);
+
+Route::get('/reset-password/{token}', ['uses' => 'RemindersController@getReset']);
+
+Route::post('/reset-password/reset', ['uses' => 'RemindersController@postReset']);
+
 Route::group(array('before' => 'auth'), function()
 {
 

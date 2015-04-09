@@ -45,7 +45,7 @@
             <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Recuerdame
                 <span class="pull-right">
-                    <a href="{{ url('RemindersController@getRemind') }}"> Olvide mi Contraseña?</a>
+                    <a href="/reset-password"> Olvide mi Contraseña?</a>
 
                 </span>
             </label>

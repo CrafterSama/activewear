@@ -7,9 +7,22 @@ class RemindersController extends Controller {
 	 *
 	 * @return Response
 	 */
+	public function showForgot()
+	{
+		if(Auth::user()){
+			return Redirect::to('/dashboard');
+		}else{
+			return View::make('backend.forgot');
+		}
+	}
 	public function getRemind()
 	{
-		return View::make('remind');
+		if(Auth::user()){
+			return Redirect::to('/login');
+		}else{
+	//		return View::make('backend.forgot');
+			return View::make('remind');
+		}
 	}
 
 	/**

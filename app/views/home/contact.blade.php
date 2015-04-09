@@ -39,6 +39,14 @@
 				</div>
 			</div>
 			<form id="contact" method="post" class="form" role="form">
+	    		@if(Session::has('status'))
+					<div class="alert alert-success">{{ Session::get('status') }}</div>
+					<br>
+				@endif
+				@if(Session::has('error'))
+					<div class="alert alert-danger">{{ Session::get('error') }}</div>
+					<br>
+				@endif
 				<div class="row">
 					<div class="col-xs-12 col-md-12 form-group input-group">
 						{{ Form::text('name','', array('placeholder'=>'Nombre...','class'=>'form-control bggray','id'=>'name','required'=>'')) }}

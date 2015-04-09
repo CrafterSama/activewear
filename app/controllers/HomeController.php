@@ -212,11 +212,15 @@ class HomeController extends BaseController {
         {
             return Redirect::back()->with('error', $validation);
         }
+
+        $name = $data['name'];
+        $email = $data['email'];
+        $message = $data['message'];
 		
 		Mail::send('emails.contacto', $data , function($m) use ($data)
         {
             $m->from(Configuration::getContactEmail(), 'Carioca Active Wear');
-            $m->to('jolivero.03@gmail.com')->cc($data['email'])->subject('Formulario de Contacto');
+            $m->to('jolivero.03@gmail.com')->cc($email)->subject('Formulario de Contacto');
         });
 
 		return Redirect::back()->with('status', 'Su correo fue enviado de forma satisfactoria.');

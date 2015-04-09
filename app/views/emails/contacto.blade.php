@@ -15,15 +15,15 @@
         <br />  
         <br />  
         <h2>Correo:</h2>
-        {{ $data['email'] }}
+        {{ $email }}
         <br />
         <br />
         <h2>Nombre:</h2>
-        {{ $data['name'] }}
+        {{ $name }}
         <br />
         <br />
         <h2>Mensaje:</h2>
-        {{ $data['message'] }}
+        {{ $message }}
         <br />
         <br />
         <hr />

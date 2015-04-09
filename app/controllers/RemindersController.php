@@ -24,7 +24,11 @@ class RemindersController extends Controller {
 	 */
 	public function postRemind()
 	{
-		switch ($response = Password::remind(Input::only('email'), function($message){ $message->subject('Reinicio de Contraseña')}))
+		$response = Password::remind(Input::only('email'), function($message)
+					{ 
+						$message->subject('Reinicio de Contraseña')
+					});
+		switch ($response)
 		{
 			case Password::INVALID_USER:
 				return Redirect::back()->with('error', 'Hay un error en el correo electrónico o el correo electrónico que proporciono no esta en nuestra base de datos.');

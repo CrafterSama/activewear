@@ -49,15 +49,15 @@
 				@endif
 				<div class="row">
 					<div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::text('name','', array('placeholder'=>'Nombre...','class'=>'form-control bggray','id'=>'name','required'=>'')) }}
+						{{ Form::text('name','', array('placeholder'=>'Nombre...','class'=>'form-control bggray form-control','id'=>'name','required'=>'')) }}
 						<span class="input-group-addon bggray"><i class="fa fa-user fa-fw"></i></span>
 					</div>
 					<div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::email('email','', array('placeholder'=>'Email...','class'=>'form-control bggray','id'=>'email','required'=>'')) }}
+						{{ Form::email('email','', array('placeholder'=>'Email...','class'=>'form-control bggray form-control','id'=>'email','required'=>'')) }}
 						<span class="input-group-addon bggray"><i class="fa fa-envelope-o fa-fw"></i></span>
 					</div>
 				    <div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::textarea('message', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control bggray','id'=>'message')) }}
+						{{ Form::textarea('message', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control bggray form-control','id'=>'message')) }}
 						<span class="input-group-addon bggray"></span>
 				    </div>
 				</div>

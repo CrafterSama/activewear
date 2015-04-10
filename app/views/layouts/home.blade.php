@@ -12,8 +12,10 @@ $url = Request::path();
 		<title>@yield('title')</title>
 
 		<!-- Bootstrap core CSS -->
-		{{ HTML::style('/../assets/css/bootstrap.min.css', array('media'=>'screen')) }}
-		{{ HTML::style('/../assets/css/font-awesome.min.css', array('media'=>'screen')) }}
+		{{ HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array('media'=>'screen')) }}
+		{{-- HTML::style('/../assets/css/bootstrap.min.css', array('media'=>'screen')) --}}
+		{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('media'=>'screen')) }}
+		{{-- HTML::style('/../assets/css/font-awesome.min.css', array('media'=>'screen')) --}}
 		<!-- Custom styles for this template -->
 		{{ HTML::style('/../assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
 		{{ HTML::style('/../assets/css/table-responsive.css', array('media'=>'screen')) }}
@@ -185,7 +187,7 @@ $url = Request::path();
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		{{ HTML::script('/../assets/js/bootstrap.min.js') }}
+		{{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') }}
 		{{ HTML::script('/../assets/js/jquery.validate.js') }}
 		{{ HTML::script('/../assets/js/jquery-ui.min.js') }}
 		{{ HTML::script('/../assets/js/jMyCarousel.js') }}

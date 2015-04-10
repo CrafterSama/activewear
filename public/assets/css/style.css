@@ -277,6 +277,10 @@ ul.nav-tabs > li > a.carioca_color5:visited
   color: #000;
 }
 
+.panel-footer
+{
+  min-height: 50px;
+}
 .cart
 {
   background: #81bcb4;

@@ -11,11 +11,11 @@ $url = Request::path();
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<title>@yield('title')</title>
 
-		<!-- Bootstrap core CSS -->
-		{{ HTML::style('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array('media'=>'screen')) }}
-		{{-- HTML::style('/../assets/css/bootstrap.min.css', array('media'=>'screen')) --}}
+		<!-- Bootstrap CDN -->
+		{{ HTML::style('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array('media'=>'screen')) }}
+		<!-- Font Awesome CDN -->
 		{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('media'=>'screen')) }}
-		{{-- HTML::style('/../assets/css/font-awesome.min.css', array('media'=>'screen')) --}}
+
 		<!-- Custom styles for this template -->
 		{{ HTML::style('/../assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
 		{{ HTML::style('/../assets/css/table-responsive.css', array('media'=>'screen')) }}
@@ -30,35 +30,26 @@ $url = Request::path();
 		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css' />
-		<!-- Just for debugging purposes. Don't actually copy this line! -->
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	  	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	  	<![endif]-->
 	</head>
-		<body>
-
-			<header class="">
-				@if (Auth::check())
-					<div class="login-menu dropdown blog-nav-item pull-right">
-						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-							<span class="username">{{ Auth::user()->full_name; }}</span>
-							<b class="caret"></b>
-						</a>
-						&nbsp;&nbsp;&nbsp;
-						<ul class="dropdown-menu extended logout">
-						@if (Auth::user()->role_id == 1)
-							<li><a href="/admin"><i class="fa fa-dashboard"></i>  Panel de Administracion</a></li>
-						@endif
-							<li><a href="/orders"><i class="fa fa-shopping-cart"></i>  Mis Pedidos</a></li>
-							<li><a href="/logout"><i class="fa fa-sign-out"></i>  Salir</a></li>
-						</ul>
-					</div>
-					<br />
-				@else
+	<body>
+		<header class="">
+			@if (Auth::check())
+				<div class="login-menu dropdown blog-nav-item pull-right">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<span class="username">{{ Auth::user()->full_name; }}</span>
+						<b class="caret"></b>
+					</a>
+					&nbsp;&nbsp;&nbsp;
+					<ul class="dropdown-menu extended logout">
+					@if (Auth::user()->role_id == 1)
+						<li><a href="/admin"><i class="fa fa-dashboard"></i>  Panel de Administracion</a></li>
+					@endif
+						<li><a href="/orders"><i class="fa fa-shopping-cart"></i>  Mis Pedidos</a></li>
+						<li><a href="/logout"><i class="fa fa-sign-out"></i>  Salir</a></li>
+					</ul>
+				</div>
+				<br />
+			@else
 					<div class="login-menu pull-right">
 						<a class="" href="/registrarse">Registrarte <i class="fa fa-edit"></i></a>
 						&nbsp;&nbsp;&nbsp;
@@ -171,7 +162,7 @@ $url = Request::path();
 						<dd><a href='/galerias' title="Ir a la Galeria de la Web">Galerias</a></dd>
 					</div>
 					<div class="company">
-						Developed by &nbsp;  2014 - <?php echo date('Y'); ?> &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
+						Developed by &nbsp;  2014 - {{ date('Y') }} &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
 						<br/>
 						<a href="mailto:mundofuturoca@gmail.com" class="craftersama-me">Mundo Futuro</a>
 						<br/>

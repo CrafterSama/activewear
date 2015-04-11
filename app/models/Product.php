@@ -64,14 +64,17 @@ class Product extends Eloquent {
    		return $amounts = Product::where('amounts','!=','0')
         		->pluck(DB::raw('sum(amounts)'));
    	}
-   	public function totalBs()
+   	public static function totalBs()
    	{
+
    		$cantidades = Product::where('amounts','!=','0');
+
+      return $cantidades;
 
 
 
    	}
-   	public function getBrand($id)
+   	public static function getBrand($id)
    	{
         $brand = Product::find($id)->pluck('brand');
 

@@ -71,8 +71,10 @@ class Product extends Eloquent {
 
 
    	}
-   	public function getName($id)
+   	public function getBrand($id)
    	{
+        $brand = Product::find($id)->pluck('brand');
 
+        return $brand;
    	}
 }

@@ -14,7 +14,7 @@ class OrdersController extends \BaseController {
 	{
 		$items = Item::orderBy('id','=','desc')->paginate(10);
 
-		if($product->brand == '0') {
+		if(Product::getBrand() == '0') {
 			$brand = 'Pioggia';
 		} else {
 			$brand = 'Carioca';
@@ -53,7 +53,7 @@ class OrdersController extends \BaseController {
 	{
 		$items = Item::onlyTrashed()->where('shipped','=','no')->orderBy('created_at','desc')->paginate(10);
 
-		if($product->brand == '0') {
+		if(Product::getBrand() == '0') {
 			$brand = 'Pioggia';
 		} else {
 			$brand = 'Carioca';
@@ -67,7 +67,7 @@ class OrdersController extends \BaseController {
 	{
 		$items = Item::onlyTrashed()->where('shipped','=','yes')->orderBy('created_at','desc')->paginate(10);
 
-		if($product->brand == '0') {
+		if(Product::getBrand() == '0') {
 			$brand = 'Pioggia';
 		} else {
 			$brand = 'Carioca';

@@ -40,6 +40,16 @@
 					</thead>
 					<tbody>
 						@foreach ($items as $item)
+							<?php
+
+								$image = '/assets/images/stamps/'.Stamp::getName($item->product->stamp_id);
+
+								if(Product::getBrand($item->product->id) == '0') {
+									$brand = 'Pioggia';
+								} else {
+									$brand = 'Carioca';
+								}
+							?>
 							<tr class="text-center">
 								<td data-title="Nº de Recibo">{{ $item->factura_id }}</td>
 								<td data-title="Usuario">

@@ -70,7 +70,7 @@ class Product extends Eloquent {
 
       return $cantidades;
    	}
-   	public static function getBrand($id)
+   	public static function getBrand($id = null)
    	{
         $brand = Product::find($id)->pluck('brand');
 

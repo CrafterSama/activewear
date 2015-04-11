@@ -40,16 +40,7 @@
 					</thead>
 					<tbody>
 						@foreach ($items as $item)
-							<?php
 
-								$image = '/assets/images/stamps/'.Stamp::getName($item->product->stamp_id);
-
-								if(Product::getBrand($item->product->id) == '0') {
-									$brand = 'Pioggia';
-								} else {
-									$brand = 'Carioca';
-								}
-							?>
 							<tr class="text-center">
 								<td data-title="Nº de Recibo">{{ $item->factura_id }}</td>
 								<td data-title="Usuario">
@@ -60,7 +51,6 @@
 									<strong>Telefono: </strong>{{ User::getPhone($item->factura->user_id) }}
 								</td>
 								<td data-title="Producto"><img class="img-thumbnail" src="/assets/images/stamps/{{ Stamp::getName($item->product->stamp_id) }}" class="cart-img" alt="" width="120"></a><br /> {{ Stamp::getStampName($item->product->stamp_id) }} <br /> ({{ Modelo::getName($item->product->model_id) }})</td>
-								<td data-title="Marca">{{ $brand }}</td>
 								<td data-title="Cantidad">{{ $item->cantidad }}</td>
 								<td data-title="Fecha de la Orden">{{ Helper::getDate(strtotime($item->created_at,0)) }}</td>
 								<td data-title="Acciones" class="text-center">

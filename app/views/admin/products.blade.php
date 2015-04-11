@@ -43,6 +43,13 @@
 							<h4>Aun no hay Datos</h4>
 						@else
 							@foreach ($products as $product)
+								<?php
+									if(Product::getBrand($product->id) == '0') {
+										$brand = 'Pioggia';
+									} else {
+										$brand = 'Carioca';
+									}
+								?>
 								<tr>
 									<td class="col-xs-2" data-title="Estampado">
 										<a href="/assets/images/stamps/{{ Stamp::getName($product->stamp_id) }}" class="img-thumbnail">
@@ -51,7 +58,7 @@
 										<br /> 
 									</td>
 									<td data-title="Modelo">{{ Stamp::getStampCode($product->stamp_id).'<br />'.Modelo::getName($product->model_id).'<br />'.Stamp::getStampName($product->stamp_id).'<br />'.Stamp::getStampDesc($product->stamp_id) }}</td>
-									<td data-title="Marca">{{ Product::getBrand($product->id) }}</td>
+									<td data-title="Marca">{{ $brand }}</td>
 									<td data-title="Cantidad">{{ $product->amounts }}</td>
 									<td class="visible-lg" data-title="Valor Unitario">Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }}</td>
 									<td class="visible-lg" data-title="Total Bs.">Bs. {{  number_format($product->amounts*Modelo::getPrice($product->model_id), 2, ',', '.') }}</td>

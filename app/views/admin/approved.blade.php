@@ -40,6 +40,13 @@
 					</thead>
 					<tbody>
 						@foreach ($items as $item)
+							<?php
+								if(Product::getBrand($item->product->id) == '0') {
+									$brand = 'Pioggia';
+								} else {
+									$brand = 'Carioca';
+								}
+							?>
 							<tr class="text-center">
 								<td data-title="Nº de Recibo">{{ $item->factura_id }}</td>
 								<td data-title="Usuario">
@@ -58,7 +65,7 @@
 									<br /> 
 									({{ Modelo::getName($item->product->model_id) }})
 								</td>
-								<td data-title="Marca">{{ Product::getBrand($product->id) }}</td>
+								<td data-title="Marca">{{ $brand }}</td>
 								<td data-title="Cantidad">{{ $item->cantidad }}</td>
 								<td data-title="Fecha de la Orden">{{ Helper::getDate(strtotime($item->created_at,0)) }}</td>
 								<td data-title="Acciones" class="text-center">

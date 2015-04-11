@@ -14,15 +14,9 @@ class OrdersController extends \BaseController {
 	{
 		$items = Item::orderBy('id','=','desc')->paginate(10);
 
-		if(Product::getBrand() == '0') {
-			$brand = 'Pioggia';
-		} else {
-			$brand = 'Carioca';
-		}
-
 		$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
 		
-		return View::make('admin.orders')->with(['items'=>$items, 'brand'=>$brand, 'image'=>$image]);
+		return View::make('admin.orders')->with(['items'=>$items, 'image'=>$image]);
 	}
 	public function approveOrder($id)
 	{
@@ -53,29 +47,18 @@ class OrdersController extends \BaseController {
 	{
 		$items = Item::onlyTrashed()->where('shipped','=','no')->orderBy('created_at','desc')->paginate(10);
 
-		if(Product::getBrand() == '0') {
-			$brand = 'Pioggia';
-		} else {
-			$brand = 'Carioca';
-		}
-
 		$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
 		
-		return View::make('admin.approved')->with(['items'=>$items, 'brand'=>$brand, 'image'=>$image]);
+		return View::make('admin.approved')->with(['items'=>$items, 'image'=>$image]);
 	}
 	public function shipped()
 	{
 		$items = Item::onlyTrashed()->where('shipped','=','yes')->orderBy('created_at','desc')->paginate(10);
 
-		if(Product::getBrand() == '0') {
-			$brand = 'Pioggia';
-		} else {
-			$brand = 'Carioca';
-		}
 
 		$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
 		
-		return View::make('admin.shipped')->with(['items'=>$items, 'brand'=>$brand, 'image'=>$image]);
+		return View::make('admin.shipped')->with(['items'=>$items, 'image'=>$image]);
 	}
 	public function shippedOrder($id)
 	{

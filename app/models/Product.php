@@ -72,8 +72,15 @@ class Product extends Eloquent {
    	}
    	public static function getBrand($id = null)
    	{
-        $brand = Product::find($id)->pluck('brand');
+        if(is_null($id)) {
+        
+        } else {
+          
+          $brand = Product::find($id)->pluck('brand');
 
-        return $brand;
+          return $brand;
+        
+        }
+        
    	}
 }

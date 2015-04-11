@@ -58,7 +58,7 @@
 									<br /> 
 									({{ Modelo::getName($item->product->model_id) }})
 								</td>
-								<td data-title="Marca">{{ $brand }}</td>
+								<td data-title="Marca">{{ Product::getBrand($product->id) }}</td>
 								<td data-title="Cantidad">{{ $item->cantidad }}</td>
 								<td data-title="Fecha de la Orden">{{ Helper::getDate(strtotime($item->created_at,0)) }}</td>
 								<td data-title="Acciones" class="text-center">

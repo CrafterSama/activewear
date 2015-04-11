@@ -56,7 +56,7 @@
 								<td data-title="Banco">{{ Pago::getBank($item->factura_id) }}</td>
 								<td data-title="No. de Recibo">{{ Pago::getBill($item->factura_id) }}</td>
 								<td data-title="Con Descuento">
-									@if (Item::totalItems($item->factura_id) >= 12)
+									@if (Item::totalItems($item->factura_id) >= Configuration::getQuantitiesDiscount())
 										Si
 									@else
 										No
@@ -64,13 +64,13 @@
 								</td>
 								<td data-title="Monto">
 								@if (($item->factura->with_tax == 'yes') && (Configuration::getIva() > 0))
-									@if (Item::totalItems($item->factura_id) >= 12)
+									@if (Item::totalItems($item->factura_id) >= Configuration::getQuantitiesDiscount())
 										{{ number_format((Item::totalFactura($item->factura_id)-(Item::totalFactura($item->factura_id)*Configuration::getDiscount()))+((Item::totalFactura($item->factura_id)-(Item::totalFactura($item->factura_id)*Configuration::getDiscount()))*Configuration::getIva()), 2, ',', '.') }}
 									@else
 										{{ number_format(Item::totalFactura($item->factura_id)+(Item::totalFactura($item->factura_id)*Configuration::getIva()), 2, ',', '.') }}
 									@endif
 								@else
-									@if (Item::totalItems($item->factura_id) >= 12)
+									@if (Item::totalItems($item->factura_id) >= Configuration::getQuantitiesDiscount())
 										{{ number_format(Item::totalFactura($item->factura_id)-(Item::totalFactura($item->factura_id)*Configuration::getDiscount()), 2, ',', '.') }}
 									@else
 										{{ number_format(Item::totalFactura($item->factura_id), 2, ',', '.') }}

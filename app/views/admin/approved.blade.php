@@ -41,6 +41,9 @@
 					<tbody>
 						@foreach ($items as $item)
 							<?php
+
+								$image = '/assets/images/stamps/'.Stamp::getName($item->product->stamp_id);
+
 								if(Product::getBrand($item->product->id) == '0') {
 									$brand = 'Pioggia';
 								} else {
@@ -57,7 +60,7 @@
 									<strong>Telefono: </strong>{{ User::getPhone($item->factura->user_id) }}
 								</td>
 								<td data-title="Producto">
-									<a href="/assets/images/stamps/{{ Stamp::getName($product->stamp_id) }}" class="img-thumbnail">
+									<a href="/assets/images/stamps/{{ Stamp::getName($item->product->stamp_id) }}" class="img-thumbnail">
 										<img src="{{ Image::path($image, 'resizeCrop', 150, 145)->responsive('max-width=150', 'resize', 100) }}" alt="Estampado" />
 									</a>
 									<br /> 

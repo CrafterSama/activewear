@@ -66,13 +66,9 @@ class Product extends Eloquent {
    	}
    	public static function totalBs()
    	{
-
    		$cantidades = Product::where('amounts','!=','0');
 
       return $cantidades;
-
-
-
    	}
    	public static function getBrand($id)
    	{

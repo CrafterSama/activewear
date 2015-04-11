@@ -14,9 +14,19 @@ class OrdersController extends \BaseController {
 	{
 		$items = Item::orderBy('id','=','desc')->paginate(10);
 
-		$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
-		
-		return View::make('admin.orders')->with(['items'=>$items, 'image'=>$image]);
+		return View::make('admin.orders')->with(['items'=>$items]);
+	}
+	public function approved()
+	{
+		$items = Item::onlyTrashed()->where('shipped','=','no')->orderBy('created_at','desc')->paginate(10);
+
+		return View::make('admin.approved')->with(['items'=>$items]);
+	}
+	public function shipped()
+	{
+		$items = Item::onlyTrashed()->where('shipped','=','yes')->orderBy('created_at','desc')->paginate(10);
+
+		return View::make('admin.shipped')->with(['items'=>$items]);
 	}
 	public function approveOrder($id)
 	{
@@ -42,23 +52,6 @@ class OrdersController extends \BaseController {
         });
 
 		return Redirect::back()->with('notice','El Pedido ha sido aprobado satisfactoriamente');
-	}
-	public function approved()
-	{
-		$items = Item::onlyTrashed()->where('shipped','=','no')->orderBy('created_at','desc')->paginate(10);
-
-		$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
-		
-		return View::make('admin.approved')->with(['items'=>$items, 'image'=>$image]);
-	}
-	public function shipped()
-	{
-		$items = Item::onlyTrashed()->where('shipped','=','yes')->orderBy('created_at','desc')->paginate(10);
-
-
-		$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
-		
-		return View::make('admin.shipped')->with(['items'=>$items, 'image'=>$image]);
 	}
 	public function shippedOrder($id)
 	{

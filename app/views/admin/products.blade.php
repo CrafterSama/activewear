@@ -44,6 +44,9 @@
 						@else
 							@foreach ($products as $product)
 								<?php
+
+									$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
+									
 									if(Product::getBrand($product->id) == '0') {
 										$brand = 'Pioggia';
 									} else {

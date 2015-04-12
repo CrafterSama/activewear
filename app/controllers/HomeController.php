@@ -219,7 +219,7 @@ class HomeController extends BaseController {
 		Mail::send('emails.contacto', $inputs , function($m) use ($inputs)
         {
             $m->from(Configuration::getContactEmail(), 'Carioca Active Wear');
-            $m->to('jolivero.03@gmail.com')->cc($email)->subject('Formulario de Contacto');
+            $m->to('jolivero.03@gmail.com')->cc($inputs['email'])->subject('Formulario de Contacto');
         });
 
 		return Redirect::back()->with('status', 'Su correo fue enviado de forma satisfactoria.');

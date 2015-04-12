@@ -27,7 +27,7 @@ $url = Request::path();
 		{{ HTML::style('/../assets/css/tabs.css', array('media'=>'screen')) }}
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="{{ asset('/assets/images/logo_morado_80x80.png') }}">
+		<link rel="shortcut icon" href="{{ asset('/assets/images/logo_morado.png') }}">
 
 		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css' />

@@ -16,7 +16,7 @@ $url = Request::path();
 		<!-- Font Awesome CDN -->
 		{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('media'=>'screen')) }}
 
-		<!-- Custom styles for this template -->
+		<!-- Custom styles for this web -->
 		{{ HTML::style('/../assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
 		{{ HTML::style('/../assets/css/table-responsive.css', array('media'=>'screen')) }}
 		{{ HTML::style('/../assets/css/style.css', array('media'=>'screen')) }}
@@ -25,7 +25,11 @@ $url = Request::path();
 		{{ HTML::style('/../assets/css/fotorama.css', array('media'=>'screen')) }}
 		{{ HTML::style('/../assets/css/datepicker.css', array('media'=>'screen')) }}
 		{{ HTML::style('/../assets/css/tabs.css', array('media'=>'screen')) }}
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{{ asset('/assets/images/logo-3.png') }}">
 
+		<!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />

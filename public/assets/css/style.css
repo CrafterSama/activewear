@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:visited
 {
-  color: #ffffff;
+  color: #333;
   text-decoration: none;
 }
 
@@ -190,13 +190,6 @@ ul.nav-tabs > li > a.carioca_color5:visited
   float: left;
 }
 
-.item-name,
-.item-name,
-.item-name:hover,
-.item-name:visited,
-.item-name:focus, {
-  color: #333;
-}
 
 .login-menu {
   margin: 5px 0 0 5px;

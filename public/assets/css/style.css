@@ -190,7 +190,11 @@ ul.nav-tabs > li > a.carioca_color5:visited
   float: left;
 }
 
-.item-name {
+.item-name,
+.item-name a,
+.item-name a:hover,
+.item-name a:visited,
+.item-name a:focus, {
   color: #333;
 }
 

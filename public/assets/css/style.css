@@ -190,6 +190,10 @@ ul.nav-tabs > li > a.carioca_color5:visited
   float: left;
 }
 
+.item-name {
+  color: #333;
+}
+
 .login-menu {
   margin: 5px 0 0 5px;
 }

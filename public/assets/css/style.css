@@ -203,10 +203,18 @@ ul.nav-tabs > li > a.carioca_color5:visited
   margin-left: 0;
 }
 
-.social-nav-btns.big-screen
+.social-nav-btns, .big-screen
 {
   margin-top: -2px;
   margin-right: -5px;
+}
+
+.social-nav-btns a,
+.social-nav-btns a:hover,
+.social-nav-btns a:focus,
+.social-nav-btns a:visited
+{
+  color: #fff;
 }
 
 .bar-menu, .navbar, .navbar-default

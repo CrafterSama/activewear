@@ -8,8 +8,7 @@
 		<div class="row">
 			<br />
 			<div class="panel panel-default">
-				<div class="panel-heading">
-				</div>
+				<div class="panel-heading"></div>
 				<div class="panel-body">
 					<section id="no-more-tables">
 						@if(count($cart) > 0)
@@ -129,6 +128,7 @@
 						@endif
 					</section>
 				</div>
+				<div class="panel-footer"></div>
 			</div>
 		</div>
 	</div>

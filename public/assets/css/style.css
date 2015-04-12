@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:visited
 {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -38,6 +38,14 @@ a.cart:visited
 {
   background: #81bcb4;
   color: white;
+}
+
+a.item-name,
+a.item-name:hover,
+a.item-name:focus,
+a.item-name::visited
+{
+  color: #333;
 }
 
 body {

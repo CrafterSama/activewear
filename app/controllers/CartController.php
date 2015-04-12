@@ -21,7 +21,7 @@ class CartController extends BaseController {
 
         if(!isset($cart) || (($cart->qty + $qty) <= $product->amounts)){            
             $precio = Modelo::getPrice($product->model_id);
-            $name = Stamp::getStampName($product->stamp_id) . "(". Modelo::getName($product->model_id) .")";
+            $name = Stamp::getStampCode($product->stamp_id).' '.Stamp::getStampName($product->stamp_id).'('. Modelo::getName($product->model_id) .')';
 
             Cart::add($id, $name, $qty, $precio, array('image' => Stamp::getName($product->stamp_id)));
         }        

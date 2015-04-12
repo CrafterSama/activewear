@@ -1,6 +1,6 @@
 @extends('layouts.home')
 
-@section('title', Stamp::getStampName($product->stamp_id).' ('.ucwords(strtolower(Modelo::getName($product->model_id))).')')
+@section('title', Stamp::getStampCode($product->stamp_id).' ('.ucwords(strtolower(Modelo::getName($product->model_id))).')')
 
 @section('content')
 <?php $image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id); ?>

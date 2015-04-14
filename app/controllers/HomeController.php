@@ -204,7 +204,7 @@ class HomeController extends BaseController {
 			);
 
 		$fromEmail = Configuration::getContactEmail();
-		$toEmail = 'jolivero.03@gmail.com';
+		$toEmail = Configuration::getContactEmail();
 		$companyName = 'Carioca Active Wear';
 
 		Mail::send('emails.contacto', $data , function($m) use ($data, $fromEmail, $toEmail, $companyName)

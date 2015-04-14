@@ -47,7 +47,7 @@
 
 									$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
 									
-									if(Product::getBrand($product->id) == '0') {
+									if($product->brand == '0') {
 										$brand = 'Pioggia';
 									} else {
 										$brand = 'Carioca';

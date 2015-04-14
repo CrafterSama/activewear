@@ -197,29 +197,19 @@ class HomeController extends BaseController {
 
 	public function postContact()
 	{
-		$inputs = Input::all();
+		$data = array(
+			'name' => Input::get('name'),
+			'email' => Input::get('email'),
+			'message' => Input::get('message')
+			);
 
-        $rules = array(
-            'name' 		=> 'required',
-            'email' 	=> 'required',
-            'message' 	=> 'required',
-            );
+		$fromEmail = Configuration::getContactEmail();
+		$toEmail = 'jolivero.03@gmail.com';
 
-        $validation = Validator::make($inputs, $rules);
-
-        if ($validation->fails())
+		Mail::send('emails.contacto', $data , function($message) use ($data, $fromEmail, $toEmail)
         {
-            return Redirect::back()->with('error', $validation);
-        }
-
-        $name = Input::get('name');
-        $email = Input::get('email');
-        $message = Input::get('message');
-		
-		Mail::send('emails.contacto', $inputs , function($m) use ($inputs)
-        {
-            $m->from(Configuration::getContactEmail(), 'Carioca Active Wear');
-            $m->to('jolivero.03@gmail.com')->cc($inputs['email'])->subject('Formulario de Contacto');
+            $message->from(Configuration::getContactEmail(), 'Carioca Active Wear');
+            $message->to($toEmail)->cc($data['email'])->subject('Formulario de Contacto');
         });
 
 		return Redirect::back()->with('status', 'Su correo fue enviado de forma satisfactoria.');

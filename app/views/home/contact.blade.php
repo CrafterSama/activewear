@@ -38,7 +38,15 @@
 					<br /><br />
 				</div>
 			</div>
-			<form id="contact" method="post" class="form" role="form">
+			{{ Form::open(array
+				(
+				'action' => 'HomeController@postContact',
+				'method' => 'POST',
+				'role' 	=> 'form',
+				'class' => 'form'
+				)) 
+			}}
+			{{-- <form id="contact" method="post" class="form" role="form"> --}}
 	    		@if(Session::has('status'))
 					<div class="alert alert-success">{{ Session::get('status') }}</div>
 					<br>
@@ -60,13 +68,12 @@
 						{{ Form::textarea('message', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control bggray form-control','id'=>'message')) }}
 						<span class="input-group-addon bggray"></span>
 				    </div>
-				</div>
-				<div class="row">
+					{{ Form::input('hidden', 'contacto') }}
 					<div class="col-xs-12 col-md-12 form-group pull-right">
 						{{ Form::submit('Enviar',array('class'=>'btn btn-primary pull-right, bgviolet')) }}
 					</div>
 				</div>
-			</form>
+			{{ Form::close() }}
 		</div>
 	</div>
 	<br /><br />

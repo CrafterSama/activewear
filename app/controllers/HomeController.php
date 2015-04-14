@@ -207,10 +207,10 @@ class HomeController extends BaseController {
 		$toEmail = 'jolivero.03@gmail.com';
 		$companyName = 'Carioca Active Wear';
 
-		Mail::send('emails.contacto', $data , function($m) use ($fromEmail, $toEmail, $companyName)
+		Mail::send('emails.contacto', $data , function($m) use ($data, $fromEmail, $toEmail, $companyName)
         {
             $m->from($fromEmail, $companyName);
-            $m->to($toEmail)->cc($email);
+            $m->to($toEmail)->cc($data['email']);
             $m->subject('Formulario de Contacto');
         });
 

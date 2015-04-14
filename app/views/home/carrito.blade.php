@@ -82,7 +82,7 @@
 									</tr>
 									<tr>	
 										<td colspan="1" class="cart-bottom visible-lg"></td>
-										<td><strong>Descuento a partir de 12 Piezas</strong></td>
+										<td><strong>Descuento a partir de {{ Configuration::getQuantitiesDiscount() }} Piezas</strong></td>
 										<td colspan="3" class="cart-bottom visible-lg" style="text-align:right"><strong>Total :</strong></td>
 										<td data-title="Total :">
 											{{ Configuration::getMoneySymbol() }} {{ number_format(Cart::total() - (Cart::total()*Configuration::getDiscount()), 2, ',', '.'); }}

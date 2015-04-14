@@ -57,16 +57,16 @@
 				@endif
 				<div class="row">
 					<div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::text('name','', array('placeholder'=>'Nombre...','class'=>'form-control bggray form-control','id'=>'name','required'=>'')) }}
-						<span class="input-group-addon bggray"><i class="fa fa-user fa-fw"></i></span>
+						{{ Form::text('name','', array('placeholder'=>'Nombre...','class'=>'form-control form-control','id'=>'name','required'=>'')) }}
+						<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
 					</div>
 					<div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::email('email','', array('placeholder'=>'Email...','class'=>'form-control bggray form-control','id'=>'email','required'=>'')) }}
-						<span class="input-group-addon bggray"><i class="fa fa-envelope-o fa-fw"></i></span>
+						{{ Form::email('email','', array('placeholder'=>'Email...','class'=>'form-control form-control','id'=>'email','required'=>'')) }}
+						<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
 					</div>
 				    <div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::textarea('msg', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control bggray form-control','id'=>'msg')) }}
-						<span class="input-group-addon bggray"></span>
+						{{ Form::textarea('msg', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control form-control','id'=>'msg')) }}
+						<span class="input-group-addon"></span>
 				    </div>
 					{{ Form::input('hidden', 'contacto') }}
 					<div class="col-xs-12 col-md-12 form-group pull-right">

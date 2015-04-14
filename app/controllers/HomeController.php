@@ -200,7 +200,7 @@ class HomeController extends BaseController {
 		$data = array(
 			'name' => Input::get('name'),
 			'email' => Input::get('email'),
-			'message' => Input::get('message')
+			'msg' => Input::get('msg')
 			);
 
 		$fromEmail = Configuration::getContactEmail();

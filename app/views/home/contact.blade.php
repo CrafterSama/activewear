@@ -65,7 +65,7 @@
 						<span class="input-group-addon bggray"><i class="fa fa-envelope-o fa-fw"></i></span>
 					</div>
 				    <div class="col-xs-12 col-md-12 form-group input-group">
-						{{ Form::textarea('message', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control bggray form-control','id'=>'message')) }}
+						{{ Form::textarea('msg', '', array('placeholder'=>'Mensaje...','rows'=>'6','class'=>'form-control bggray form-control','id'=>'msg')) }}
 						<span class="input-group-addon bggray"></span>
 				    </div>
 					{{ Form::input('hidden', 'contacto') }}

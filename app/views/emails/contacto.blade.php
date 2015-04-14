@@ -23,7 +23,7 @@
         <br />
         <br />
         <h2>Mensaje:</h2>
-        {{ $message }}
+        {{ $msg }}
         <br />
         <br />
         <hr />

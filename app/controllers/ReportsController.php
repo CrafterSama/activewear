@@ -9,6 +9,9 @@ class ReportsController extends \BaseController {
 	
 	public function getPorcentual()
 	{
+		$stDate = Input::get('first-date');
+		$ndDate = Input::get('second-date');
 
+		
 	}
 }

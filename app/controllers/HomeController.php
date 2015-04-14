@@ -207,11 +207,11 @@ class HomeController extends BaseController {
 		$toEmail = 'jolivero.03@gmail.com';
 		$companyName = 'Carioca Active Wear';
 
-		Mail::send('emails.contacto', $data , function($message) use ($fromEmail, $toEmail, $companyName)
+		Mail::send('emails.contacto', $data , function($m) use ($fromEmail, $toEmail, $companyName)
         {
-            $message->from($fromEmail, $companyName);
-            $message->to($toEmail)->cc($data['email'])
-            $message->subject('Formulario de Contacto');
+            $m->from($fromEmail, $companyName);
+            $m->to($toEmail)->cc($data['email'])
+            $m->subject('Formulario de Contacto');
         });
 
 		return Redirect::back()->with('status', 'Su correo fue enviado de forma satisfactoria.');

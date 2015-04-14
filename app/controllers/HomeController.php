@@ -210,7 +210,7 @@ class HomeController extends BaseController {
 		Mail::send('emails.contacto', $data , function($m) use ($fromEmail, $toEmail, $companyName)
         {
             $m->from($fromEmail, $companyName);
-            $m->to($toEmail)->cc($data['email'])
+            $m->to($toEmail)->cc($data['email']);
             $m->subject('Formulario de Contacto');
         });
 

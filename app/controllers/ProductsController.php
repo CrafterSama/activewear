@@ -19,6 +19,7 @@ class ProductsController extends \BaseController {
 	 */
 	public function index()
 	{
+		if(!$this->autorizado) return Redirect::to('/login');
 		$products = Product::where('amounts','!=',0)->orderBy('id','desc')->paginate(10);
 		$stamps = Stamp::all();
 		$modelos = Modelo::all();
@@ -61,7 +62,7 @@ class ProductsController extends \BaseController {
 			'stampcode'	=>'required',
 			/*'stampname'	=>'required',
 			'stampdesc'	=>'required',*/
-			'stamp' 	=>'image|max:3072'
+			'stamp' 	=>'required|image|max:3072'
 			);
 		$inputs 		= array(
 			'stampname'	=> Input::get('stampname'),
@@ -72,6 +73,7 @@ class ProductsController extends \BaseController {
 		$messages 			= array(
 			'stamp.image' => 'El Formato del Archivo debe ser de tipos Imagen (.jpg, .png, .gif, .bmp)',
 			'stamp.max:3072' => 'La Imagen que esta tratando de subir pesa mas de 3MB, reduzca su tamaño en megas.',
+			'stamp.required' => 'Debe subir una imagen del producto.',
 			'stampcode.required' => 'Debe llenar el Campo Codigo del Stampado',
 			/*'stampname.required' => 'Debe llenar el Campo Nombre del Stampado',
 			'stampdesc.required' => 'Debe llenar el Campo Descripcion del Stampado',*/
@@ -102,10 +104,10 @@ class ProductsController extends \BaseController {
 					$product->brand     = $brand;
 					$amount 			= 'amounts_'.$modelId;
 					$rules 				= array(
-					$amount 		=> 'required|numeric'
+					$amount 			=> 'required|numeric'
 					);
 					$inputs 			= array(
-					$amount 		=> $amounts
+					$amount 			=> $amounts
 					);
 					$messages 			= array(
 						'amounts_'.$modelId.'.required' => 'Dede llenar el campo Cantidades',

@@ -52,7 +52,7 @@ class Stamp extends Eloquent {
 	{
 		$stamp = Stamp::find($id);
 		if (is_null($stamp)) {
-			return 'No se Encuentra Nombre Asociado';
+			return 'No se Encuentra Codigo Asociado';
 		} else {
 			return $stamp->stampcode;
 		}

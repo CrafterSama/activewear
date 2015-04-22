@@ -19,6 +19,7 @@
 </div>
 
 <?php
+
 $url = Request::segment(5);
 //print_r($url);
 $n = 1;

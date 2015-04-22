@@ -50,7 +50,7 @@
 										</a>
 										<br />
 										{{ Stamp::getStampName($item->product->stamp_id) }}
-										{{ ucwords(strtolower(Modelo::getStampCode($item->product->model_id))) }}
+										{{ ucwords(strtolower(Modelo::getStampCode($item->product->stamp_id))) }}
 										<br />
 										({{ ucwords(strtolower(Modelo::getName($item->product->model_id))) }})
 										</td>

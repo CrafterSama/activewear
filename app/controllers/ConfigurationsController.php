@@ -19,5 +19,21 @@ class ConfigurationsController extends BaseController {
 		
 		return Redirect::back()->with('notice','Configuracion guardada de forma satisfactoria');;
 	}
+	/* SETTINGS */
+    public function settings()
+    {
+        return View::make('backend.pages.settings');
+    }
+    public function settings_post()
+    {
+        $inputs = Input::all();
+        $inputs['app_export'] = Input::has('app_export');
+        foreach ($inputs as $key => $value) {
+            $setting = Setting::firstOrNew(['key' => $key]);
+            $setting->value = $value;
+            $setting->save();
+        }
+        return Redirect::to('/dashboard/settings')->with('alert', ['type' => 'success', 'message' => 'Configuración guardada.']);
+    }
 
 }

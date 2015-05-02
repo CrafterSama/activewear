@@ -30,6 +30,7 @@
 	            	<thead class="cf">
 						<tr>
 							<th class="col-xs-1 text-center">Nº de Pedido</th>
+							<th class="col-xs-1 text-center">Producto</th>
 							<th class="col-xs-1 text-center">Nombre Completo</th>
 							<th class="col-xs-2 text-center">Banco</th>
 							<th class="col-xs-1 text-center">No. de Recibo</th>
@@ -45,6 +46,9 @@
 						@foreach ($items as $item)
 							<tr class="text-center">
 								<td data-title="Nº de Factura">{{ $item->factura_id }}</td>
+								<td data-title="Producto">
+									{{ Stamp::getStampCode($item->product->stamp_id) }}<br />{{ Modelo::getName($item->product->model_id) }}
+								</td>
 								<td data-title="Nombre Completo">
 								@if(User::getName($item->factura->user_id)=='false')
 									El Usuario fue Borrado

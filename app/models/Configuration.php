@@ -138,12 +138,12 @@ class Configuration extends Eloquent {
 	}
     public function scopeKey($query, $key)
     {    	
-        if( count(Configuration::where('key', '=', $key)->get()) == 0){
-            $setting = Configuration::firstOrNew(['key' => $key]);
+        if( count(Configuration::where('config_name', '=', $key)->get()) == 0){
+            $setting = Configuration::firstOrNew(['config_name' => $key]);
             $setting->value = '';
             $setting->save();
         }
-        return $query->where('key', '=', $key);
+        return $query->where('config_name', '=', $key);
         
     }
 

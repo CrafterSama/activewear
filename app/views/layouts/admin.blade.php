@@ -17,6 +17,7 @@
     {{ HTML::style('assets/css/adminpanel-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/table-responsive.css', array('media'=>'screen')) }}
+    {{ HTML::style('/../assets/css/datepicker.css', array('media'=>'screen')) }}
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
     {{ HTML::style('assets/css/jquery-img-upload/jquery.fileupload.css', array('media'=>'screen')) }}
         
@@ -248,6 +249,23 @@
                         /*}*/
                     }
                 });    
+            });
+            $(function() {
+                $( "#datepicker" ).datepicker({
+                    direction: 'up',
+                    constrainInput: true,
+                    showOn: "both",
+                    showAnim: "fade",
+                    buttonImage: "/../assets/images/calendar.png",
+                    buttonImageOnly: true,
+                    dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+                    monthNamesShort: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+                    'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                    yearRange: '2014:2025',
+                    /*dateFormat: 'dd/mm/yy',*/
+                    changeMonth: true,
+                    changeYear: true
+                });
             });
     </script>
 </body>

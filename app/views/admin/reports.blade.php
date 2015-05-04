@@ -24,6 +24,25 @@
 			</span>
 		</header>
 		<div class="panel-body">
+			<div class="row">
+				<div class="col-lg-12 bg2">
+					<h3>Confirmar pago:</h3>
+					<form action="/pay" id="order" autocomplete="off" method="post" enctype="multipart/form-data">
+						<div class="col-lg-6">
+							<div class="form-group">
+								{{ Form::label('fecha-star','Desde') }}
+								{{ $errors->first('fecha-star', '<div class="alert alert-danger">:message</div>') }}
+								<input name="fecha-star" value="{{ Input::old('fecha-star') }}" type="text" id="datepicker" class="form-control datepicker" required />
+							</div>
+						</div>
+						<div class="col-lg 6">
+							<div class="form-group">
+								{{ Form::label('fecha-end','Hasta') }}
+								{{ $errors->first('fecha-end', '<div class="alert alert-danger">:message</div>') }}
+								<input name="fecha-end" value="{{ Input::old('fecha-end') }}" type="text" id="datepicker" class="form-control datepicker" required />
+							</div>
+						</div>
+					</form>
 		</div>
 		<div class="panel-footer">
 		</div>

@@ -140,7 +140,8 @@ Route::group(array('before' => 'auth'), function()
 		Route::get('pedidos/quitar/{id}', 'OrdersController@cancelOrder');
 		Route::get('pedidos/cancelar/{id}', 'OrdersController@cancelAllOrder');
 
-		Route::get('reportes/por-fecha', 'ReportsController@getDates');
+		Route::get('reportes', 'ReportsController@getDates');
+		//Route::get('reportes/por-fecha', 'ReportsController@getDates');
 		Route::get('reportes/por-porcentaje', 'ReportsController@getPorcentual');
 		
 		Route::get('configuracion', 'ConfigurationsController@edit');

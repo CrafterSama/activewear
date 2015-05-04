@@ -110,8 +110,8 @@
                     </a>
                     <div class="collapse" id="toggleReports">
                         <ul class="sub">
-                            <li><a href="/admin/reportes/porfecha">Por Fechas</a></li>
-                            <li><a href="/admin/pedidos/porcentaje">Por Porcentaje</a></li>
+                            <li><a href="/admin/reportes">Por Fechas</a></li>
+                            <li><a href="#">Por Porcentaje</a></li>
                         </ul>
                     </div>
                 </li>

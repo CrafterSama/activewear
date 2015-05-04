@@ -12,6 +12,10 @@ class Configuration extends Eloquent {
 	 */
 
 	protected $table = 'configurations';
+	protected $fillable = ['key', 'value'];
+    protected static $rules = [
+        'key' => 'required',
+    ];
 
 	public static function getIva()
 	{

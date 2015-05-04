@@ -4,9 +4,9 @@
 
 @section('content')
 
-	<h1>Opciones de Configuracion</h1>
+	<h1>Modulo de Reportes</h1>
 	<div class="alert alert-info">
-		Formulario para hacer cambios en las opciones de configuracion, tales como cambiar IVA o porcentaje de descuento. 
+		Seleccione las Fechas desde y hasta con un lapso no mayor a 30/31 dias e indique el porcentaje de ganancia total entre las fechas indicadas.
 	</div>
 	<br>
 	@if(Session::has('notice'))
@@ -20,14 +20,12 @@
 		<header class="panel-heading">
 			<a href="{{ URL::previous() }}" class="btn btn-info"><i class="fa fa-chevron-left"></i> Volver</a>	
 			<span class="pull-right">
-				Cambiar Opciones
+				Reportes
 			</span>
 		</header>
 		<div class="panel-body">
-
 		</div>
 		<div class="panel-footer">
-		
 		</div>
 	</section>
 

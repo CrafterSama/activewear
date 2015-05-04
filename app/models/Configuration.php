@@ -136,5 +136,15 @@ class Configuration extends Eloquent {
 		return $value;
 
 	}
+    public function scopeKey($query, $key)
+    {    	
+        if( count(Configuration::where('key', '=', $key)->get()) == 0){
+            $setting = Configuration::firstOrNew(['key' => $key]);
+            $setting->value = '';
+            $setting->save();
+        }
+        return $query->where('key', '=', $key);
+        
+    }
 
 }

@@ -251,7 +251,7 @@
                 });    
             });
             $(function() {
-                $( "#datepicker" ).datepicker({
+                $("#datepicker").datepicker({
                     direction: 'up',
                     constrainInput: true,
                     showOn: "both",

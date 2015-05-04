@@ -50,6 +50,8 @@
 							</div>
 						</div>
 					</form>
+				</div>
+			</div>
 		</div>
 		<div class="panel-footer">
 		</div>

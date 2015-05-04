@@ -150,6 +150,23 @@
 {{ HTML::script('/../assets/js/scripts.js') }}
 <!--script for this page-->
     <script type="text/javascript">
+    $(function() {
+        $("#datepicker").datepicker({
+            direction: 'up',
+            constrainInput: true,
+            showOn: "both",
+            showAnim: "fade",
+            buttonImage: "/../assets/images/calendar.png",
+            buttonImageOnly: true,
+            dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+            monthNamesShort: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+            'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+            yearRange: '2014:2025',
+            /*dateFormat: 'dd/mm/yy',*/
+            changeMonth: true,
+            changeYear: true
+        });
+    });
     /* GEO */
     $(document).on("ready", function(){
 
@@ -180,93 +197,76 @@
             $municipios.append(option);
         }
     });
-            $(function(){
-                $('#form').validate({
-                    rules :{
-                        recibo : {
-                            required : true,
-                            number : true
+    $(function(){
+        $('#form').validate({
+            rules :{
+                recibo : {
+                    required : true,
+                    number : true
 
-                        },
-                        monto : {
-                            required : true,
-                            number : true
+                },
+                monto : {
+                    required : true,
+                    number : true
 
-                        },
-                        fecha : {
-                            required : true,
-                            date : true
+                },
+                fecha : {
+                    required : true,
+                    date : true
 
-                        },
-                        adjunto : {
-                            required : true
-                        },
-                        options : {
-                            required : true
-                        },
-                        /*if ($('#no').is(':checked')) {*/
-                            user_address : {
-                                required : true,
-                                maxlenght : 140
-                            },
-                            estado : {
-                                required : true
-                            },
-                            municipio : {
-                                required : true
-                            },
-                        /*}*/
+                },
+                adjunto : {
+                    required : true
+                },
+                options : {
+                    required : true
+                },
+                /*if ($('#no').is(':checked')) {*/
+                    user_address : {
+                        required : true,
+                        maxlenght : 140
                     },
-                    messages : {
-                        recibo : {
-                            required : "Debe ingresar el numero del recibo",
-                            number    : "Solo puede ingresar caracteres numericos"
-                        },
-                        monto : {
-                            required : "Debe Ingresar el Monto de la Transferencia o Deposito",
-                            number    : "Solo puede ingresar caracteres numericos"
-                        },
-                        fecha : {
-                            required : "Debe Ingresar la fecha en la que realizo la Transferencia o Deposito",
-                            date : "El Formato debe Ser de Fecha"
-                        },
-                        adjunto : {
-                            required : "Debe subir una imagen"
-                        },
-                        options : {
-                            required : "Debe Seleccionar Si o No"
-                        },
-                        /*if ($('#no').is(':checked')) {*/
-                            user_address : {
-                                required : "Este Campo es Obligatorio, debe ingresar su nueva dirección"
-                            },
-                            estados : {
-                                required : "Seleccione el estado"
-                            },
-                            municipios : {
-                                required : "Seleccione el municipio"
-                            },
-                        /*}*/
-                    }
-                });    
-            });
-            $(function() {
-                $("#datepicker").datepicker({
-                    direction: 'up',
-                    constrainInput: true,
-                    showOn: "both",
-                    showAnim: "fade",
-                    buttonImage: "/../assets/images/calendar.png",
-                    buttonImageOnly: true,
-                    dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-                    monthNamesShort: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
-                    'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
-                    yearRange: '2014:2025',
-                    /*dateFormat: 'dd/mm/yy',*/
-                    changeMonth: true,
-                    changeYear: true
-                });
-            });
+                    estado : {
+                        required : true
+                    },
+                    municipio : {
+                        required : true
+                    },
+                /*}*/
+            },
+            messages : {
+                recibo : {
+                    required : "Debe ingresar el numero del recibo",
+                    number    : "Solo puede ingresar caracteres numericos"
+                },
+                monto : {
+                    required : "Debe Ingresar el Monto de la Transferencia o Deposito",
+                    number    : "Solo puede ingresar caracteres numericos"
+                },
+                fecha : {
+                    required : "Debe Ingresar la fecha en la que realizo la Transferencia o Deposito",
+                    date : "El Formato debe Ser de Fecha"
+                },
+                adjunto : {
+                    required : "Debe subir una imagen"
+                },
+                options : {
+                    required : "Debe Seleccionar Si o No"
+                },
+                /*if ($('#no').is(':checked')) {*/
+                    user_address : {
+                        required : "Este Campo es Obligatorio, debe ingresar su nueva dirección"
+                    },
+                    estados : {
+                        required : "Seleccione el estado"
+                    },
+                    municipios : {
+                        required : "Seleccione el municipio"
+                    },
+                /*}*/
+            }
+        });    
+    });
     </script>
 </body>
 </html>

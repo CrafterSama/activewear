@@ -80,7 +80,7 @@
 											</tr>
 											<tr>
 												<td colspan="1"></td>
-												<td><strong>Descuento a partir de 12 Piezas</strong></td>
+												<td><strong>Descuento a partir de {{ Configuration::getQuantitiesDiscount() }} Piezas</strong></td>
 												<td colspan="2" class="cart-bottom visible-lg" style="text-align:right"><strong>Sub-Total - {{ Configuration::getWholesaleDiscountReference() }} :</strong></td>
 												<td data-title="Sub-Total - {{ Configuration::getWholesaleDiscountReference() }} :">
 													{{ Configuration::getMoneySymbol() }} {{ number_format($order->total()-($order->total()*Configuration::getDiscount()), 2, ',', '.') }}
@@ -130,7 +130,7 @@
 											</tr>
 											<tr>
 												<td colspan="1"></td>
-												<td><strong>Descuento a partir de 12 Piezas</strong></td>
+												<td><strong>Descuento a partir de {{ Configuration::getQuantitiesDiscount() }} Piezas</strong></td>
 												<td colspan="2" class="cart-bottom visible-lg" style="text-align:right"><strong>Total :</strong></td>
 												<td data-title="Total :">{{ Configuration::getMoneySymbol() }} {{ number_format($order->total()-($order->total()*Configuration::getDiscount()), 2, ',', '.') }}</td>						
 											</tr>

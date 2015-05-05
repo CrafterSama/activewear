@@ -44,10 +44,12 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="form-group">
-								{{ Form::label('porcentual','Porcentaje', array('class' => 'awesome')) }}
 								{{ $errors->first('porcentual', '<div class="alert alert-danger">:message</div>') }}
-								<input name="porcentual" value="{{ Input::old('porcentual') }}" type="number" min="1" max="100" id="datepicker" class="form-control datepicker" required />
+								{{ Form::label('porcentual','Porcentaje', array('class' => 'awesome')) }}
+								<input name="porcentual" value="{{ Input::old('porcentual') }}" type="number" min="0" max="100" id="datepicker" class="form-control datepicker" required />
 							</div>
+							<br />
+							<input type="submit" value="Mostrar" class="btn btn-primary pull-right" />
 						</div>
 					</form>
 				</div>

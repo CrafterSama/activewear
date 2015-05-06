@@ -23,28 +23,34 @@
 				Reportes
 			</span>
 		</header>
-		<div class="panel-body">
+		<div class="panel-body bg2">
+			<h3>Reporte de Ventas:</h3>
 			<div class="row">
-				<div class="col-lg-12 bg2">
-					<h3>Reporte de Ventas:</h3>
-					<form action="/pay" id="order" autocomplete="off" method="post" enctype="multipart/form-data">
+				<form action="/pay" id="order" autocomplete="off" method="post" enctype="multipart/form-data">
+					<div class="col-lg-12">
 						<div class="col-lg-4">
-							<select name="type" id="type">
+							<select name="type" id="type" class="form-control">
 								<option value="1">Total</option>
 								<option value="2">Al Detal</option>
 								<option value="3">Al Mayor</option>
 							</select>
+						</div>
+						<div class="col-lg-4"></div>
+						<div class="col-lg-4"></div>
+					</div>
+					<div class="col-lg-12">
+						<div class="col-lg-4">
 							<div class="form-group">
-								{{ $errors->first('date-star', '<div class="alert alert-danger">:message</div>') }}
-								{{ Form::label('date-star','Desde') }}
-								<input name="date-star" value="{{ Input::old('date-star') }}" type="date" id="datepicker" class="form-control datepicker" required />
+								{{ $errors->first('date-start', '<div class="alert alert-danger">:message</div>') }}
+								{{ Form::label('date-start','Desde') }}
+								<input name="date-start" value="{{ Input::old('date-start') }}" type="date" id="date-start" class="form-control datepicker" required />
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="form-group">
 								{{ $errors->first('date-end', '<div class="alert alert-danger">:message</div>') }}
 								{{ Form::label('date-end','Hasta') }}
-								<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="datepicker" class="form-control datepicker" required />
+								<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="date-end" class="form-control datepicker" required />
 							</div>
 						</div>
 						<div class="col-lg-4">
@@ -56,8 +62,8 @@
 							<br />
 							<input type="submit" value="Generar" class="btn btn-primary pull-right" />
 						</div>
-					</form>
-				</div>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="panel-footer">

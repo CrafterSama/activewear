@@ -151,7 +151,7 @@
 <!--script for this page-->
     <script type="text/javascript">
     $(function() {
-        $("#datepicker").datepicker({
+        $(".datepicker").datepicker({
             direction: 'up',
             constrainInput: true,
             showOn: "both",

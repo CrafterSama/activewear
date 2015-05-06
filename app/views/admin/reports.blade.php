@@ -29,15 +29,19 @@
 				<form action="/pay" id="order" autocomplete="off" method="post" enctype="multipart/form-data">
 					<div class="col-lg-12">
 						<div class="col-lg-4">
-							<select name="type" id="type" class="form-control">
-								<option value="1">Total</option>
-								<option value="2">Al Detal</option>
-								<option value="3">Al Mayor</option>
-							</select>
+							<div class="form-group">
+								<label for="type">Tipo de Reporte</label>
+								<select name="type" id="type" class="form-control">
+									<option value="1">Total</option>
+									<option value="2">Al Detal</option>
+									<option value="3">Al Mayor</option>
+								</select>
+							</div>
 						</div>
 						<div class="col-lg-4"></div>
 						<div class="col-lg-4"></div>
 					</div>
+					<br />
 					<div class="col-lg-12">
 						<div class="col-lg-4">
 							<div class="form-group">

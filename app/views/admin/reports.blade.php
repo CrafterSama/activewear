@@ -29,17 +29,22 @@
 					<h3>Reporte de Ventas:</h3>
 					<form action="/pay" id="order" autocomplete="off" method="post" enctype="multipart/form-data">
 						<div class="col-lg-4">
+							<select name="type" id="type">
+								<option value="1">Total</option>
+								<option value="2">Al Detal</option>
+								<option value="3">Al Mayor</option>
+							</select>
 							<div class="form-group">
-								{{ $errors->first('fecha-star', '<div class="alert alert-danger">:message</div>') }}
-								{{ Form::label('fecha-star','Desde') }}
-								<input name="fecha-star" value="{{ Input::old('fecha-star') }}" type="date" id="datepicker" class="form-control datepicker" required />
+								{{ $errors->first('date-star', '<div class="alert alert-danger">:message</div>') }}
+								{{ Form::label('date-star','Desde') }}
+								<input name="date-star" value="{{ Input::old('date-star') }}" type="date" id="datepicker" class="form-control datepicker" required />
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="form-group">
-								{{ $errors->first('fecha-end', '<div class="alert alert-danger">:message</div>') }}
-								{{ Form::label('fecha-end','Hasta') }}
-								<input name="fecha-end" value="{{ Input::old('fecha-end') }}" type="date" id="datepicker" class="form-control datepicker" required />
+								{{ $errors->first('date-end', '<div class="alert alert-danger">:message</div>') }}
+								{{ Form::label('date-end','Hasta') }}
+								<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="datepicker" class="form-control datepicker" required />
 							</div>
 						</div>
 						<div class="col-lg-4">

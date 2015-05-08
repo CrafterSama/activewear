@@ -142,7 +142,7 @@ Route::group(array('before' => 'auth'), function()
 
 		Route::get('reportes', 'ReportsController@getDates');
 		//Route::get('reportes/por-fecha', 'ReportsController@getDates');
-		Route::get('reportes/por-porcentaje', 'ReportsController@getPorcentual');
+		Route::get('reportes', 'ReportsController@postDates');
 		
 		Route::get('configuracion', 'ConfigurationsController@edit');
 		Route::post('configuracion', 'ConfigurationsController@update');

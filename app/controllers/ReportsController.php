@@ -4,18 +4,18 @@ class ReportsController extends \BaseController {
 
 	public function getDates()
 	{
+		if(!$this->autorizado) return Redirect::to('/login');
 		return View::make('admin.reports');
 	}
-	public function get_Dates($date1,$date2=null)
-	{
-				
-	}
-	
 	public function postDates()
 	{
-		$stDate = Input::get('first-date');
-		$ndDate = Input::get('second-date');
-
+		if(!$this->autorizado) return Redirect::to('/login');
 		
+		$dateStart 	= Input::get('date-start');
+		$dateEnd 	= Input::get('date-end');
+		$porcent 	= Input::get('porcentual');
+		$type 		= Input::get('type');
+		
+
 	}
 }

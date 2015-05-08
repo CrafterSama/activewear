@@ -104,17 +104,11 @@
                         <span>Modelos</span>
                     </a>
                 </li>
-                <li class="sub-menu">
-                    <a data-toggle="collapse" data-target="#toggleReports" class="collapse">
-                        <i class="fa fa-list-alt fa-lg"></i>
+                <li>
+                    <a href="/admin/reportes">
+                        <i class="fa fa-th-large fa-lg"></i>
                         <span>Reportes</span>
                     </a>
-                    <div class="collapse" id="toggleReports">
-                        <ul class="sub">
-                            <li><a href="/admin/reportes">Por Fechas</a></li>
-                            <li><a href="#">Por Porcentaje</a></li>
-                        </ul>
-                    </div>
                 </li>
                 <li>
                     <a href="/admin/usuarios">

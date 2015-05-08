@@ -5,8 +5,10 @@ class ReportsController extends \BaseController {
 	public function getDates()
 	{
 		if(!$this->autorizado) return Redirect::to('/login');
+		
 		return View::make('admin.reports');
 	}
+
 	public function postDates()
 	{
 		if(!$this->autorizado) return Redirect::to('/login');
@@ -16,6 +18,8 @@ class ReportsController extends \BaseController {
 		$porcent 	= Input::get('porcentual');
 		$type 		= Input::get('type');
 		
+
+		return Redirect::back();
 
 	}
 }

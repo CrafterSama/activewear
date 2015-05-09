@@ -80,11 +80,17 @@
                         <span>Inicio</span>
                     </a>
                 </li>
-                <li>
-                    <a href="/admin/productos">
+                <li class="sub-menu">
+                    <a data-toggle="collapse" data-target="#toggleOrders" class="collapse">
                         <i class="fa fa-list fa-lg"></i>
                         <span>Productos</span>
                     </a>
+                    <div class="collapse" id="toggleOrders">
+                        <ul class="sub">
+                            <li><a href="/admin/productos">Listado</a></li>
+                            <li><a href="/admin/productos/buscar">Buscador</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="sub-menu">
                     <a data-toggle="collapse" data-target="#toggleOrders" class="collapse">

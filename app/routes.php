@@ -169,6 +169,7 @@ Route::post('/cart/{id}/add/{qty}', ['uses' => 'CartController@post_add'] );
 Route::get('/cart/minus/{rowid}', ['uses' => 'CartController@post_minus'] );
 Route::get('/cart/plus/{rowid}', ['uses' => 'CartController@post_plus'] );
 
+Route::get('/api/stadistics/data', 'ProductsController@chartData');
 
 
 

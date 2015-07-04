@@ -219,6 +219,15 @@ class ProductsController extends \BaseController {
 			return Redirect::back()->with('notice', 'El producto ha sido eliminado correctamente.');	
 		}
 	}
+    public function chartData()
+    {
+        $devlist = DB::table('items')
+            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as items'))
+            ->groupBy('monthNum')
+            ->get();
+
+        return $devlist;
+    }
 
 
 }

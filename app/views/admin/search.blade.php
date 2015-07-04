@@ -68,7 +68,6 @@
 						</div>
 					</div>
 				</form>
-				<canvas id="projects-graph" width="1000" height="400"></canvas>
 			</div>
 		</div>
 		<div class="panel-footer">

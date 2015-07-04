@@ -148,6 +148,7 @@
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}
 {{ HTML::script('/../assets/js/scripts.js') }}
+{{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 <!--script for this page-->
     <script type="text/javascript">
     $(function() {

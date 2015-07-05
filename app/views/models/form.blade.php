@@ -28,12 +28,10 @@
 				{{ $action }} Modelos 
 			</span>
 		</header>
-		<div class="panel-body">
-			<section id="{{ strtolower($action) }}_modelos">
-				{{ Form::model($modelo, $form_data, array('role' => 'form')) }}
-
+		{{ Form::model($modelo, $form_data, array('role' => 'form')) }}
+			<div class="panel-body">
+				<section id="{{ strtolower($action) }}_modelos">
 					@include ('common/errors', array('errors' => $errors))
-
 					<div class="row">
 						<div class="form-group col-md-8">
 							{{ Form::label('model_name', 'Nombre del Modelo',array('class'=>'control-label')) }}
@@ -47,11 +45,12 @@
 							</div>
 						</div>
 					</div>
-					{{ Form::button($action . ' modelo', array('type' => 'submit', 'class' => 'btn btn-primary pull-right')) }}    
-			  
-				{{ Form::close() }}
-			</section>
-		</div>
+				</section>
+			</div>
+			<div class="panel-footer">
+				{{ Form::button($action . ' modelo', array('type' => 'submit', 'class' => 'btn btn-primary pull-right')) }}    
+			</div>
+		{{ Form::close() }}
 	</section>
 
 @stop

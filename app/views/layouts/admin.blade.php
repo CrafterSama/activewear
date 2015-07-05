@@ -142,11 +142,11 @@
 <!--common script init for all pages-->
 {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
 {{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
-{{ HTML::script('/../assets/js/toggle-init.js') }}
 {{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
 {{ HTML::script('http://code.jquery.com/ui/1.10.4/jquery-ui.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
+{{ HTML::script('/../assets/js/toggle-init.js') }}
 {{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}
 {{ HTML::script('/../assets/js/scripts.js') }}

@@ -48,7 +48,7 @@
 				</section>
 			</div>
 			<div class="panel-footer">
-				{{ Form::button($action . ' modelo', array('type' => 'submit', 'class' => 'btn btn-primary pull-right')) }}    
+				{{ Form::button($action . ' modelo', array('type' => 'submit', 'class' => 'btn btn-primary')) }}    
 			</div>
 		{{ Form::close() }}
 	</section>

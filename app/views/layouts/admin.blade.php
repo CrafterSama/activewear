@@ -28,7 +28,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    {{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
+
 </head>
 <body>
 <section id="container">
@@ -147,6 +147,7 @@
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
 {{ HTML::script('http://code.jquery.com/ui/1.10.4/jquery-ui.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
+{{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}
 {{ HTML::script('/../assets/js/scripts.js') }}
 <!--script for this page-->
@@ -268,7 +269,39 @@
             }
         });    
     });
+    $(function(){
+        $.getJSON("/api/stadistics/data", function (result) {
+
+        var labels = [],data=[];
+        for (var i = 0; i < result.length; i++) {
+            labels.push(result[i].month);
+            data.push(result[i].items);
+        }
+
+        var buyerData = {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Ventas del Mes",
+                    fillColor: "rgba(220,220,220,0.5)",
+                    strokeColor: "rgba(220,220,220,0.8)",
+                    highlightFill: "rgba(220,220,220,0.75)",
+                    highlightStroke: "rgba(220,220,220,1)",
+                    data: data
+                }
+            ]
+        };
+
+        var buyers = document.getElementById('projects-graph').getContext('2d');
+        new Chart(buyers).Bar(buyerData, {
+          bezierCurve : true
+        });
+
+      });
+
+    });
     </script>
+
 </body>
 </html>
 @endif

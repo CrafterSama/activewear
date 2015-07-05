@@ -68,6 +68,7 @@
 						</div>
 					</div>
 				</form>
+				{{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 				<script type="text/javascript">
 					$(function(){
 					    $.getJSON("/api/stadistics/data", function (result) {

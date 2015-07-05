@@ -148,7 +148,7 @@ var Script = function () {
     });*/
 
 
-    $(function() {
+    /*$(function() {
 
         var datatPie = [30,50];
 // DONUT

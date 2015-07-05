@@ -11,11 +11,7 @@ $(function() {
         classExpand: 'dcjq-current-parent'
     });
 
-
-
 });
-
-
 var Script = function () {
 
     //  menu auto scrolling

@@ -81,10 +81,8 @@
 	    var labels = [],data=[];
 	    for (var i = 0; i < result.length; i++) {
 	        labels.push(result[i].month);
-	        data.push(result[i].projects);
+	        data.push(result[i].items);
 	    }
-
-
 
 	    var buyerData = {
 	      labels : labels,
@@ -98,6 +96,7 @@
 	        }
 	      ]
 	    };
+
 	    var buyers = document.getElementById('projects-graph').getContext('2d');
 	    new Chart(buyers).Line(buyerData, {
 	      bezierCurve : true

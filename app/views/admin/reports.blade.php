@@ -68,44 +68,44 @@
 						</div>
 					</div>
 				</form>
+				<script type="text/javascript">
+					$(function(){
+					    $.getJSON("/api/stadistics/data", function (result) {
+
+					    var labels = [],data=[];
+					    for (var i = 0; i < result.length; i++) {
+					        labels.push(result[i].month);
+					        data.push(result[i].items);
+					    }
+
+					    var buyerData = {
+						    labels: labels,
+						    datasets: [
+						        {
+						            label: "Ventas del Mes",
+						            fillColor: "rgba(220,220,220,0.5)",
+						            strokeColor: "rgba(220,220,220,0.8)",
+						            highlightFill: "rgba(220,220,220,0.75)",
+						            highlightStroke: "rgba(220,220,220,1)",
+						            data: data
+						        }
+						    ]
+					    };
+
+					    var buyers = document.getElementById('projects-graph').getContext('2d');
+					    new Chart(buyers).Bar(buyerData, {
+					      bezierCurve : true
+					    });
+
+					  });
+
+					});
+				</script>
 				<canvas id="projects-graph" width="1000" height="400"></canvas>
 			</div>
 		</div>
 		<div class="panel-footer">
 		</div>
 	</section>
-	<script type="text/javascript">
-	    $(function(){
-	    $.getJSON("/api/stadistics/data", function (result) {
-
-	    var labels = [],data=[];
-	    for (var i = 0; i < result.length; i++) {
-	        labels.push(result[i].month);
-	        data.push(result[i].items);
-	    }
-
-	    var buyerData = {
-		    labels: labels,
-		    datasets: [
-		        {
-		            label: "Ventas del Mes",
-		            fillColor: "rgba(220,220,220,0.5)",
-		            strokeColor: "rgba(220,220,220,0.8)",
-		            highlightFill: "rgba(220,220,220,0.75)",
-		            highlightStroke: "rgba(220,220,220,1)",
-		            data: data
-		        }
-		    ]
-	    };
-
-	    var buyers = document.getElementById('projects-graph').getContext('2d');
-	    new Chart(buyers).Line(buyerData, {
-	      bezierCurve : true
-	    });
-
-	  });
-
-	});
-	</script>
 
 @stop

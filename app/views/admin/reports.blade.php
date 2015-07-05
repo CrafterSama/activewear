@@ -85,16 +85,17 @@
 	    }
 
 	    var buyerData = {
-	      labels : labels,
-	      datasets : [
-	        {
-	          fillColor : "rgba(240, 127, 110, 0.3)",
-	          strokeColor : "#f56954",
-	          pointColor : "#A62121",
-	          pointStrokeColor : "#741F1F",
-	          data : data
-	        }
-	      ]
+		    labels: labels,
+		    datasets: [
+		        {
+		            label: "Ventas del Mes",
+		            fillColor: "rgba(220,220,220,0.5)",
+		            strokeColor: "rgba(220,220,220,0.8)",
+		            highlightFill: "rgba(220,220,220,0.75)",
+		            highlightStroke: "rgba(220,220,220,1)",
+		            data: data
+		        }
+		    ]
 	    };
 
 	    var buyers = document.getElementById('projects-graph').getContext('2d');

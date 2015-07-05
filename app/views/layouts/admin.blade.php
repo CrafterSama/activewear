@@ -16,6 +16,7 @@
     {{ HTML::style('assets/css/adminpanel.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/adminpanel-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-switch.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/table-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('/../assets/css/datepicker.css', array('media'=>'screen')) }}
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
@@ -146,6 +147,8 @@
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
 {{ HTML::script('http://code.jquery.com/ui/1.10.4/jquery-ui.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
+{{ HTML::script('/../assets/js/bootstrap-switch.js') }}
+{{ HTML::script('/../assets/js/toggle-init.js') }}
 {{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}
 {{ HTML::script('/../assets/js/scripts.js') }}

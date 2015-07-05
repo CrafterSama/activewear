@@ -222,7 +222,7 @@
             };
             var buyers = document.getElementById('projects-graph').getContext('2d');
             new Chart(buyers).Bar(buyerData, {
-                barShowStroke: true
+                barShowStroke: false
             });
         });
     });

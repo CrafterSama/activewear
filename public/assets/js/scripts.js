@@ -132,7 +132,7 @@ var Script = function () {
     $('.popovers').popover();
 
     // notification pie chart
-    $(function() {
+    /*$(function() {
         $('.notification-pie-chart').easyPieChart({
             onStep: function(from, to, percent) {
                 $(this.el).find('.percent').text(Math.round(percent));
@@ -145,7 +145,7 @@ var Script = function () {
 
         });
 
-    });
+    });*/
 
 
     $(function() {

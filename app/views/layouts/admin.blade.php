@@ -146,6 +146,7 @@
 {{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
 {{ HTML::script('http://code.jquery.com/ui/1.10.4/jquery-ui.min.js') }}
+{{ HTML::script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
 {{ HTML::script('/../assets/js/toggle-init.js') }}

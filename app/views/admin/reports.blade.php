@@ -61,7 +61,7 @@
 							<div class="form-group">
 								{{ $errors->first('porcentual', '<div class="alert alert-danger">:message</div>') }}
 								{{ Form::label('porcentual','Porcentaje', array('class' => 'awesome')) }}
-								<input name="porcentual" value="{{ Input::old('porcentual') }}" type="number" min="0" max="100" id="datepicker" class="form-control datepicker" required />
+								<input name="porcentual" value="{{ Input::old('porcentual') }}" type="number" min="0" max="100" id="" class="form-control" required />
 							</div>
 							<br />
 							<input type="submit" value="Generar" class="btn btn-primary pull-right" />

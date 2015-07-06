@@ -150,6 +150,7 @@
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
 {{ HTML::script('/../assets/js/bootstrap-select.min.js') }}
+{{ HTML::script('/../assets/js/bootstrap-fiestyle.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-datepicker.min.js') }}
 {{ HTML::script('/../assets/js/locales/bootstrap-datepicker.es.min.js') }}
 {{ HTML::script('/../assets/js/toggle-init.js') }}
@@ -158,6 +159,7 @@
 {{ HTML::script('/../assets/js/scripts.js') }}
 <!--script for this page-->
     <script type="text/javascript">
+    $(":file").filestyle({buttonName: "btn-primary"});
     $('.date input').datepicker({
         format: "dd/mm/yyyy",
         language: "es",

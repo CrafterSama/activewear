@@ -50,7 +50,8 @@
 				                	<option value="1">Carioca</option>
 				                </select>
 				                <br />
-					        	<input type='file' id="imgInp" name="stamp" class="file" /><br />
+				                <br />
+					        	<input type='file' id="imgInp" name="stamp" class="file filestyle" data-buttonName="btn-primary" /><br />
 						        <div class="thumbnail">
 		        					<img id="target" src="#" alt="Estampado" class="img-responsive" />
 								</div>

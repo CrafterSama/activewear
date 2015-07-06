@@ -31,7 +31,7 @@
 						<div class="col-lg-4">
 							<div class="form-group">
 								<label for="type">Tipo de Reporte</label>
-								<select name="type" id="type" class="form-control selectpicker">
+								<select name="type" id="type" class="selectpicker">
 									<option value="1">Total</option>
 									<option value="2">Al Detal</option>
 									<option value="3">Al Mayor</option>

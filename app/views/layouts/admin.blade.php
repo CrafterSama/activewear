@@ -20,7 +20,6 @@
     {{ HTML::style('assets/css/bootstrap-datepicker3.min.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-select.min.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/table-responsive.css', array('media'=>'screen')) }}
-    {{ HTML::style('/../assets/css/datepicker.css', array('media'=>'screen')) }}
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
     {{ HTML::style('assets/css/jquery-img-upload/jquery.fileupload.css', array('media'=>'screen')) }}
         
@@ -144,15 +143,15 @@
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--common script init for all pages-->
 {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
-{{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
-{{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
 {{ HTML::script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js') }}
+{{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
+{{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
+{{ HTML::script('/../assets/js/bootstrap-select.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-datepicker.min.js') }}
 {{ HTML::script('/../assets/js/locales/bootstrap-datepicker.es.min.js') }}
-{{ HTML::script('/../assets/js/locales/bootstrap-select.min.js') }}
 {{ HTML::script('/../assets/js/toggle-init.js') }}
 {{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}

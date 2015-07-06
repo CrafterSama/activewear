@@ -51,7 +51,7 @@
 				                </select>
 				                <br />
 				                <br />
-					        	<input type='file' id="imgInp" name="stamp" class="file filestyle" data-buttonName="btn-primary" /><br />
+					        	<input type='file' id="imgInp" name="stamp" class="filestyle" data-buttonName="btn-primary" /><br />
 						        <div class="thumbnail">
 		        					<img id="target" src="#" alt="Estampado" class="img-responsive" />
 								</div>

@@ -61,10 +61,10 @@
 								@foreach ($modelos as $modelo)
 									<div class="row">
 										<div class="col-xs-2">
-											<div class="btn-group" data-toggle="buttons">
+											<span class="btn" data-toggle="buttons">
 												{{ Form::label($modelo->model_name, strtoupper($modelo->model_name)) }}
 												{{ Form::checkbox('model_id['.$modelo->id.']',$modelo->id) }}
-											</div>
+											</span>
 										</div>
 										<div class="col-xs-4"></div>
 										<div class="col-xs-6">

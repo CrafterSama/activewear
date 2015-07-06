@@ -17,6 +17,7 @@
     {{ HTML::style('assets/css/adminpanel-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-switch.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-datepicker.min.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/table-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('/../assets/css/datepicker.css', array('media'=>'screen')) }}
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
@@ -145,32 +146,21 @@
 {{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
 {{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
-{{ HTML::script('http://code.jquery.com/ui/1.10.4/jquery-ui.min.js') }}
 {{ HTML::script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
+{{ HTML::script('/../assets/js/bootstrap-datepicker.min.js') }}
+{{ HTML::script('/../assets/js/locales/bootstrap-datepicker.es.min.js') }}
 {{ HTML::script('/../assets/js/toggle-init.js') }}
 {{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}
 {{ HTML::script('/../assets/js/scripts.js') }}
 <!--script for this page-->
     <script type="text/javascript">
-    $(function() {
-        $(".datepicker").datepicker({
-            direction: 'up',
-            constrainInput: true,
-            showOn: "both",
-            showAnim: "fade",
-            buttonImage: "/../assets/images/calendar.png",
-            buttonImageOnly: true,
-            dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-            monthNamesShort: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
-            'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
-            yearRange: '2014:2025',
-            /*dateFormat: 'dd/mm/yy',*/
-            changeMonth: true,
-            changeYear: true
-        });
+    $('.date input').datepicker({
+        format: "dd/mm/yyyy",
+        language: "es",
+        autoclose: true
     });
     /* GEO */
     $(document).on("ready", function(){

@@ -17,7 +17,8 @@
     {{ HTML::style('assets/css/adminpanel-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/bootstrap-switch.css', array('media'=>'screen')) }}
-    {{ HTML::style('assets/css/bootstrap-datepicker.min.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-datepicker3.min.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-select.min.css', array('media'=>'screen')) }}
     {{ HTML::style('assets/css/table-responsive.css', array('media'=>'screen')) }}
     {{ HTML::style('/../assets/css/datepicker.css', array('media'=>'screen')) }}
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
@@ -151,6 +152,7 @@
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
 {{ HTML::script('/../assets/js/bootstrap-datepicker.min.js') }}
 {{ HTML::script('/../assets/js/locales/bootstrap-datepicker.es.min.js') }}
+{{ HTML::script('/../assets/js/locales/bootstrap-select.min.js') }}
 {{ HTML::script('/../assets/js/toggle-init.js') }}
 {{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('/../assets/js/common.js') }}

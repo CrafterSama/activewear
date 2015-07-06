@@ -45,7 +45,7 @@
 								{{ Form::text('stampdesc','',array('placeholder'=>'Descripcion','class'=>'form-control')) }}
 								<br />
 				                <label for="brand">Marca</label>
-				                <select name="brand" id="brand" class="form-control">
+				                <select name="brand" id="brand" class="selectpicker">
 				                	<option value="0">Pioggia</option>
 				                	<option value="1">Carioca</option>
 				                </select>

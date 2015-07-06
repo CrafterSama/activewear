@@ -84,11 +84,11 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a data-toggle="collapse" data-target="#toggleOrders" class="collapse">
+                    <a data-toggle="collapse" data-target="#toggleProducts" class="collapse">
                         <i class="fa fa-list fa-lg"></i>
                         <span>Productos</span>
                     </a>
-                    <div class="collapse" id="toggleOrders">
+                    <div class="collapse" id="toggleProducts">
                         <ul class="sub">
                             <li><a href="/admin/productos">Listado</a></li>
                             <li><a href="/admin/productos/buscar">Buscador</a></li>

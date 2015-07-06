@@ -62,11 +62,8 @@
 									<div class="row">
 										<div class="col-xs-2">
 											<div class="btn-group" data-toggle="buttons">
-												<span class="btn btn-default">
-													{{ Form::label($modelo->model_name, strtoupper($modelo->model_name)) }}
-													{{ Form::checkbox('model_id['.$modelo->id.']',$modelo->id) }}
-													&nbsp;&nbsp;<span class="glyphicon glyphicon-ok"></span>
-												</span>
+												{{ Form::label($modelo->model_name, strtoupper($modelo->model_name)) }}
+												{{ Form::checkbox('model_id['.$modelo->id.']',$modelo->id) }}
 											</div>
 										</div>
 										<div class="col-xs-4"></div>

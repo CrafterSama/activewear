@@ -165,17 +165,14 @@
     });
     /* GEO */
     $(document).on("ready", function(){
-
         var $estados = $("#estados");
         var $municipios = $("#municipios");
-
         $.post('/geo/estados', function(data, textStatus, xhr) {                
             $.each(data, function(index, val) {
                 var option = '<option value="' + val.id +'">' + val.estado +'</option>';
                 $estados.append(option);
             }); 
         },'json');
-
         $estados.on("change", function(){
             var id = $(this).val();
             resetMunicipios();
@@ -186,7 +183,6 @@
                 }); 
             },'json');
         });
-
         function resetMunicipios(){
             $municipios.empty();
             var option = '<option> -- Seleccione --</option>';

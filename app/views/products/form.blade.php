@@ -69,6 +69,8 @@
 											<br />
 											<input type="number" min="1" name="amounts_{{ $modelo->id }}" placeholder="Cantidades" class="form-control" />
 										</div>
+										<br />
+										<br />
 									</div>
 								@endforeach
 							</div>

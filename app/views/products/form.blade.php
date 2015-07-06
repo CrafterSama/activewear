@@ -63,7 +63,7 @@
 										<div class="col-xs-2">
 											<span class="btn-group" data-toggle="buttons">
 												{{ Form::label($modelo->model_name, strtoupper($modelo->model_name)) }}
-												<input type="checkbox" name="{{ model_id['$modelo->id'] }}" value="{{ $modelo->id }}" data-size="mini" />
+												<input type="checkbox" name="model_id['{{ $modelo->id }}']" value="{{ $modelo->id }}" data-size="mini" />
 												{{-- Form::checkbox('model_id['.$modelo->id.']',$modelo->id) --}}
 											</span>
 										</div>

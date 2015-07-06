@@ -60,18 +60,15 @@
 								<hr />
 								@foreach ($modelos as $modelo)
 									<div class="row">
-										<div class="col-xs-2">
+										<div class="col-xs-12">
 											<span class="btn btn-default" data-toggle="buttons">
 												{{ Form::label($modelo->model_name, strtoupper($modelo->model_name)) }}
 												<input type="checkbox" name="model_id['{{ $modelo->id }}']" value="{{ $modelo->id }}" data-size="mini" />
 												{{-- Form::checkbox('model_id['.$modelo->id.']',$modelo->id) --}}
 											</span>
-										</div>
-										<div class="col-xs-4"></div>
-										<div class="col-xs-6">
+											<br />
 											<input type="number" min="1" name="amounts_{{ $modelo->id }}" placeholder="Cantidades" class="form-control" />
 										</div>
-										<br />
 									</div>
 								@endforeach
 							</div>

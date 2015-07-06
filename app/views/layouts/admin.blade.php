@@ -150,7 +150,7 @@
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
 {{ HTML::script('/../assets/js/bootstrap-select.min.js') }}
-{{ HTML::script('/../assets/js/bootstrap-fiestyle.min.js') }}
+{{ HTML::script('/../assets/js/bootstrap-filestyle.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-datepicker.min.js') }}
 {{ HTML::script('/../assets/js/locales/bootstrap-datepicker.es.min.js') }}
 {{ HTML::script('/../assets/js/toggle-init.js') }}

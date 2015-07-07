@@ -141,14 +141,14 @@ var Script = function () {
 
     //  menu auto scrolling
 
-    /*jQuery('#sidebar .sub-menu > a').click(function () {
+    jQuery('#sidebar .sub-menu > a').click(function () {
         var o = ($(this).offset());
         diff = 80 - o.top;
         if(diff>0)
             $("#sidebar").scrollTo("-="+Math.abs(diff),500);
         else
             $("#sidebar").scrollTo("+="+Math.abs(diff),500);
-    });*/
+    });
 
     // toggle bar
 

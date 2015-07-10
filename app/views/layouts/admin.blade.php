@@ -206,10 +206,7 @@
                         }
                     ]
                 };
-                var buyers = document.getElementById('projects-graph').getContext('2d');
-                new Chart(buyers).Bar(buyerData, {
-                    barShowStroke: false
-                });
+                var buyers = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
             });
         }
     });

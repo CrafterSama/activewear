@@ -80,7 +80,7 @@
 	                    </header>
 	                    <div class="panel-body">
 	                        <div class="chartJS">
-	                            <canvas id="projects-graph" height="250" width="800" ></canvas>
+	                            <canvas id="bar-chart-js" height="250" width="800" ></canvas>
 	                        </div>
 	                    </div>
 	                </section>

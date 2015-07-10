@@ -88,7 +88,7 @@
                         <i class="fa fa-list-alt fa-lg"></i>
                         <span>Productos</span>
                     </a>
-                    <div class="collapse" id="toggleProducts">
+                    <div class="" id="toggleProducts">
                         <ul class="sub">
                             <li><a href="/admin/productos">Listado</a></li>
                             <li><a href="/admin/productos/buscar">Buscador</a></li>
@@ -96,16 +96,14 @@
                     </div>
                 </li>
                 <li class="sub-menu">
-                    <a data-toggle="collapse" data-target="#toggleOrders">
+                    <a href="javascript:;">
                         <i class="fa fa-list-alt fa-lg"></i>
                         <span>Pedidos</span>
                     </a>
-                    <div class="collapse" id="toggleOrders">
-                        <ul class="sub">
-                            <li><a href="/admin/pedidos">Pendientes</a></li>
-                            <li><a href="/admin/pedidos/aprobados">Aprobados</a></li>
-                        </ul>
-                    </div>
+                    <ul class="sub">
+                        <li><a href="/admin/pedidos">Pendientes</a></li>
+                        <li><a href="/admin/pedidos/aprobados">Aprobados</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="/admin/modelos">

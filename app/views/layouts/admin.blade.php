@@ -148,7 +148,7 @@
 {{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
 {{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
 {{ HTML::script('/../assets/js/jquery.scrollTo.min.js') }}
-{{ HTML::script('/../assets/js/bootstrap.min.js') }}
+{{ HTML::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
 {{ HTML::script('/../assets/js/bootstrap-select.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-filestyle.min.js') }}

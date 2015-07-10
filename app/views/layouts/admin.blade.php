@@ -191,6 +191,7 @@
             var option = '<option> -- Seleccione --</option>';
             $municipios.append(option);
         }
+        
         $.getJSON("/api/stadistics/data", function (result) {
             var labels = [],data=[];
             for (var i = 0; i < result.length; i++) {

@@ -68,7 +68,24 @@
 						</div>
 					</div>
 				</form>
-				<canvas id="projects-graph" width="1200" height="400"></canvas>
+	            <div class="col-sm-12">
+	                <section class="panel">
+	                    <header class="panel-heading">
+	                        Bar Chart
+	                        <span class="tools pull-right">
+	                            <a href="javascript:;" class="fa fa-chevron-down"></a>
+	                            <a href="javascript:;" class="fa fa-cog"></a>
+	                            <a href="javascript:;" class="fa fa-times"></a>
+	                         </span>
+	                    </header>
+	                    <div class="panel-body">
+	                        <div class="chartJS">
+	                            <canvas id="projects-graph" height="250" width="800" ></canvas>
+	                        </div>
+	                    </div>
+	                </section>
+	            </div>
+				{{--  <canvas id="projects-graph" width="1200" height="400"></canvas> --}}
 			</div>
 		</div>
 		<div class="panel-footer">

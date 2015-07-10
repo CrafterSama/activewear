@@ -200,10 +200,8 @@
                     datasets: [
                         {
                             label: "Ventas del Mes",
-                            fillColor: "rgba(220,220,220,0.5)",
-                            strokeColor: "rgba(220,220,220,0.8)",
-                            highlightFill: "rgba(220,220,220,0.75)",
-                            highlightStroke: "rgba(220,220,220,1)",
+                            fillColor : "#E67A77",
+                            strokeColor : "#E67A77",
                             data: data
                         }
                     ]

@@ -84,15 +84,6 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a role="button" data-toggle="collapse" data-target="#toggleProducts"><i class="fa fa-list fa-lg"></i><span>Productos</span></a>
-                    <div class="collapse" id="toggleProducts">
-                        <ul class="sub">
-                            <li><a href="/admin/productos">Listado</a></li>
-                            <li><a href="/admin/productos/buscar">Buscador</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="sub-menu">
                     <a data-toggle="collapse" data-target="#toggleProducts" class="collapse">
                         <i class="fa fa-list-alt fa-lg"></i>
                         <span>Productos</span>
@@ -156,6 +147,7 @@
 {{ HTML::script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js') }}
 {{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
 {{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
+{{ HTML::script('/../assets/js/jquery.scrollTo.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap.min.js') }}
 {{ HTML::script('/../assets/js/bootstrap-switch.js') }}
 {{ HTML::script('/../assets/js/bootstrap-select.min.js') }}

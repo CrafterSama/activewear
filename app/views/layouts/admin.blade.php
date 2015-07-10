@@ -84,7 +84,7 @@
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a data-toggle="collapse" data-target="#toggleProducts" class="collapse">
+                    <a data-toggle="collapse" data-target="#toggleProducts">
                         <i class="fa fa-list-alt fa-lg"></i>
                         <span>Productos</span>
                     </a>
@@ -96,7 +96,7 @@
                     </div>
                 </li>
                 <li class="sub-menu">
-                    <a data-toggle="collapse" data-target="#toggleOrders" class="collapse">
+                    <a data-toggle="collapse" data-target="#toggleOrders">
                         <i class="fa fa-list-alt fa-lg"></i>
                         <span>Pedidos</span>
                     </a>
@@ -145,18 +145,18 @@
 {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
 {{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
 {{ HTML::script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js') }}
-{{ HTML::script('/../assets/js/jquery.nicescroll.js') }}
-{{ HTML::script('/../assets/js/jquery.dcjqaccordion.2.7.js') }}
-{{ HTML::script('/../assets/js/jquery.scrollTo.min.js') }}
+{{ HTML::script('assets/js/jquery.nicescroll.js') }}
+{{ HTML::script('assets/js/jquery.dcjqaccordion.2.7.js') }}
+{{ HTML::script('assets/js/jquery.scrollTo.min.js') }}
 {{ HTML::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js') }}
-{{ HTML::script('/../assets/js/bootstrap-switch.js') }}
-{{ HTML::script('/../assets/js/bootstrap-select.min.js') }}
-{{ HTML::script('/../assets/js/bootstrap-filestyle.min.js') }}
-{{ HTML::script('/../assets/js/bootstrap-datepicker.min.js') }}
-{{ HTML::script('/../assets/js/locales/bootstrap-datepicker.es.min.js') }}
-{{ HTML::script('/../assets/js/toggle-init.js') }}
-{{ HTML::script('/../assets/js/vendor/Chart.min.js') }}
-{{ HTML::script('/../assets/js/common.js') }}
+{{ HTML::script('assets/js/bootstrap-switch.js') }}
+{{ HTML::script('assets/js/bootstrap-select.min.js') }}
+{{ HTML::script('assets/js/bootstrap-filestyle.min.js') }}
+{{ HTML::script('assets/js/bootstrap-datepicker.min.js') }}
+{{ HTML::script('assets/js/locales/bootstrap-datepicker.es.min.js') }}
+{{ HTML::script('assets/js/toggle-init.js') }}
+{{ HTML::script('assets/js/vendor/Chart.min.js') }}
+{{ HTML::script('assets/js/common.js') }}
 {{-- HTML::script('/../assets/js/scripts.js') --}}
 <!--script for this page-->
     <script type="text/javascript">

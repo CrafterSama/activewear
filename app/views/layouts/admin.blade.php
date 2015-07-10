@@ -191,32 +191,33 @@
             var option = '<option> -- Seleccione --</option>';
             $municipios.append(option);
         }
-        var URLhash = window.location.hash;
-        alert(URLhash);
-        $.getJSON("/api/stadistics/data", function (result) {
-            var labels = [],data=[];
-            for (var i = 0; i < result.length; i++) {
-                labels.push(result[i].month);
-                data.push(result[i].items);
-            }
-            var buyerData = {
-                labels: labels,
-                datasets: [
-                    {
-                        label: "Ventas del Mes",
-                        fillColor: "rgba(220,220,220,0.5)",
-                        strokeColor: "rgba(220,220,220,0.8)",
-                        highlightFill: "rgba(220,220,220,0.75)",
-                        highlightStroke: "rgba(220,220,220,1)",
-                        data: data
-                    }
-                ]
-            };
-            var buyers = document.getElementById('projects-graph').getContext('2d');
-            new Chart(buyers).Bar(buyerData, {
-                barShowStroke: false
+        var pathname = window.location.pathname;
+        if(pathname == '/admin/reportes'){
+            $.getJSON("/api/stadistics/data", function (result) {
+                var labels = [],data=[];
+                for (var i = 0; i < result.length; i++) {
+                    labels.push(result[i].month);
+                    data.push(result[i].items);
+                }
+                var buyerData = {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: "Ventas del Mes",
+                            fillColor: "rgba(220,220,220,0.5)",
+                            strokeColor: "rgba(220,220,220,0.8)",
+                            highlightFill: "rgba(220,220,220,0.75)",
+                            highlightStroke: "rgba(220,220,220,1)",
+                            data: data
+                        }
+                    ]
+                };
+                var buyers = document.getElementById('projects-graph').getContext('2d');
+                new Chart(buyers).Bar(buyerData, {
+                    barShowStroke: false
+                });
             });
-        });
+        }
     });
     </script>
 

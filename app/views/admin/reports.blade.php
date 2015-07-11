@@ -44,25 +44,29 @@
 					<br />
 					<div class="col-lg-12">
 						<div class="col-lg-4">
-							<div class="form-group date">
+							<div class="form-group">
 								{{ $errors->first('date-start', '<div class="alert alert-danger">:message</div>') }}
 								{{ Form::label('date-start','Desde') }}
-								<input name="date-start" value="{{ Input::old('date-start') }}" type="date" id="date-start" class="form-control" required />
-								<span class="input-group-addon">
-                    				<span class="fa fa-calendar">
-                    				</span>
-                				</span>
+								<div class='input-group date'>
+									<input name="date-start" value="{{ Input::old('date-start') }}" type="date" id="date-start" class="form-control" required />
+									<span class="input-group-addon">
+                    					<span class="fa fa-calendar">
+                    					</span>
+                					</span>
+                				</div>
 							</div>
 						</div>
 						<div class="col-lg-4">
-							<div class="form-group date">
+							<div class="form-group">
 								{{ $errors->first('date-end', '<div class="alert alert-danger">:message</div>') }}
 								{{ Form::label('date-end','Hasta') }}
-								<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="date-end" class="form-control" required />
-								<span class="input-group-addon">
-                    				<span class="fa fa-calendar">
-                    				</span>
-                				</span>
+								<div class='input-group date'>
+									<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="date-end" class="form-control" required />
+									<span class="input-group-addon">
+                    					<span class="fa fa-calendar">
+                    					</span>
+                					</span>
+            					</div>
 							</div>
 						</div>
 						<div class="col-lg-4">

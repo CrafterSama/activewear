@@ -53,11 +53,11 @@
                 <div class="alert alert-info">Debe guardar aqui la direccion a la cual recibe los pedidos, no olvide seleccionar La Ciudad y el Estado</div>
                 <input type="text" name="user_address" id="user_address" class="form-control" placeholder="Dirección" required />
                 <label for="estado">Estado</label>
-                <select name="estado" id="estados" class="form-control">
+                <select name="estado" id="estados" class="selectpicker" data-width="100%">
                 </select>
                 <br />
                 <label for="municipio">Ciudad</label>
-                <select name="municipio" id="municipios" class="form-control">
+                <select name="municipio" id="municipios" class="selectpicker" data-width="100%">
                     <option>Selecciona el Estado</option>
                 </select>
             </div>

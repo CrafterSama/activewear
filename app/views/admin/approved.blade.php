@@ -18,9 +18,6 @@
 	    <header class="panel-heading">
 	        <span class="tools pull-left">
 	        	<a href="{{ URL::previous() }}" class="btn btn-info"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp; Volver</a>
-	            {{-- <a href="/admin/pedidos/agregar" class="btn btn-success pull-right white"><i class="fa fa-plus fa-lg"></i>  Agregar Orden</a>
-	            &nbsp;&nbsp;
-	            <a href="/admin/usuarios" class="btn btn-success pull-right white"><i class="fa fa-users fa-lg"></i>  Usuarios</a> --}}
 	        </span>
 	    	<span class="visible-lg text-right">Pedidos Aprobados</span>
 	    </header>

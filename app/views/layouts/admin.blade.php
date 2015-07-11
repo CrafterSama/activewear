@@ -110,6 +110,7 @@
         language: "es",
         orientation: "auto right",
         autoclose: true,
+        date: "fa fa-calendar",
         todayHighlight: true
     });
     var pathname = window.location.pathname;

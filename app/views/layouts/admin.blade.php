@@ -108,7 +108,9 @@
     $('.date input').datepicker({
         format: "dd/mm/yyyy",
         language: "es",
-        autoclose: true
+        orientation: "auto right",
+        autoclose: true,
+        todayHighlight: true
     });
     var pathname = window.location.pathname;
     if(pathname == '/admin/reportes'){

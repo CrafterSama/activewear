@@ -95,7 +95,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;">
-                        <i class="fa fa-list-alt fa-lg"></i>
+                        <i class="fa fa-list fa-lg"></i>
                         <span>Pedidos</span>
                     </a>
                     <ul class="sub">

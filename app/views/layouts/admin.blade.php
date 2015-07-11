@@ -111,7 +111,7 @@
                 </li>
                 <li>
                     <a href="/admin/reportes">
-                        <i class="fa fa-th-large fa-lg"></i>
+                        <i class="fa fa-bar-chart fa-lg"></i>
                         <span>Reportes</span>
                     </a>
                 </li>

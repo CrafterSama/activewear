@@ -48,6 +48,10 @@
 								{{ $errors->first('date-start', '<div class="alert alert-danger">:message</div>') }}
 								{{ Form::label('date-start','Desde') }}
 								<input name="date-start" value="{{ Input::old('date-start') }}" type="date" id="date-start" class="form-control" required />
+								<span class="input-group-addon">
+                    				<i class="fa fa-calendar">
+                    				</i>
+                				</span>
 							</div>
 						</div>
 						<div class="col-lg-4">
@@ -55,6 +59,10 @@
 								{{ $errors->first('date-end', '<div class="alert alert-danger">:message</div>') }}
 								{{ Form::label('date-end','Hasta') }}
 								<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="date-end" class="form-control" required />
+								<span class="input-group-addon">
+                    				<i class="fa fa-calendar">
+                    				</i>
+                				</span>
 							</div>
 						</div>
 						<div class="col-lg-4">

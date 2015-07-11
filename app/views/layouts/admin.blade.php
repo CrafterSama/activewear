@@ -180,7 +180,7 @@
                     }
                 ]
             };
-            var buyers = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
+            var buyers = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(buyerData);
         });
     }
     /* GEO */

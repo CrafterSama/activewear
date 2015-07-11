@@ -162,6 +162,27 @@
         language: "es",
         autoclose: true
     });
+    var pathname = window.location.pathname;
+    if(pathname == '/admin/reportes'){
+        $.getJSON("/api/stadistics/data", function (result) {
+            var labels = [], data = [];
+            for (var i = 0; i < result.length; i++) {
+                labels.push(result[i].month);
+                data.push(result[i].items);
+            }
+            var buyerData = {
+                labels: labels,
+                datasets: [
+                    {
+                        fillColor : "#E67A77",
+                        strokeColor : "#E67A77",
+                        data: data
+                    }
+                ]
+            };
+            var buyers = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
+        });
+    }
     /* GEO */
     $(document).on("ready", function(){
         var $estados = $("#estados");
@@ -186,29 +207,7 @@
             $municipios.empty();
             var option = '<option> -- Seleccione --</option>';
             $municipios.append(option);
-        }
-        var pathname = window.location.pathname;
-        if(pathname == '/admin/reportes'){
-            $.getJSON("/api/stadistics/data", function (result) {
-                var labels = [],data=[];
-                for (var i = 0; i < result.length; i++) {
-                    labels.push(result[i].month);
-                    data.push(result[i].items);
-                }
-                var buyerData = {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: "Ventas del Mes",
-                            fillColor : "#E67A77",
-                            strokeColor : "#E67A77",
-                            data: data
-                        }
-                    ]
-                };
-                var buyers = new Chart(document.getElementById("bar-chart-js").getContext("2d")).Bar(barChartData);
-            });
-        }
+        }     
     });
     </script>
 

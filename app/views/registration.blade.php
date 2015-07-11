@@ -7,14 +7,19 @@
     <title>@yield('title','Panel de Administración')</title>
 
     <!-- Bootstrap core CSS -->
-    {{ HTML::style('/../assets/css/bootstrap.min.css', array('media'=>'screen')) }}
-
+    {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', array('media'=>'screen')) }}
+    <!-- Font Awesome -->
+    {{ HTML::style('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', array('media'=>'screen')) }}
     <!-- Custom styles for this template -->
-    {{ HTML::style('/../assets/css/adminpanel.css', array('media'=>'screen')) }}
-    {{ HTML::style('/../assets/css/adminpanel-responsive.css', array('media'=>'screen')) }}
-    {{ HTML::style('/../assets/css/table-responsive.css', array('media'=>'screen')) }}
-    {{ HTML::style('/../assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
-    {{ HTML::style('/../assets/css/font-awesome.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/adminpanel.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/adminpanel-responsive.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-reset.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-switch.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-datepicker3.min.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/bootstrap-select.min.css', array('media'=>'screen')) }}
+    {{ HTML::style('assets/css/table-responsive.css', array('media'=>'screen')) }}
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    {{ HTML::style('assets/css/jquery-img-upload/jquery.fileupload.css', array('media'=>'screen')) }}
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="js/ie8/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -77,10 +82,23 @@
         {{ Form::close() }}
 
     </div>
-    {{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
-    {{ HTML::script('/../assets/js/bootstrap.min.js') }}
-    {{ HTML::script('/../assets/js/jquery.validate.js') }}
-    {{ HTML::script('/../assets/js/common.js') }}
+<!-- Placed js at the end of the document so the pages load faster -->
+<!--common script init for all pages-->
+{{ HTML::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') }}
+{{ HTML::script('http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js') }}
+{{ HTML::script('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js') }}
+{{ HTML::script('assets/js/jquery.nicescroll.js') }}
+{{ HTML::script('assets/js/jquery.dcjqaccordion.2.7.js') }}
+{{ HTML::script('assets/js/jquery.scrollTo.min.js') }}
+{{ HTML::script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js') }}
+{{ HTML::script('assets/js/bootstrap-switch.js') }}
+{{ HTML::script('assets/js/bootstrap-select.min.js') }}
+{{ HTML::script('assets/js/bootstrap-filestyle.min.js') }}
+{{ HTML::script('assets/js/bootstrap-datepicker.min.js') }}
+{{ HTML::script('assets/js/locales/bootstrap-datepicker.es.min.js') }}
+{{ HTML::script('assets/js/toggle-init.js') }}
+{{ HTML::script('assets/js/vendor/Chart.min.js') }}
+{{ HTML::script('assets/js/common.js') }}
     <script type="text/javascript">
         /* GEO */
         $(document).on("ready", function(){

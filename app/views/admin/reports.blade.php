@@ -49,8 +49,8 @@
 								{{ Form::label('date-start','Desde') }}
 								<input name="date-start" value="{{ Input::old('date-start') }}" type="date" id="date-start" class="form-control" required />
 								<span class="input-group-addon">
-                    				<i class="fa fa-calendar">
-                    				</i>
+                    				<span class="fa fa-calendar">
+                    				</span>
                 				</span>
 							</div>
 						</div>
@@ -60,8 +60,8 @@
 								{{ Form::label('date-end','Hasta') }}
 								<input name="date-end" value="{{ Input::old('date-end') }}" type="date" id="date-end" class="form-control" required />
 								<span class="input-group-addon">
-                    				<i class="fa fa-calendar">
-                    				</i>
+                    				<span class="fa fa-calendar">
+                    				</span>
                 				</span>
 							</div>
 						</div>

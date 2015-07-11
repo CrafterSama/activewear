@@ -32,7 +32,7 @@
 		</header>
 		<div class="panel-body">
 			<section id="{{ strtolower($action) }}_usuario">
-				{{ Form::model($user, $form_data, array('role' => 'form')) }}
+				{{ Form::model($user, $form_data, array('role' => 'form', 'class' => )) }}
 
 					@include ('common/errors', array('errors' => $errors))
 

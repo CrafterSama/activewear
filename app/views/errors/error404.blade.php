@@ -11,7 +11,7 @@
           <div class="error-head"> </div>
           <h1><img src="assets/images/404.png" alt=""></h1>
           <div class="error-desk">
-              <h2>Funcion o Modulo no Encontrada</h2>
+              <h2>Modulo no Encontrado</h2>
               <p class="nrml-txt">No podemos encontrar esta Pagina</p>
           </div>
           <a href="/" class="btn btn-success btn-lg"><i class="fa fa-home"></i> Regresar al Inicio</a>

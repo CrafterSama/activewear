@@ -11,10 +11,10 @@
 |
 */
 
-/*App::missing(function($exception)
+App::missing(function($exception)
 {
 	return Response::view('errors.error404');
-});*/
+});
 
 /** Home Links **/
 Route::pattern('id', '[0-9]+');

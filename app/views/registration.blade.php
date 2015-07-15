@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title','Panel de Administración')</title>
 
@@ -106,21 +105,21 @@
             var $estados = $("#estados");
             var $municipios = $("#municipios");
 
-            $.post('/geo/estados', function(data, textStatus, xhr) {                
+            $.post('/geo/estados', function(data, textStatus, xhr) {
                 $.each(data, function(index, val) {
                     var option = '<option value="' + val.id +'">' + val.estado +'</option>';
                     $estados.append(option);
-                }); 
+                });
             },'json');
 
             $estados.on("change", function(){
                 var id = $(this).val();
                 resetMunicipios();
-                $.post('/geo/estado/' + id, function(data, textStatus, xhr) {                
+                $.post('/geo/estado/' + id, function(data, textStatus, xhr) {
                     $.each(data, function(index, val) {
                         var option = '<option value="' + val.id +'">' + val.ciudad +'</option>';
                         $municipios.append(option);
-                    }); 
+                    });
                 },'json');
             });
 
@@ -195,7 +194,7 @@
                         equalTo : "La confirmacion del password debe coincidir con el password",
                     },
                 }
-            });    
+            });
         });
     </script>
 

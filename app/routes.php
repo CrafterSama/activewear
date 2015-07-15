@@ -13,7 +13,7 @@
 
 App::missing(function($exception)
 {
-	return Response::view('errors.error404');
+	return Response::view('errors.error404', array(), 404);
 });
 
 /** Home Links **/

@@ -14,7 +14,7 @@
         </div>
         <div class="white-space-index"></div>
         <div style="col-md-12">
-            <div style="background-color: rgba(0, 0, 0, 0.5)" align="center"><img src="/../assets/images/logo_carioca.png" width='70%'></div>
+            <div style="background-color: rgba(0, 0, 0, 0.5)" align="center"><img src="assets/images/logo_carioca.png" width='70%'></div>
         </div>
      </div>
 </div>

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title','Panel de Administración')</title>
-
     <!-- Bootstrap core CSS -->
     {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', array('media'=>'screen')) }}
     <!-- Font Awesome -->
@@ -75,11 +74,8 @@
                     Ingresa Aqui
                 </a>
             </div>
-
         </div>
-
         {{ Form::close() }}
-
     </div>
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--common script init for all pages-->
@@ -98,105 +94,105 @@
 {{ HTML::script('assets/js/toggle-init.js') }}
 {{ HTML::script('assets/js/vendor/Chart.min.js') }}
 {{ HTML::script('assets/js/common.js') }}
-    <script type="text/javascript">
-        /* GEO */
-        $(document).on("ready", function(){
+<script type="text/javascript">
+    /* GEO */
+    $(document).on("ready", function(){
 
-            var $estados = $("#estados");
-            var $municipios = $("#municipios");
+        var $estados = $("#estados");
+        var $municipios = $("#municipios");
 
-            $.post('/geo/estados', function(data, textStatus, xhr) {
+        $.post('/geo/estados', function(data, textStatus, xhr) {
+            $.each(data, function(index, val) {
+                var option = '<option value="' + val.id +'">' + val.estado +'</option>';
+                $estados.append(option);
+            });
+        },'json');
+
+        $estados.on("change", function(){
+            var id = $(this).val();
+            resetMunicipios();
+            $.post('/geo/estado/' + id, function(data, textStatus, xhr) {
                 $.each(data, function(index, val) {
-                    var option = '<option value="' + val.id +'">' + val.estado +'</option>';
-                    $estados.append(option);
+                    var option = '<option value="' + val.id +'">' + val.ciudad +'</option>';
+                    $municipios.append(option);
                 });
             },'json');
+        });
 
-            $estados.on("change", function(){
-                var id = $(this).val();
-                resetMunicipios();
-                $.post('/geo/estado/' + id, function(data, textStatus, xhr) {
-                    $.each(data, function(index, val) {
-                        var option = '<option value="' + val.id +'">' + val.ciudad +'</option>';
-                        $municipios.append(option);
-                    });
-                },'json');
-            });
-
-            function resetMunicipios(){
-                $municipios.empty();
-                var option = '<option> -- Seleccione --</option>';
-                $municipios.append(option);
+        function resetMunicipios(){
+            $municipios.empty();
+            var option = '<option> -- Seleccione --</option>';
+            $municipios.append(option);
+        }
+    });
+    $(function(){
+        $('#singup').validate({
+            rules :{
+                full_name : {
+                    required : true,
+                },
+                email : {
+                    required : true,
+                    email : true
+                },
+                user_address : {
+                    required : true,
+                },
+                estado : {
+                    required : true,
+                },
+                municipio : {
+                    required : true,
+                },
+                user_mobile : {
+                    required : true,
+                    number : true,
+                },
+                username : {
+                    required : true,
+                },
+                password : {
+                    required : true,
+                },
+                password_confirmation : {
+                    required : true,
+                    equalTo : "#password",
+                },
+            },
+            messages : {
+                full_name : {
+                    required : "No puede dejar en blanco este campo, ingrese su nombre completo",
+                },
+                email : {
+                    required : "El correo electronico es requerido",
+                    email    : "Escriba una direccion de correo electronica valida",
+                },
+                user_address : {
+                    required : "Escriba una direccion ya que es requerida para efectos de envios de los pedidos a su persona",
+                },
+                estado : {
+                    required : "Seleccione el Estado de residencia",
+                },
+                municipio : {
+                    required : "Seleccione el municipio de referencia",
+                },
+                user_mobile : {
+                    required : "Este campo es obligatorio, el telefono es para efectos de comunicacion",
+                },
+                username : {
+                    required : "El nombre de usuario es obligatorio, se usa para efectos de acceder a su cuenta",
+                },
+                password : {
+                    required : "Este campo es obligatorio, debe ingresar el password que usara para su cuenta de usuario",
+                },
+                password_confirmation : {
+                    required : "La confirmacion del password no la puede dejar vacia",
+                    equalTo : "La confirmacion del password debe coincidir con el password",
+                },
             }
         });
-        $(function(){
-            $('#singup').validate({
-                rules :{
-                    full_name : {
-                        required : true,
-                    },
-                    email : {
-                        required : true,
-                        email : true
-                    },
-                    user_address : {
-                        required : true,
-                    },
-                    estado : {
-                        required : true,
-                    },
-                    municipio : {
-                        required : true,
-                    },
-                    user_mobile : {
-                        required : true,
-                        number : true,
-                    },
-                    username : {
-                        required : true,
-                    },
-                    password : {
-                        required : true,
-                    },
-                    password_confirmation : {
-                        required : true,
-                        equalTo : "#password",
-                    },
-                },
-                messages : {
-                    full_name : {
-                        required : "No puede dejar en blanco este campo, ingrese su nombre completo",
-                    },
-                    email : {
-                        required : "El correo electronico es requerido",
-                        email    : "Escriba una direccion de correo electronica valida",
-                    },
-                    user_address : {
-                        required : "Escriba una direccion ya que es requerida para efectos de envios de los pedidos a su persona",
-                    },
-                    estado : {
-                        required : "Seleccione el Estado de residencia",
-                    },
-                    municipio : {
-                        required : "Seleccione el municipio de referencia",
-                    },
-                    user_mobile : {
-                        required : "Este campo es obligatorio, el telefono es para efectos de comunicacion",
-                    },
-                    username : {
-                        required : "El nombre de usuario es obligatorio, se usa para efectos de acceder a su cuenta",
-                    },
-                    password : {
-                        required : "Este campo es obligatorio, debe ingresar el password que usara para su cuenta de usuario",
-                    },
-                    password_confirmation : {
-                        required : "La confirmacion del password no la puede dejar vacia",
-                        equalTo : "La confirmacion del password debe coincidir con el password",
-                    },
-                }
-            });
-        });
-    </script>
+    });
+</script>
 
 </body>
 </html>

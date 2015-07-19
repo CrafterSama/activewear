@@ -6,8 +6,10 @@
 	"require": {
 		"laravel/framework": "4.2.x-dev",
 		"gloudemans/shoppingcart": "~1.2",
-    	"webpatser/laravel-uuid": "1.*",
-    	"kevbaldwyn/image":"dev-master"
+		"webpatser/laravel-uuid": "1.*",
+		"kevbaldwyn/image":"dev-master",
+		"dompdf/dompdf": "~0.6.1",
+		"mpdf/mpdf": "~5.7.3"
 	},
 	"autoload": {
 		"classmap": [

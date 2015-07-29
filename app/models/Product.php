@@ -12,15 +12,15 @@ class Product extends Eloquent {
 	 * @var string
 	 */
 
-  use SoftDeletingTrait;
+    use SoftDeletingTrait;
 
 	protected $table = 'products';
 
-  protected $softDelete = true;
+protected $softDelete = true;
 
 	public function stamps()
 	{
- 		return $this->hasMany('Stamp');
+		return $this->hasMany('Stamp');
 	}
 	public function modelos()
 	{

@@ -110,7 +110,7 @@ class HomeController extends BaseController {
 
 	public function showProducts()
 	{
-		$models = Modelo::whereBetween('id', array(1, 4)->get();
+		$models = Modelo::whereRaw('id between 1, 4')->get();
 		$modelos = Modelo::whereNotBetween('id', array(1, 4))->get();
 		$products = Product::whereRaw('amounts != 0 and brand = 0')
 		  	->orderBy('id','desc')

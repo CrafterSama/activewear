@@ -89,6 +89,6 @@ if ($url=='largo')
 				<br />
 			@endif
 	    </div>
-		{{ $products->links() }}
 	</div>
+	<span class="center-block">{{ $products->links() }}</span>
 @stop

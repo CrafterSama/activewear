@@ -18,10 +18,10 @@ App::missing(function($exception)
 
 /** Home Links **/
 Route::pattern('id', '[0-9]+');
+
 Route::pattern('model', '[a-zA-Z-]+');
 
 Route::get('/', 'HomeController@index');
-
 
 Route::get('productos', 'HomeController@showProducts');
 
@@ -48,7 +48,6 @@ Route::get('productos/modelos/largo-venezuela', 'HomeController@showLargoVenezue
 Route::get('productos/modelos/falda-short', 'HomeController@showFaldaShort');
 
 Route::get('productos/modelos/semi-body', 'HomeController@showSemiBody');
-
 
 Route::get('productos/ver/{id}/{title?}', 'HomeController@showProductProfile');
 
@@ -187,7 +186,8 @@ Route::post('/total', function()
 });
 
 
-Route::get('/assets/images/pays/{slug}', function($slug){
+Route::get('/assets/images/pays/{slug}', function($slug)
+{
 	return Response::download('assets/images/pays/'.$slug);
 });
 

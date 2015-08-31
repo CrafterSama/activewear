@@ -166,13 +166,7 @@ $url = Request::path();
 						<dd><a href='/galerias' title="Ir a la Galeria de la Web">Galerias</a></dd>
 					</div>
 					<div class="company">
-						Developed by &nbsp;  2014 - {{ date('Y') }} &nbsp; <a class="craftersama-me" href="http://craftersama.me"><img src="http://craftersama.me/images/craftersama_gw_logo.png" alt="" width="20px">&nbsp; CrafterSama Studio</a>
-						<br/>
-						<a href="mailto:mundofuturoca@gmail.com" class="craftersama-me">Mundo Futuro</a>
-						<br/>
-						<a href="mailto:naomicampuzano@gmail.com" class="craftersama-me"><img src="http://craftersama.me/images/V.png" alt="" width="20px">&nbsp; Naomi Campuzano</a>
-						<br/>
-						<br/>
+						Developed by &nbsp;  2014 - {{ date('Y') }} &nbsp; <a class="craftersama-me" href="http://craftersama.com">CrafterSama Studio</a>
 						<br/>
 						<span id="back-to-top"><i class="fa fa-arrow-up fa-lg"></i> &nbsp; Subir</span>
 					</div>

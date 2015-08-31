@@ -168,6 +168,8 @@ $url = Request::path();
 					<div class="company">
 						Developed by &nbsp;  2014 - {{ date('Y') }} &nbsp; <a class="craftersama-me" href="http://craftersama.com">CrafterSama Studio</a>
 						<br/>
+						<br/>
+						<br/>
 						<span id="back-to-top"><i class="fa fa-arrow-up fa-lg"></i> &nbsp; Subir</span>
 					</div>
 				</div> 

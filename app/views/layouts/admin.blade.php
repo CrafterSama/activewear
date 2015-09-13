@@ -100,7 +100,7 @@
 {{ HTML::script('assets/js/locales/bootstrap-datepicker.es.min.js') }}
 {{ HTML::script('assets/js/toggle-init.js') }}
 {{ HTML::script('assets/js/vendor/Chart.min.js') }}
-{{ HTML::script('assets/js/common.js') }}
+{{ HTML::script('assets/js/dashboard.js') }}
 {{-- HTML::script('/../assets/js/scripts.js') --}}
 <!--script for this page-->
     <script type="text/javascript">

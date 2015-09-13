@@ -181,10 +181,8 @@ $url = Request::path();
 		{{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js') }}
 		{{ HTML::script('/../assets/js/jquery.validate.js') }}
 		{{ HTML::script('/../assets/js/jquery-ui.min.js') }}
-		{{ HTML::script('/../assets/js/jMyCarousel.js') }}
 		{{ HTML::script('/../assets/js/fotorama.js') }}
 		{{ HTML::script('/../assets/js/common.js') }}
-		{{-- HTML::script('/../assets/js/tabs.js') --}}
 		{{ HTML::script('/../assets/js/Imagecow.js') }}
 		<script type="text/javascript">
     		Imagecow.init();

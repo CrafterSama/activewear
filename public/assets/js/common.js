@@ -134,9 +134,9 @@ $(function(){
         showCount: false,
         autoExpand: true,
         classExpand: 'dcjq-current-parent'
-    });
+    });*/
 
-});*/
+});
 var Script = function () {
 
     //  menu auto scrolling
@@ -223,7 +223,7 @@ var Script = function () {
 
 
    // custom scroll bar
-    /*$("#sidebar").niceScroll({styler:"fb",cursorcolor:"#1FB5AD", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});
+/*    $("#sidebar").niceScroll({styler:"fb",cursorcolor:"#1FB5AD", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});
     $(".right-sidebar").niceScroll({styler:"fb",cursorcolor:"#1FB5AD", cursorwidth: '3', cursorborderradius: '10px', background: '#404040', spacebarenabled:false, cursorborder: ''});*/
 
 

@@ -18,10 +18,10 @@
 	@endif
 	<section class="panel">
 	    <header class="panel-heading">
-			Productos
-	        <span class="tools pull-right">
-	            <a href="/admin/productos/agregar" class="btn btn-success pull-right white"><i class="fa fa-plus fa-lg"></i>	Agregar Producto</a>	
-	        </span>
+			<div class="col-md-10 col-lg-10"></div>
+	        <div class="col-sm-6 col-md-2 col-lg-2 col-md-offset-10 col-lg-offset-10">
+	            <a href="/admin/productos/agregar" class="btn btn-success btn-block white"><i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Agregar Producto</a>	
+	        </div>
 	    </header>
 	    <div class="panel-body">
 	        <section id="no-more-tables">
@@ -47,7 +47,7 @@
 
 									$image = '/assets/images/stamps/'.Stamp::getName($product->stamp_id);
 									
-									if($product->brand == '0') {
+									if($product->brand == '2') {
 										$brand = 'Pioggia';
 									} else {
 										$brand = 'Carioca';
@@ -60,15 +60,27 @@
 										</a>
 										<br /> 
 									</td>
-									<td data-title="Modelo">{{ Stamp::getStampCode($product->stamp_id).'<br />'.Modelo::getName($product->model_id).'<br />'.Stamp::getStampName($product->stamp_id).'<br />'.Stamp::getStampDesc($product->stamp_id) }}</td>
-									<td data-title="Marca">{{ $brand }}</td>
-									<td data-title="Cantidad">{{ $product->amounts }}</td>
-									<td class="visible-lg" data-title="Valor Unitario">Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }}</td>
-									<td class="visible-lg" data-title="Total Bs.">Bs. {{  number_format($product->amounts*Modelo::getPrice($product->model_id), 2, ',', '.') }}</td>
-									<td class="visible-lg" data-title="Fecha de Registro">{{ $product->created_at }}</td>
+									<td data-title="Modelo">
+										{{ Stamp::getStampCode($product->stamp_id).'<br />'.Modelo::getName($product->model_id).'<br />'.Stamp::getStampName($product->stamp_id).'<br />'.Stamp::getStampDesc($product->stamp_id) }}
+									</td>
+									<td data-title="Marca">
+										{{ $brand }}
+									</td>
+									<td data-title="Cantidad">
+										{{ $product->amounts }}
+									</td>
+									<td class="visible-lg" data-title="Valor Unitario">
+										Bs. {{  number_format(Modelo::getPrice($product->model_id), 2, ',', '.') }}
+									</td>
+									<td class="visible-lg" data-title="Total Bs.">
+										Bs. {{  number_format($product->amounts*Modelo::getPrice($product->model_id), 2, ',', '.') }}
+									</td>
+									<td class="visible-lg" data-title="Fecha de Registro">
+										{{ $product->created_at }}
+									</td>
 									<td data-title="Acciones" class="text-center">
-										<a href="/admin/productos/{{ $product->id }}/editar" class="btn btn-warning btn-xs white"  data-toggle="tooltip" data-placement="top" title="Editar Registro"><i class="fa fa-pencil fa-lg"></i></a>
-										<a href="{{ url('/admin/productos/borrar',$product->id) }}" class="btn btn-danger btn-xs white"  data-toggle="tooltip" data-placement="top" title="Borrar Registro" onclick="return confirm('¿Esta seguro que desea borrar este Registro?');"><i class="fa fa-trash-o fa-lg"></i></a>
+										<a href="/admin/productos/{{ $product->id }}/editar" class="btn btn-warning btn-xs white"  data-toggle="tooltip" data-placement="top" title="Editar Registro"><i class="fa fa-pencil fa-2x"></i></a>
+										<a href="{{ url('/admin/productos/borrar',$product->id) }}" class="btn btn-danger btn-xs white"  data-toggle="tooltip" data-placement="top" title="Borrar Registro" onclick="return confirm('¿Esta seguro que desea borrar este Registro?');"><i class="fa fa-trash-o fa-2x"></i></a>
 									</td>
 								</tr>
 							@endforeach

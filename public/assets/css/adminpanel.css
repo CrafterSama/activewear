@@ -201,6 +201,14 @@ span.btn
     bottom:-35px;
     color: #b8bab9;
 }
+.panel-heading button.btn.dropdown-toggle.btn-default {
+    margin-top: 1px;
+}
+
+.panel-heading input.btn.btn-success.btn-block {
+    margin-top: 1px;
+}
+
 /*sidebar navigation*/
 #sidebar {
     width:240px;
@@ -1071,6 +1079,12 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 .chart-tittle .title {
 }
+
+.panel-heading
+{
+  min-height: 65px;  
+}
+
 .panel.green-chart .chart-tittle .value {
     float:right;
     color:#c0f080;

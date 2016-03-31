@@ -34,26 +34,31 @@
 					{{ Form::model($product, $form_data) }}
 						@include ('common/errors', array('errors' => $errors))
 						<div class="row">
-							<div class="form-group col-md-6" >
+							<div class="col-md-6" >
 								<h4>Codigo, Nombre, Descripción e Imagen del Producto</h4>
 								<hr />
-								{{ Form::label('stampcode','Codigo del Estampado') }}
-								{{ Form::text('stampcode','',array('placeholder'=>'Codigo del Estampado','class'=>'form-control')) }}
-								{{ Form::label('stampname','Nombre del Estampado') }}
-								{{ Form::text('stampname','',array('placeholder'=>'Nombre del Estampado','class'=>'form-control')) }}
-								{{ Form::label('stampdesc','Descripcion del Estampado') }}
-								{{ Form::text('stampdesc','',array('placeholder'=>'Descripcion','class'=>'form-control')) }}
-								<br />
-				                <label for="brand">Marca</label>
-				                <select name="brand" id="brand" class="selectpicker" data-width="100%">
-				                	<option value="0">Pioggia</option>
-				                	<option value="1">Carioca</option>
-				                </select>
-				                <br />
-				                <br />
-					        	<input type='file' name="stamp" class="filestyle" data-buttonName="btn-primary" /><br />
-						        <div class="thumbnail">
-		        					<img id="target" src="#" alt="Estampado" class="img-responsive" />
+								<div class="form-group">
+									{{ Form::text('stampcode','',array('placeholder'=>'Codigo del Estampado','class'=>'form-control')) }}
+								</div>
+								<div class="form-group">
+									{{ Form::text('stampname','',array('placeholder'=>'Nombre del Estampado','class'=>'form-control')) }}
+								</div>
+								<div class="form-group">
+									{{ Form::text('stampdesc','',array('placeholder'=>'Descripcion','class'=>'form-control')) }}
+								</div>
+								<div class="form-group">
+					                <select name="brand" id="brand" class="selectpicker" data-width="100%" required>
+					                	<option value="2">Pioggia</option>
+					                	<option value="1">Carioca</option>
+					                </select>
+					            </div>
+								<div class="form-group">
+					        		<input type='file' name="stamp" class="filestyle" data-buttonName="btn-primary" />
+					        	</div>
+					        	<div class="form-group">
+							        <div class="thumbnail">
+			        					<img id="target" src="#" alt="Estampado" class="img-responsive" />
+									</div>
 								</div>
 							</div>
 							<div class="form-group col-md-6">
@@ -62,13 +67,14 @@
 								@foreach ($modelos as $modelo)
 									<div class="row">
 										<div class="col-xs-12">
-											<span class="btn btn-default" data-toggle="buttons">
+											<span class="col-md-6 btn btn-default" data-toggle="buttons">
 												{{ Form::label($modelo->model_name, strtoupper($modelo->model_name)) }}
+												&nbsp;&nbsp;&nbsp;
 												<input type="checkbox" name="model_id['{{ $modelo->id }}']" value="{{ $modelo->id }}" data-size="mini" />
-												{{-- Form::checkbox('model_id['.$modelo->id.']',$modelo->id) --}}
 											</span>
-											<br />
-											<input type="number" min="1" name="amounts_{{ $modelo->id }}" placeholder="Cantidades" class="form-control" />
+											<span class="col-md-6">
+												<input type="number" min="1" name="amounts_{{ $modelo->id }}" placeholder="Cantidades" class="form-control col-md-6" />
+											</span>
 										</div>
 									</div>
 								<br />
@@ -84,15 +90,36 @@
 							<div class="form-group col-md-6">
 								{{ Form::label(Modelo::getName($product->model_id), strtoupper(Modelo::getName($product->model_id))) }}
 								<br />
-								<img src="/../assets/images/stamps/{{ Stamp::getName($stamp->id) }}" alt="" width="120px" class="img-thumbnail" />
-								<br />
-								<label for="stampname">Codigo del Stampado</label>
-								<input type="text" value="{{ Stamp::getStampCode($stamp->id) }}" name="stampcode" class="form-control">				<label for="stampname">Nombre del Stampado</label>
-								<input type="text" value="{{ Stamp::getStampName($stamp->id) }}" name="stampname" class="form-control">				<label for="stampname">Descripcion del Stampado</label>
-								<input type="text" value="{{ Stamp::getStampDesc($stamp->id) }}" name="stampdesc" class="form-control">
-								<br />
-								<label for="amounts">Cantidades</label>
-								<input type="number" min="1" value="{{ Product::getAmounts($product->id) }}" name="amounts" class="form-control">
+								<div class="form-group">
+									<img src="/../assets/images/stamps/{{ Stamp::getName($stamp->id) }}" alt="" width="120px" class="img-thumbnail" />
+					        	</div>
+					        	<div class="form-group">
+									<label for="stampname">Codigo del Stampado</label>
+									<input type="text" value="{{ Stamp::getStampCode($stamp->id) }}" name="stampcode" class="form-control">				
+					        	</div>
+					        	<div class="form-group">
+									<label for="stampname">Nombre del Stampado</label>
+									<input type="text" value="{{ Stamp::getStampName($stamp->id) }}" name="stampname" class="form-control">
+					        	</div>
+					        	<div class="form-group">
+									<label for="stampname">Observaciones del Producto</label>
+									<input type="text" value="{{ Stamp::getStampDesc($stamp->id) }}" name="stampdesc" class="form-control">
+					        	</div>
+					        	<div class="form-group">
+									<label for="amounts">Cantidades</label>
+									<input type="number" min="1" value="{{ $product->amounts }}" name="amounts" class="form-control">
+					        	</div>
+								<div class="form-group">
+					                <select name="brand" id="brand" class="selectpicker" data-width="100%">
+					                @if($product->brand == '2')
+					                	<option value="2" selected="selected">Pioggia</option>
+					                	<option value="1">Carioca</option>
+					                @else	
+					                	<option value="2">Pioggia</option>
+					                	<option value="1" selected="selected">Carioca</option>
+					                @endif
+					                </select>
+					            </div>
 							</div>
 						</div>
 						{{ Form::submit('Guardar', array('class'=>'btn btn-primary pull-right')) }}

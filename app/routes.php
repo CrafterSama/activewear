@@ -101,6 +101,9 @@ Route::group(array('before' => 'auth'), function()
 		
 		/** Admin Links **/
 		Route::get('productos', 'ProductsController@index');
+		Route::get('productos/modelos/{id}', 'ProductsController@searchByModel');
+		Route::get('productos/buscar', 'ProductsController@search');
+		Route::post('productos/buscar', 'ProductsController@search');
 		Route::get('productos/agregar', 'ProductsController@create');
 		Route::post('productos/agregar', 'ProductsController@store');
 		Route::get('productos/{id}/editar', 'ProductsController@edit');

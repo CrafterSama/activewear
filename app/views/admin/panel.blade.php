@@ -23,7 +23,7 @@
 						<tbody class="text-center">
 							@foreach ($modelos as $modelo)
 								<tr>
-									<td data-title="Nombre">{{ strtoupper(Modelo::getName($modelo->id)) }}</td>	
+									<td data-title="Nombre"><a class="btn btn-default" href="/admin/productos/modelos/{{ $modelo->id }}">{{ strtoupper(Modelo::getName($modelo->id)) }}&nbsp;&nbsp;<i class="fa fa-external-link"></i></a></td>	
 									<td data-title="Cantidades">{{ Product::getAmounts($modelo->id) }}</td>
 								</tr>
 				    		@endforeach
@@ -58,7 +58,7 @@
 							<?php $totalQty = 0; ?>
 							@foreach ($modelos as $modelo)
 								<tr>
-									<td data-title="Nombre">{{ strtoupper(Modelo::getName($modelo->id)) }}</td>
+									<td data-title="Nombre"><a href="/admin/productos/modelos/{{ $modelo->id }}">{{ strtoupper(Modelo::getName($modelo->id)) }}</a></td>
 									<td data-title="Totales en Bs.">Bs. {{ number_format(Product::getAmounts($modelo->id)*$modelo->price_out_tax_float, 2, ',', '.') }}</td>
 								</tr>
 								<?php
@@ -96,7 +96,7 @@
 							<?php $totalQty = 0; ?>
 							@foreach ($modelos as $modelo)
 								<tr>
-									<td data-title="Nombre">{{ strtoupper(Modelo::getName($modelo->id)) }}</td>
+									<td data-title="Nombre"><a href="/admin/productos/modelos/{{ $modelo->id }}">{{ strtoupper(Modelo::getName($modelo->id)) }}</a></td>
 									<td data-title="Totales en Bs.">Bs. {{ number_format((Product::getAmounts($modelo->id)*$modelo->price_out_tax_float)-(Product::getAmounts($modelo->id)*$modelo->price_out_tax_float*0.30), 2, ',', '.') }}</td>
 								</tr>
 								<?php
@@ -132,7 +132,7 @@
 						<tbody class="text-center">
 							@foreach ($modelos as $modelo)
 								<tr>
-									<td data-title="Modelo">{{ strtoupper(Modelo::getName($modelo->id)) }}</td>
+									<td data-title="Modelo"><a href="/admin/productos/modelos/{{ $modelo->id }}">{{ strtoupper(Modelo::getName($modelo->id)) }}</a></td>
 								</tr>
 				    		@endforeach
 						</tbody>

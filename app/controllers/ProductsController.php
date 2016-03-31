@@ -26,6 +26,37 @@ class ProductsController extends \BaseController {
 		return View::make('admin.products')->with(['products'=>$products,'stamps'=>$stamps,'modelos'=>$modelos]);
 	}
 
+	public function searchByModel($id)
+	{
+		$products = Product::where('model_id','=',$id)->where('amounts','!=','0')->orderBy('id','desc')->paginate(10);
+		$stamps = Stamp::all();
+		$modelos = Modelo::all();
+		return View::make('admin.products')->with(['products'=>$products,'stamps'=>$stamps,'modelos'=>$modelos]);
+	}
+
+	public function search()
+	{
+	    $name = Input::get('search');
+	    $model = Input::get('model');
+	    $brand = Input::get('brand');
+		$stamps = Stamp::all();
+		$models = Modelo::all();
+		$stampId = Stamp::where('stampcode','like','%'.$name.'%')->lists('id');
+		if(empty($model) && empty($brand) && empty($name)):
+			$products = Product::where('amounts','!=','0')->orderBy('id','desc')->get();
+		elseif(empty($model) && empty($brand)) :
+			$products = Product::whereIn('stamp_id',$stampId)->where('amounts','!=','0')->orderBy('id','desc')->get();
+		elseif(empty($model)) :
+			$products = Product::whereIn('stamp_id',$stampId)->where('brand','=',$brand)->where('amounts','!=','0')->orderBy('id','desc')->get();
+		elseif(empty($name)) :
+			$products = Product::where('model_id','=',$model)->where('brand','=',$brand)->where('amounts','!=','0')->orderBy('id','desc')->get();
+		else:
+			$products = Product::whereIn('stamp_id',$stampId)->where('brand','=',$brand)->where('model_id','=',$model)->where('amounts','!=','0')->orderBy('id','desc')->get();
+		endif;
+		
+		return View::make('admin.search')->with(['products'=>$products,'stamps'=>$stamps,'models'=>$models,'stampId'=>$stampId])->with('notice', 'Se encontraron '.$products->count().' productos en tu busqueda');
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *

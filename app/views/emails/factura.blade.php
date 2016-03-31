@@ -67,17 +67,12 @@
 		</div>
 		<h4 style="background-color: #8c2d83; color:#fff; padding: 10px; width: 450px;">Instrucciones: </h4>
 		<div style="width: 70%; float: left;">
-	        <span style="font-weight:bold;">Deposita o has una transferencia a las siguientes Cuentas.</span>
+	        <span style="font-weight:bold;">Deposita o has una transferencia a la siguiente Cuenta:</span>
 	        <br><br>
-	        <span><strong style="color:#060;">Banesco Banco Universal Banesco</strong><br>
-	        <strong>Cuenta Corriente No.</strong> 0134-0073-31-0731061723<br>
-	        <strong>A Nombre de:</strong> Vivian Medina<br>
-	        <strong>C.I. No.</strong> 14738935</span>
-	        <br><br>
-	        <span><strong style="color:#060;">Banco de Venezuela</strong><br>
-	        <strong>Cuenta Corriente No.</strong> 0102-0145-45-0000005982<br>
-	        <strong>A Nombre de:</strong> Vivian Medina<br>
-	        <strong>C.I. No.</strong> 14738935</span>
+	        <span><strong style="color:#060;">Banesco Banco Universal</strong><br>
+	        <strong>Cuenta Corriente No.</strong> 0134-0079-26-0791134545<br>
+	        <strong>A Nombre de:</strong> Inversiones Medina Molero<br>
+	        <strong>RIF No.</strong> J406047910</span>
 	    </div>
 		<div style="width: 30%; float: right;">
         	<p><strong>Reporta tu pago haciendo click en el botón <a style="background-color: #8c2d83; text-decoration: none; color: #fff; font-weight: bold; border-radius: 0.3em; padding: 0.1em;" href="http://cariocaactivewear.com/order/{{ $factura['id'] }}">Completar Pago</a>, y llena el formulario</strong></p>

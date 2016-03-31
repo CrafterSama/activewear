@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'cariocatest',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'C04n1m3..',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
